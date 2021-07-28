@@ -3,8 +3,250 @@
 @import 'vars';
 @import 'global';
 
+.nav {
+  display: flex;
+  align-items: center;
 
+  &__list {
+    display: flex;
+  }
 
+  &__item:not(:last-child) {
+    margin-right: 30px;
+  }
+}
+
+.logo {
+  &__img {
+    object-fit: contain;
+  }
+}
+
+.catalog {
+  position: relative;
+
+  &__btn {
+    position: relative;
+    padding: 15px 40px 15px 61px;
+    @extend %lato-14;
+    font-weight: 600;
+    white-space: nowrap;
+    color: $green-900;
+    background-color: $white;
+    border: none;
+    border-radius: 6px;
+    transition: background-color 0.3s;
+  }
+
+  &__btn::before {
+    content: "";
+    position: absolute;
+    top: 16px;
+    left: 18px;
+    width: 25px;
+    height: 17px;
+    background-image: url("../images/icons/nav.svg");
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+
+  &__btn::after {
+    content: "";
+    position: absolute;
+    top: 23px;
+    right: 18px;
+    width: 8px;
+    height: 4px;
+    background-image: url("../images/icons/arrow-down.svg");
+    background-repeat: no-repeat;
+    background-size: contain;
+    transition: transform 0.3s;
+  }
+
+  &__btn:hover,
+  &__btn--active {
+    background-color: $green-200;
+  }
+
+  &__btn--active {
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
+  }
+
+  &__btn--active::after {
+    transform: scale(-1);
+  }
+
+  &__list {
+    display: none;
+    position: absolute;
+    width: 100%;
+    background-color: $white;
+    border: 1px solid $silver-100;
+    border-radius: 0 0 6px 6px;
+  }
+
+  &__list--active {
+    display: block;
+  }
+
+  &__item:not(:last-child) {
+    border-bottom: 1px solid $silver-100;
+  }
+
+  &__link {
+    padding: 15px 24px;
+    display: block;
+    @extend %lato-16;
+    line-height: 1.2;
+    color: $black;
+    border-left: 3px solid transparent;
+    transition: color 0.3s, border-left-color 0.3s;
+  }
+
+  &__link:hover {
+    color: $green-900;
+    border-left-color: $green-900;
+  }
+}
+
+.header {
+  &__top {
+    @extend %lato-bold;
+    font-size: 13px;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    color: $white;
+    background-color: $dark-800;
+  }
+
+  &__top a {
+    transition: opacity 0.3s;
+  }
+
+  &__top a:focus {
+    outline: 1px solid $white;
+  }
+
+  &__top a:hover {
+    opacity: 0.7;
+  }
+
+  &__top a:active {
+    opacity: 0.3;
+  }
+
+  &__top-inner {
+    padding-top: 14px;
+    padding-bottom: 14px;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__service {
+    display: flex;
+  }
+
+  &__item:not(:last-child) {
+    margin-right: 48px;
+  }
+
+  &__link {
+    padding-top: 4px;
+    padding-bottom: 4px;
+    display: block;
+    background-repeat: no-repeat;
+    background-position: left top;
+  }
+
+  &__link--delivery {
+    padding-left: 44px;
+    background-image: url("../images/icons/delivery.svg");
+  }
+
+  &__link--hotline {
+    padding-left: 35px;
+    background-image: url("../images/icons/tel.svg");
+  }
+
+  &__bottom {
+    background-color: $green-900;
+  }
+
+  &__bottom-inner {
+    padding-top: 25px;
+    padding-bottom: 25px;
+    display: flex;
+    align-items: center;
+  }
+
+  &__logo {
+    min-width: 200px;
+    margin-right: 24px;
+  }
+
+  &__catalog {
+    margin-right: 30px;
+  }
+
+  &__form {
+    margin-right: 32px;
+    display: flex;
+  }
+
+  &__search {
+    width: 419px;
+    padding: 16px 13px 14px 51px;
+    @extend %lato-14;
+    background-image: url("../images/icons/search.svg");
+    background-repeat: no-repeat;
+    background-position: 13px center;
+    border: none;
+    border-radius: 6px 0 0 6px;
+  }
+
+  &__button {
+    padding: 15px 52px;
+    text-transform: uppercase;
+    color: $white;
+    background-color: $dark-800;
+    border: none;
+    border-radius: 0 6px 6px 0;
+  }
+}
+
+.personal {
+  width: 50px;
+  height: 50px;
+  padding: 0;
+  background-color: transparent;
+  border: none;
+  border-radius: 3px;
+
+  &:hover {
+    background-color: rgba($white, 0.1);
+  }
+
+  &--user {
+    margin-right: 12px;
+    background-image: url("../images/icons/user.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  &--favorite {
+    margin-right: 12px;
+    background-image: url("../images/icons/favorite.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  &--cart {
+    background-image: url("../images/icons/cart.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+}
 
 
 
