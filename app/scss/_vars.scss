@@ -1,0 +1,51 @@
+$green-900: #63a60f;
+$green-200: #e0edcf;
+$green-100: #eff6e7;
+$dark-900: #121212;
+$dark-800: #31352b;
+$dark-500: #505050;
+$red-900: #cf3e3b;
+$orange-900: #ff7a00;
+$yellow-900: #ffb800;
+$silver-600: #c1c1c1;
+$silver-100: #f6f6f6;
+$white: #ffffff;
+
+%signika-bold {
+  font-weight: 700;
+  font-size: 60px;
+  font-family: "Signika", "Arial", sans-serif;
+}
+
+%signika-32 {
+  font-weight: 600;
+  font-size: 32px;
+  font-family: "Signika", "Arial", sans-serif;
+}
+
+%signika-30 {
+  font-weight: 600;
+  font-size: 30px;
+  font-family: "Signika", "Arial", sans-serif;
+}
+
+%lato-14 {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.4;
+  font-family: "Lato", "Arial", sans-serif;
+}
+
+%lato-16 {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.4;
+  font-family: "Lato", "Arial", sans-serif;
+}
+
+%lato-bold {
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 1.4;
+  font-family: "Lato", "Arial", sans-serif;
+}
