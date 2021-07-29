@@ -1,8 +1,8 @@
 $(function(){
 
-  $('.catalog__btn').on('click', function() {
-    $('.catalog__list').toggleClass('catalog__list--active');
-    $('.catalog__btn').toggleClass('catalog__btn--active');
+  $('.dropdown__btn').on('click', function() {
+    $('.dropdown__list').toggleClass('dropdown__list--active');
+    $('.dropdown__btn').toggleClass('dropdown__btn--active');
   });
 
 });

@@ -18,25 +18,29 @@
         <div class="header__top-inner">
           <ul class="header__service">
             <li class="header__item">
-              <a class="header__link header__link--delivery"
-                href="#">Адрес и время доставки</a>
+              <a class="header__link header__link--delivery animation-inline"
+                href="#">
+                Адрес и время доставки
+              </a>
             </li>
             <li class="header__item">
-              <a class="header__link header__link--hotline"
-                href="tel:+7907288365">Горячая линия 24/7</a>
+              <a class="header__link header__link--hotline animation-inline"
+                href="tel:+7907288365">
+                Горячая линия 24/7
+              </a>
             </li>
           </ul>
 
           <nav class="nav">
             <ul class="nav__list">
               <li class="nav__item">
-                <a class="nav__link" href="#">Доставка</a>
+                <a class="nav__link animation-inline" href="#">Доставка</a>
               </li>
               <li class="nav__item">
-                <a class="nav__link" href="#">О нас</a>
+                <a class="nav__link animation-inline" href="#">О нас</a>
               </li>
               <li class="nav__item">
-                <a class="nav__link" href="#">Новости</a>
+                <a class="nav__link animation-inline" href="#">Новости</a>
               </li>
             </ul>
           </nav>
@@ -47,73 +51,86 @@
     <div class="header__bottom">
       <div class="container">
         <div class="header__bottom-inner">
-          <a class="header__logo logo" href="index.html">
+          <a class="header__logo logo animation-btn" href="index.html">
             <img class="logo__img" src="images/logo.png" alt="Логотип"
               width="200" height="60">
           </a>
 
-          <div class="header__catalog catalog">
-            <button class="catalog__btn" type="button">
+          <div class="header__dropdown dropdown">
+            <button class="dropdown__btn" type="button">
               Каталог продуктов
             </button>
-            <ul class="catalog__list">
-              <li class="catalog__item">
-                <a class="catalog__link" href="#">Овощи и фрукты</a>
+            <ul class="dropdown__list">
+              <li class="dropdown__item">
+                <a class="dropdown__link" href="#">Овощи и фрукты</a>
               </li>
-              <li class="catalog__item">
-                <a class="catalog__link" href="#">Бакалея</a>
+              <li class="dropdown__item">
+                <a class="dropdown__link" href="#">Бакалея</a>
               </li>
-              <li class="catalog__item">
-                <a class="catalog__link" href="#">Молочные продукты</a>
+              <li class="dropdown__item">
+                <a class="dropdown__link" href="#">Молочные продукты</a>
               </li>
-              <li class="catalog__item">
-                <a class="catalog__link" href="#">Хлеб</a>
+              <li class="dropdown__item">
+                <a class="dropdown__link" href="#">Хлеб</a>
               </li>
-              <li class="catalog__item">
-                <a class="catalog__link" href="#">Мясо</a>
+              <li class="dropdown__item">
+                <a class="dropdown__link" href="#">Мясо</a>
               </li>
-              <li class="catalog__item">
-                <a class="catalog__link" href="#">Колбаса</a>
+              <li class="dropdown__item">
+                <a class="dropdown__link" href="#">Колбаса</a>
               </li>
-              <li class="catalog__item">
-                <a class="catalog__link" href="#">Рыба</a>
+              <li class="dropdown__item">
+                <a class="dropdown__link" href="#">Рыба</a>
               </li>
-              <li class="catalog__item">
-                <a class="catalog__link" href="#">Алкоголь</a>
+              <li class="dropdown__item">
+                <a class="dropdown__link" href="#">Алкоголь</a>
               </li>
-              <li class="catalog__item">
-                <a class="catalog__link" href="#">Напитки</a>
+              <li class="dropdown__item">
+                <a class="dropdown__link" href="#">Напитки</a>
               </li>
-              <li class="catalog__item">
-                <a class="catalog__link" href="#">Торты</a>
+              <li class="dropdown__item">
+                <a class="dropdown__link" href="#">Торты</a>
               </li>
-              <li class="catalog__item">
-                <a class="catalog__link" href="#">Мясо</a>
+              <li class="dropdown__item">
+                <a class="dropdown__link" href="#">Мясо</a>
               </li>
-              <li class="catalog__item">
-                <a class="catalog__link" href="#">Чай, кофе</a>
+              <li class="dropdown__item">
+                <a class="dropdown__link" href="#">Чай, кофе</a>
               </li>
             </ul>
           </div>
 
           <form class="header__form">
-            <input class="header__search" type="search" name="search"
-              aria-placeholder="Поле ввода поиска товара"
-              placeholder="Найти в магазине ...">
-            <button class="header__button" type="submit">Поиск</button>
+            <input class="header__search animation-field" type="search"
+              name="search" aria-placeholder="Поле ввода поиска товара"
+              placeholder="Найти в магазине ..." required>
+            <button class="header__button animation-btn" type="submit">
+              Поиск
+            </button>
           </form>
 
-          <button class="personal personal--user" type="button">
-            <span class="sr-only">Личный кабинет</span>
-          </button>
-          <button class="personal personal--favorite" type="button">
-            <span class="sr-only">Любимые товары</span>
-            <span class="personal__number">12</span>
-          </button>
-          <button class="personal personal--cart" type="button">
-            <span class="sr-only">Корзина</span>
-            <span class="personal__number">12</span>
-          </button>
+          <ul class="icon">
+            <li class="icon__item">
+              <button class="icon__btn icon__btn--user animation-btn"
+                type="button">
+                <span class="sr-only">Личный кабинет</span>
+              </button>
+            </li>
+            <li class="icon__item">
+              <button class="icon__btn icon__btn--favorite animation-btn"
+                type="button">
+                <span class="sr-only">Любимые товары</span>
+                <span class="icon__number icon__number--favorite">12</span>
+              </button>
+            </li>
+            <li class="icon__item">
+              <button class="icon__btn icon__btn--cart animation-btn"
+                type="button">
+                <span class="sr-only">Корзина</span>
+                <span class="icon__number icon__number--cart">12</span>
+              </button>
+            </li>
+          </ul>
         </div>
       </div>
     </div>

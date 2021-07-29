@@ -12,7 +12,7 @@
   }
 
   &__item:not(:last-child) {
-    margin-right: 30px;
+    margin-right: 24px;
   }
 }
 
@@ -22,12 +22,12 @@
   }
 }
 
-.catalog {
+.dropdown {
   position: relative;
 
   &__btn {
     position: relative;
-    padding: 15px 40px 15px 61px;
+    padding: 16px 48px 15px 61px;
     @extend %lato-14;
     font-weight: 600;
     white-space: nowrap;
@@ -35,7 +35,8 @@
     background-color: $white;
     border: none;
     border-radius: 6px;
-    transition: background-color 0.3s;
+    outline: 0;
+    transition: background-color 0.3s, box-shadow 0.3s;
   }
 
   &__btn::before {
@@ -63,9 +64,17 @@
     transition: transform 0.3s;
   }
 
+  &__btn:focus {
+    box-shadow: inset 0 0 0 3px $dark-500;
+  }
+
   &__btn:hover,
   &__btn--active {
     background-color: $green-200;
+  }
+
+  &__btn:active {
+    box-shadow: inset 0 4px 4px rgba($black, 0.5);
   }
 
   &__btn--active {
@@ -101,39 +110,83 @@
     line-height: 1.2;
     color: $black;
     border-left: 3px solid transparent;
-    transition: color 0.3s, border-left-color 0.3s;
+    outline: 0;
+    transition: color 0.3s, border-left-color 0.3s, box-shadow 0.3s;
+  }
+
+  &__link:focus {
+    box-shadow: 0 0 0 3px $dark-500;
   }
 
   &__link:hover {
     color: $green-900;
     border-left-color: $green-900;
   }
+
+  &__link:active {
+    box-shadow: inset 0 4px 4px rgba($black, 0.5);
+  }
+}
+
+.icon {
+  display: flex;
+
+  &__item:not(:last-child) {
+    margin-right: 12px;
+  }
+
+  &__btn {
+    position: relative;
+    width: 50px;
+    height: 50px;
+    padding: 0;
+    background-color: transparent;
+    background-repeat: no-repeat;
+    background-position: center;
+    border: none;
+    border-radius: 3px;
+  }
+
+  &__btn:hover {
+    background-color: rgba($white, 0.1);
+  }
+
+  &__btn--user {
+    background-image: url("../images/icons/user.svg");
+  }
+
+  &__btn--favorite {
+    background-image: url("../images/icons/favorite.svg");
+  }
+
+  &__btn--cart {
+    background-image: url("../images/icons/cart.svg");
+  }
+
+  &__number {
+    position: absolute;
+    top: 3px;
+    left: 3px;
+    width: 18px;
+    height: 18px;
+    font-weight: 600;
+    font-size: 10px;
+    line-height: 1.8;
+    color: $red-900;
+    background-color: $white;
+    border-radius: 9px;
+  }
 }
 
 .header {
+  letter-spacing: 0.03em;
+
   &__top {
     @extend %lato-bold;
     font-size: 13px;
-    letter-spacing: 0.03em;
     text-transform: uppercase;
     color: $white;
     background-color: $dark-800;
-  }
-
-  &__top a {
-    transition: opacity 0.3s;
-  }
-
-  &__top a:focus {
-    outline: 1px solid $white;
-  }
-
-  &__top a:hover {
-    opacity: 0.7;
-  }
-
-  &__top a:active {
-    opacity: 0.3;
   }
 
   &__top-inner {
@@ -152,8 +205,8 @@
   }
 
   &__link {
-    padding-top: 4px;
-    padding-bottom: 4px;
+    padding-top: 2px;
+    padding-bottom: 2px;
     display: block;
     background-repeat: no-repeat;
     background-position: left top;
@@ -165,7 +218,7 @@
   }
 
   &__link--hotline {
-    padding-left: 35px;
+    padding-left: 34px;
     background-image: url("../images/icons/tel.svg");
   }
 
@@ -181,72 +234,48 @@
   }
 
   &__logo {
-    min-width: 200px;
+    max-width: 200px;
     margin-right: 24px;
+    border-radius: 5px;
   }
 
-  &__catalog {
+  &__dropdown {
     margin-right: 30px;
   }
 
   &__form {
+    flex-basis: 577px;
     margin-right: 32px;
     display: flex;
   }
 
   &__search {
-    width: 419px;
-    padding: 16px 13px 14px 51px;
+    flex-basis: 419px;
+    min-width: 225px;
+    padding: 16px 13px 15px 51px;
     @extend %lato-14;
     background-image: url("../images/icons/search.svg");
     background-repeat: no-repeat;
-    background-position: 13px center;
+    background-position: 12px center;
     border: none;
     border-radius: 6px 0 0 6px;
   }
 
   &__button {
-    padding: 15px 52px;
+    padding: 15px 53px 16px;
     text-transform: uppercase;
     color: $white;
     background-color: $dark-800;
     border: none;
     border-radius: 0 6px 6px 0;
+    outline: 0;
+  }
+
+  &__button:hover {
+    background-color: $dark-500;
   }
 }
 
-.personal {
-  width: 50px;
-  height: 50px;
-  padding: 0;
-  background-color: transparent;
-  border: none;
-  border-radius: 3px;
-
-  &:hover {
-    background-color: rgba($white, 0.1);
-  }
-
-  &--user {
-    margin-right: 12px;
-    background-image: url("../images/icons/user.svg");
-    background-repeat: no-repeat;
-    background-position: center;
-  }
-
-  &--favorite {
-    margin-right: 12px;
-    background-image: url("../images/icons/favorite.svg");
-    background-repeat: no-repeat;
-    background-position: center;
-  }
-
-  &--cart {
-    background-image: url("../images/icons/cart.svg");
-    background-repeat: no-repeat;
-    background-position: center;
-  }
-}
 
 
 
