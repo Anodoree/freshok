@@ -2,6 +2,7 @@ body {
   @extend %lato-14;
   color: $dark-800;
   background-color: $white;
+  letter-spacing: 0.03em;
 }
 
 .container {
@@ -50,7 +51,7 @@ body {
   }
 
   &:hover {
-    background-color: #4D810C;
+    background-color: #4d810c;
   }
 
   &:active {
