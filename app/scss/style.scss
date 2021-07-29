@@ -430,6 +430,50 @@
   }
 }
 
+.advantage {
+  padding: 48px;
+  display: flex;
+  justify-content: center;
+  letter-spacing: normal;
+  background-color: $silver-100;
+
+  &__item {
+    flex-basis: 275px;
+    padding-left: 74px;
+    background-position: left center;
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+
+  &__item:not(:last-child) {
+    margin-right: 48px;
+  }
+
+  &__item--delivery {
+    background-image: url("../images/icons/delivery-moto.svg");
+  }
+
+  &__item--return {
+    background-image: url("../images/icons/return-box.svg");
+  }
+
+  &__item--24h {
+    background-image: url("../images/icons/24h.svg");
+  }
+
+  &__term {
+    margin-bottom: 8px;
+    @extend %lato-16;
+    font-weight: 700;
+    color: $dark-900;
+  }
+
+  &__desc {
+    @extend %lato-14;
+    color: $dark-500;
+  }
+}
+
 .footer {
   letter-spacing: normal;
   color: $white;
