@@ -1,8 +1,19 @@
+html,
 body {
+  height: 100%;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
   @extend %lato-14;
   color: $dark-800;
   background-color: $white;
   letter-spacing: 0.03em;
+}
+
+.main {
+  flex-grow: 1;
 }
 
 .container {
