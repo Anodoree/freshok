@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>ФрешОк</title>
+  <title>ФрешОк - онлайн-маркет | Главная страница</title>
   <link rel="stylesheet" href="css/style.min.css">
   <link rel="icon" href="favicon.png" type="image/x-icon">
   <link rel="shortcut icon" href="favicon.png" type="image/x-icon">
@@ -100,11 +100,13 @@
             </ul>
           </div>
 
-          <form class="header__form">
-            <input class="header__search animation-field" type="search"
+          <form class="header__form form">
+            <input class="header__input form__input animation-field"
+              type="search"
               name="search" aria-label="Поле ввода поиска товара"
               placeholder="Найти в магазине ..." required>
-            <button class="header__button animation-btn" type="submit">
+            <button class="header__button form__button animation-btn"
+              type="submit">
               Поиск
             </button>
           </form>
@@ -139,63 +141,53 @@
   <main class="main">
     <h1 class="sr-only">Фрешок - онлайн-маркет</h1>
 
-    <div class="hero">
-      <ul class="hero__list">
-        <li class="hero__item"
-          style="background-image: url('images/banner/001.jpg');">
-          <article class="hero__article">
-            <div class="hero__box">
-              <div class="hero__content">
-                <h2 class="hero__title">
-                  Свежачок вам в хату
-                  <span class="hero__accent">Скидка -50%</span>
-                </h2>
-                <p>
-                  Только с 7 по 13 июля скидка на сезонные фрукты и овощи до
-                  50%. Торопитесь!
-                </p>
-              </div>
-              <a class="button animation-btn" href="#">Купить сейчас</a>
-            </div>
-          </article>
-        </li>
+    <ul class="hero">
+      <li class="hero__item"
+        style="background-image: url('images/banner/001.jpg');">
+        <article class="hero__article">
+          <div class="hero__content">
+            <h2 class="hero__title">
+              Свежачок вам в хату
+              <span class="hero__accent">Скидка -50%</span>
+            </h2>
+            <p>
+              Только с 7 по 13 июля скидка на сезонные фрукты и овощи до
+              50%. Торопитесь!
+            </p>
+          </div>
+          <a class="button animation-btn" href="#">Купить сейчас</a>
+        </article>
+      </li>
 
-        <li class="hero__item"
-          style="background-image: url('images/banner/002.jpg');">
-          <article class="hero__article">
-            <div class="hero__box">
-              <div class="hero__content">
-                <h2 class="hero__title">
-                  Накрути себе томатов
-                  <span class="hero__accent">Акция: 3 кг по цене 1</span>
-                </h2>
-                <p>
-                  Только с 12 по 15 июля скидка на домашние помидорчики
-                </p>
-              </div>
+      <li class="hero__item"
+        style="background-image: url('images/banner/002.jpg');">
+        <article class="hero__article">
+          <div class="hero__content">
+            <h2 class="hero__title">
+              Накрути себе томатов
+              <span class="hero__accent">Акция: 3 кг по цене 1</span>
+            </h2>
+            <p>
+              Только с 12 по 15 июля скидка на домашние помидорчики
+            </p>
+          </div>
+          <a class="button animation-btn" href="#">Купить сейчас</a>
+        </article>
+      </li>
 
-              <a class="button animation-btn" href="#">Купить сейчас</a>
-            </div>
-          </article>
-        </li>
-
-        <li class="hero__item"
-          style="background-image: url('images/banner/003.jpg');">
-          <article class="hero__article">
-            <div class="hero__box">
-              <div class="hero__content">
-                <h2 class="hero__title">
-                  Пусть остальные позеленеют от зависти
-                  <span class="hero__accent">Распродажа зелени</span>
-                </h2>
-                <p></p>
-              </div>
-              <a class="button animation-btn" href="#">Купить сейчас</a>
-            </div>
-          </article>
-        </li>
-      </ul>
-    </div>
+      <li class="hero__item"
+        style="background-image: url('images/banner/003.jpg');">
+        <article class="hero__article">
+          <div class="hero__content">
+            <h2 class="hero__title">
+              Пусть остальные позеленеют от зависти
+              <span class="hero__accent">Распродажа зелени</span>
+            </h2>
+          </div>
+          <a class="button animation-btn" href="#">Купить сейчас</a>
+        </article>
+      </li>
+    </ul>
 
     <dl class="advantage">
       <div class="advantage__item advantage__item--delivery">
@@ -226,12 +218,13 @@
             <p class="footer__text">
               Следите за нашими акциями
             </p>
-            <form class="footer__form">
-              <input class="footer__input animation-field" type="email"
-                name="email"
+            <form class="footer__form form">
+              <input class="footer__input form__input animation-field"
+                type="email" name="email"
                 aria-label="Поле ввода вашей электронной почты для подписки на акции"
                 placeholder="email@email.com" required>
-              <button class="footer__button animation-btn" type="submit">
+              <button class="footer__button form__button animation-btn"
+                type="submit">
                 Подписаться
               </button>
             </form>
@@ -269,12 +262,11 @@
           <div class="footer__contact">
             <address class="footer__address address">
               <ul class="address__list">
-                <li class="address__item">
-                  Горячая линия <a class="animation-inline"
-                    href="tel:+7907288365">+7 907 288 365</a>
+                <li>
+                  Горячая линия <a href="tel:+7907288365">+7 907 288 365</a>
                 </li>
-                <li class="address__item">
-                  Санкт-Петербург, ул. Ленина, 1
+                <li>
+                  Санкт-Петербург, Ул. Ленина, 1
                 </li>
               </ul>
             </address>
@@ -317,7 +309,8 @@
           <ul class="card">
             <li class="card__item">
               <div class="card__block card__block--visa"
-                style="background-image: url('images/icons/visa.svg');"></div>
+                style="background-image: url('images/icons/visa.svg');">
+              </div>
             </li>
             <li class="card__item">
               <div class="card__block card__block--mastercard"

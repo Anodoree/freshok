@@ -7,13 +7,14 @@ body {
   display: flex;
   flex-direction: column;
   @extend %lato-14;
+  line-height: 1.4;
   color: $dark-800;
   background-color: $white;
-  letter-spacing: 0.03em;
 }
 
 .main {
   flex-grow: 1;
+  min-height: 3720px; // для требования прибития футера к низу траницы
 }
 
 .container {
@@ -62,7 +63,7 @@ body {
   }
 
   &:hover {
-    background-color: #4d810c;
+    background-color: $green-800;
   }
 
   &:active {
