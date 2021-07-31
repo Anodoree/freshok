@@ -173,6 +173,7 @@
   padding: 48px;
   display: flex;
   justify-content: center;
+  align-items: center;
   background-color: $silver-100;
 
   &__item {
@@ -208,6 +209,29 @@
 
   &__desc {
     color: $dark-500;
+  }
+}
+
+.best {
+  padding-top: 72px;
+  letter-spacing: 0.03em;
+
+  &__inner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  &__filter {
+    margin-bottom: 48px;
+  }
+
+  &__grid {
+    align-self: stretch;
+    margin-bottom: 48px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 30px;
   }
 }
 
@@ -267,12 +291,20 @@
     grid-gap: 6px 84px;
   }
 
+  &__item {
+    max-width: 200px;
+  }
+
   &__bottom-inner {
     padding-top: 24px;
     padding-bottom: 24px;
     display: flex;
     justify-content: space-between;
     align-items: center;
+  }
+
+  &__contact {
+    max-width: 220px;
   }
 
   &__address {
