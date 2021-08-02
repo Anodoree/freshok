@@ -6,52 +6,48 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>ФрешОк - онлайн-маркет | Главная страница</title>
   <link rel="stylesheet" href="css/style.min.css">
-  <link rel="icon" href="favicon.png" type="image/x-icon">
-  <link rel="shortcut icon" href="favicon.png" type="image/x-icon">
+  <link rel="icon" href="images/favicon.png" type="image/x-icon">
+  <link rel="shortcut icon" href="images/favicon.png" type="image/x-icon">
 </head>
 
 <body>
 
   <header class="header">
-    <div class="header__top">
+    <nav class="header__top">
       <div class="container">
         <div class="header__top-inner">
           <ul class="header__service">
             <li class="header__item">
-              <a class="header__link header__link--delivery animation-inline"
-                href="#">
+              <a class="header__link header__link--delivery" href="#">
                 Адрес и время доставки
               </a>
             </li>
             <li class="header__item">
-              <a class="header__link header__link--hotline animation-inline"
-                href="tel:+7907288365">
+              <a class="header__link header__link--hotline" href="tel:+7907288365">
                 Горячая линия 24/7
               </a>
             </li>
           </ul>
 
-          <nav class="nav">
-            <ul class="nav__list">
-              <li class="nav__item">
-                <a class="nav__link animation-inline" href="#">Доставка</a>
-              </li>
-              <li class="nav__item">
-                <a class="nav__link animation-inline" href="#">О нас</a>
-              </li>
-              <li class="nav__item">
-                <a class="nav__link animation-inline" href="#">Новости</a>
-              </li>
-            </ul>
-          </nav>
+          <ul class="menu">
+            <li class="menu__item">
+              <a class="menu__link" href="#">Доставка</a>
+            </li>
+            <li class="menu__item">
+              <a class="menu__link" href="#">О нас</a>
+            </li>
+            <li class="menu__item">
+              <a class="menu__link" href="#">Новости</a>
+            </li>
+          </ul>
         </div>
       </div>
-    </div>
+    </nav>
 
-    <div class="header__bottom">
+    <nav class="header__bottom">
       <div class="container">
         <div class="header__bottom-inner">
-          <a class="header__logo logo animation-btn" href="index.html">
+          <a class="header__logo logo" href="index.html">
             <img class="logo__img" src="images/logo.png" alt="Логотип"
               width="200" height="60">
           </a>
@@ -101,11 +97,11 @@
           </div>
 
           <form class="header__form form">
-            <input class="header__input form__input animation-field"
+            <input class="header__input form__input"
               type="search"
               name="search" aria-label="Поле ввода поиска товара"
               placeholder="Найти в магазине ..." required>
-            <button class="header__button form__button animation-btn"
+            <button class="header__button form__button"
               type="submit">
               Поиск
             </button>
@@ -113,21 +109,21 @@
 
           <ul class="icon">
             <li class="icon__item">
-              <button class="icon-btn icon-btn--user animation-btn"
+              <button class="icon-btn icon-btn--user"
                 type="button">
                 <span class="sr-only">Личный кабинет</span>
               </button>
             </li>
             <li class="icon__item">
-              <button class="icon-btn icon-btn--favorite animation-btn"
+              <button class="icon-btn icon-btn--favorite"
                 type="button">
-                <span class="sr-only">Любимые товары</span>
+                <span class="sr-only">Избранные товары</span>
                 <span
                   class="icon-btn__number icon-btn__number--favorite">12</span>
               </button>
             </li>
             <li class="icon__item">
-              <button class="icon-btn icon-btn--cart animation-btn"
+              <button class="icon-btn icon-btn--cart"
                 type="button">
                 <span class="sr-only">Корзина</span>
                 <span class="icon-btn__number icon-btn__number--cart">12</span>
@@ -136,7 +132,7 @@
           </ul>
         </div>
       </div>
-    </div>
+    </nav>
   </header>
 
   <main class="main">
@@ -156,7 +152,7 @@
               50%. Торопитесь!
             </p>
           </div>
-          <a class="button animation-btn" href="#">Купить сейчас</a>
+          <a class="button" href="#">Купить сейчас</a>
         </article>
       </li>
 
@@ -172,7 +168,7 @@
               Только с 12 по 15 июля скидка на домашние помидорчики
             </p>
           </div>
-          <a class="button animation-btn" href="#">Купить сейчас</a>
+          <a class="button" href="#">Купить сейчас</a>
         </article>
       </li>
 
@@ -185,7 +181,7 @@
               <span class="hero__accent">Распродажа зелени</span>
             </h2>
           </div>
-          <a class="button animation-btn" href="#">Купить сейчас</a>
+          <a class="button" href="#">Купить сейчас</a>
         </article>
       </li>
     </ul>
@@ -259,7 +255,7 @@
                   <svg class="product__favorite-pic">
                     <use xlink:href="images/icons.svg#favorite"></use>
                   </svg>
-                  <span class="sr-only">Добавить в "любимые товары"</span>
+                  <span class="sr-only">Добавить в "избранное"</span>
                 </button>
               </div>
 
@@ -284,7 +280,7 @@
                   </li>
                 </ul>
 
-                <button class="product__cart animation-btn" type="button">
+                <button class="product__cart" type="button">
                   <svg class="product__cart-pic">
                     <use xlink:href="images/icons.svg#cart"></use>
                   </svg>
@@ -302,7 +298,7 @@
                   <svg class="product__favorite-pic">
                     <use xlink:href="images/icons.svg#favorite"></use>
                   </svg>
-                  <span class="sr-only">Добавить в "любимые товары"</span>
+                  <span class="sr-only">Добавить в "избранное"</span>
                 </button>
               </div>
 
@@ -324,7 +320,7 @@
                   </li>
                 </ul>
 
-                <button class="product__cart animation-btn" type="button">
+                <button class="product__cart" type="button">
                   <svg class="product__cart-pic">
                     <use xlink:href="images/icons.svg#cart"></use>
                   </svg>
@@ -345,7 +341,7 @@
                   <svg class="product__favorite-pic">
                     <use xlink:href="images/icons.svg#favorite"></use>
                   </svg>
-                  <span class="sr-only">Добавить в "любимые товары"</span>
+                  <span class="sr-only">Добавить в "избранное"</span>
                 </button>
               </div>
 
@@ -368,7 +364,7 @@
                   </li>
                 </ul>
 
-                <button class="product__cart animation-btn" type="button">
+                <button class="product__cart" type="button">
                   <svg class="product__cart-pic">
                     <use xlink:href="images/icons.svg#cart"></use>
                   </svg>
@@ -389,7 +385,7 @@
                   <svg class="product__favorite-pic">
                     <use xlink:href="images/icons.svg#favorite"></use>
                   </svg>
-                  <span class="sr-only">Добавить в "любимые товары"</span>
+                  <span class="sr-only">Добавить в "избранное"</span>
                 </button>
               </div>
 
@@ -411,7 +407,7 @@
                   </li>
                 </ul>
 
-                <button class="product__cart animation-btn" type="button">
+                <button class="product__cart" type="button">
                   <svg class="product__cart-pic">
                     <use xlink:href="images/icons.svg#cart"></use>
                   </svg>
@@ -432,7 +428,7 @@
                   <svg class="product__favorite-pic">
                     <use xlink:href="images/icons.svg#favorite"></use>
                   </svg>
-                  <span class="sr-only">Добавить в "любимые товары"</span>
+                  <span class="sr-only">Добавить в "избранное"</span>
                 </button>
               </div>
 
@@ -454,7 +450,7 @@
                   </li>
                 </ul>
 
-                <button class="product__cart animation-btn" type="button">
+                <button class="product__cart" type="button">
                   <svg class="product__cart-pic">
                     <use xlink:href="images/icons.svg#cart"></use>
                   </svg>
@@ -475,7 +471,7 @@
                   <svg class="product__favorite-pic">
                     <use xlink:href="images/icons.svg#favorite"></use>
                   </svg>
-                  <span class="sr-only">Добавить в "любимые товары"</span>
+                  <span class="sr-only">Добавить в "избранное"</span>
                 </button>
               </div>
 
@@ -501,7 +497,7 @@
                   </li>
                 </ul>
 
-                <button class="product__cart animation-btn">
+                <button class="product__cart" type="button">
                   <svg class="product__cart-pic">
                     <use xlink:href="images/icons.svg#cart"></use>
                   </svg>
@@ -522,7 +518,7 @@
                   <svg class="product__favorite-pic">
                     <use xlink:href="images/icons.svg#favorite"></use>
                   </svg>
-                  <span class="sr-only">Добавить в "любимые товары"</span>
+                  <span class="sr-only">Добавить в "избранное"</span>
                 </button>
               </div>
 
@@ -544,7 +540,7 @@
                   </li>
                 </ul>
 
-                <button class="product__cart animation-btn">
+                <button class="product__cart" type="button">
                   <svg class="product__cart-pic">
                     <use xlink:href="images/icons.svg#cart"></use>
                   </svg>
@@ -568,7 +564,7 @@
                   <svg class="product__favorite-pic">
                     <use xlink:href="images/icons.svg#favorite"></use>
                   </svg>
-                  <span class="sr-only">Добавить в "любимые товары"</span>
+                  <span class="sr-only">Добавить в "избранное"</span>
                 </button>
               </div>
 
@@ -590,7 +586,7 @@
                   </li>
                 </ul>
 
-                <button class="product__cart animation-btn" type="button">
+                <button class="product__cart" type="button">
                   <svg class="product__cart-pic">
                     <use xlink:href="images/icons.svg#cart"></use>
                   </svg>
@@ -600,7 +596,7 @@
             </li>
           </ul>
 
-          <a class="best__button button animation-btn" href="#">Показать еще</a>
+          <a class="best__button button" href="#">Показать еще</a>
         </div>
       </div>
     </section>
@@ -609,7 +605,7 @@
   <footer class="footer">
     <div class="footer__top">
       <div class="container">
-        <a class="footer__logo logo animation-btn" href="index.html">
+        <a class="footer__logo logo" href="index.html">
           <img class="logo__img" src="images/logo.png" alt="Логотип"
             width="200" height="60">
         </a>
@@ -620,11 +616,11 @@
               Следите за нашими акциями
             </p>
             <form class="footer__form form">
-              <input class="footer__input form__input animation-field"
+              <input class="footer__input form__input"
                 type="email" name="email"
                 aria-label="Поле ввода вашей электронной почты для подписки на акции"
                 placeholder="email@email.com" required>
-              <button class="footer__button form__button animation-btn"
+              <button class="footer__button form__button"
                 type="submit">
                 Подписаться
               </button>
@@ -633,30 +629,30 @@
 
           <ul class="footer__menu">
             <li class="footer__item">
-              <a class="footer__link animation-inline" href="#">О нас</a>
+              <a class="footer__link" href="#">О нас</a>
             </li>
             <li class="footer__item">
-              <a class="footer__link animation-inline" href="#">Оплата и
+              <a class="footer__link" href="#">Оплата и
                 доставка</a>
             </li>
             <li class="footer__item">
-              <a class="footer__link animation-inline" href="#">Отзывы</a>
+              <a class="footer__link" href="#">Отзывы</a>
             </li>
             <li class="footer__item">
-              <a class="footer__link animation-inline" href="#">Контакты</a>
+              <a class="footer__link" href="#">Контакты</a>
             </li>
             <li class="footer__item">
-              <a class="footer__link animation-inline" href="#">Вакансии</a>
+              <a class="footer__link" href="#">Вакансии</a>
             </li>
             <li class="footer__item">
-              <a class="footer__link animation-inline" href="#">Новости</a>
+              <a class="footer__link" href="#">Новости</a>
             </li>
             <li class="footer__item">
-              <a class="footer__link animation-inline" href="#">Публичная
+              <a class="footer__link" href="#">Публичная
                 оферта</a>
             </li>
             <li class="footer__item">
-              <a class="footer__link animation-inline" href="#">Акции</a>
+              <a class="footer__link" href="#">Акции</a>
             </li>
           </ul>
 
@@ -674,25 +670,25 @@
 
             <ul class="social">
               <li class="social__item">
-                <a class="social__link social__link--facebook animation-inline"
+                <a class="social__link social__link--facebook"
                   href="#" target="_blank" rel="nofollow">
                   <span class="sr-only">Facebook</span>
                 </a>
               </li>
               <li class="social__item">
-                <a class="social__link social__link--youtube animation-inline"
+                <a class="social__link social__link--youtube"
                   href="#" target="_blank" rel="nofollow">
                   <span class="sr-only">YouTube</span>
                 </a>
               </li>
               <li class="social__item">
-                <a class="social__link social__link--telegram animation-inline"
+                <a class="social__link social__link--telegram"
                   href="#" target="_blank" rel="nofollow">
                   <span class="sr-only">Telegram</span>
                 </a>
               </li>
               <li class="social__item">
-                <a class="social__link social__link--instagram animation-inline"
+                <a class="social__link social__link--instagram"
                   href="#" target="_blank" rel="nofollow">
                   <span class="sr-only">Instagram</span>
                 </a>

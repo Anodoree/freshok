@@ -1,9 +1,8 @@
-.nav {
+.menu {
   display: flex;
-  align-items: center;
 
-  &__list {
-    display: flex;
+  &__link {
+    @extend %animation-inline;
   }
 
   &__item:not(:last-child) {
@@ -16,6 +15,7 @@
   max-width: 200px;
   display: inline-block;
   border-radius: 5px;
+  @extend %animation-btn;
 
   &__img {
     object-position: left;
@@ -107,7 +107,7 @@
   &__link {
     padding: 15px 24px;
     display: block;
-    @extend %lato-16;
+    font-size: 16px;
     line-height: 1.2;
     color: $black;
     border-left: 3px solid transparent;
@@ -139,6 +139,7 @@
     border: none;
     border-top-left-radius: 6px;
     border-bottom-left-radius: 6px;
+    @extend %animation-field;
   }
 
   &__button {
@@ -149,6 +150,7 @@
     border: none;
     border-top-right-radius: 6px;
     border-bottom-right-radius: 6px;
+    @extend %animation-btn;
   }
 }
 
@@ -173,6 +175,7 @@
   background-repeat: no-repeat;
   border: none;
   border-radius: 3px;
+  @extend %animation-btn;
 
   &:hover {
     background-color: rgba($white, 0.1);
@@ -194,11 +197,9 @@
     position: absolute;
     top: 3px;
     left: 3px;
-    width: 18px;
-    height: 18px;
+    padding: 2px 3px;
     font-weight: 600;
     font-size: 10px;
-    line-height: 1.8;
     color: $red-900;
     background-color: $white;
     border-radius: 9px;
@@ -208,25 +209,27 @@
 .button {
   padding: 12px 24px;
   display: inline-block;
-  @extend %lato-bold;
   font-weight: 400;
+  font-size: 18px;
   letter-spacing: 0.03em;
   color: $white;
   background-color: $green-900;
   border-radius: 6px;
+  @extend %animation-btn;
 }
 
 .title {
   margin-bottom: 30px;
-  @extend %signika-32;
   font-weight: 700;
+  font-size: 32px;
+  font-family: "Signika", "OpenSans", "Trebuchet MS", sans-serif;
   text-transform: uppercase;
   color: $dark-900;
 }
 
 .filter {
   display: flex;
-  @extend %lato-bold;
+  font-weight: 700;
   font-size: 15px;
 
   &__item:not(:last-child) {
@@ -287,7 +290,7 @@
 
   &__label {
     padding: 1px 6px;
-    @extend %lato-bold;
+    font-weight: 700;
     font-size: 10px;
     text-align: center;
     text-transform: uppercase;
@@ -408,8 +411,8 @@
 
   &__figcaption {
     padding: 14px 18px 0;
-    @extend %lato-14;
     font-weight: 600;
+    font-size: 14px;
   }
 
   &__bottom {
@@ -449,6 +452,7 @@
     background-color: $green-900;
     border: none;
     border-radius: 3px;
+    @extend %animation-btn;
   }
 
   &__cart-pic {
@@ -505,6 +509,7 @@
     background-position: center;
     background-size: contain;
     background-repeat: no-repeat;
+    @extend %animation-inline;
   }
 
   &__link--facebook {
