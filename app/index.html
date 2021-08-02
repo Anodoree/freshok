@@ -13,178 +13,182 @@
 <body>
 
   <header class="header">
-    <nav class="header__top">
+    <nav class="header-top">
       <div class="container">
-        <div class="header__top-inner">
-          <ul class="header__service">
-            <li class="header__item">
-              <a class="header__link header__link--delivery" href="#">
+        <div class="header-top__inner">
+          <ul class="header-top__menu">
+            <li class="header-top__item">
+              <a class="header-top__link header-top__link--delivery" href="#">
                 Адрес и время доставки
               </a>
             </li>
-            <li class="header__item">
-              <a class="header__link header__link--hotline" href="tel:+7907288365">
+            <li class="header-top__item">
+              <a class="header-top__link header-top__link--hotline"
+                href="tel:+7907288365">
                 Горячая линия 24/7
               </a>
             </li>
           </ul>
 
-          <ul class="menu">
-            <li class="menu__item">
-              <a class="menu__link" href="#">Доставка</a>
+          <ul class="header-top__menu">
+            <li class="header-top__item--right">
+              <a class="header-top__link" href="#">Доставка</a>
             </li>
-            <li class="menu__item">
-              <a class="menu__link" href="#">О нас</a>
+            <li class="header-top__item--right">
+              <a class="header-top__link" href="#">О нас</a>
             </li>
-            <li class="menu__item">
-              <a class="menu__link" href="#">Новости</a>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </nav>
-
-    <nav class="header__bottom">
-      <div class="container">
-        <div class="header__bottom-inner">
-          <a class="header__logo logo" href="index.html">
-            <img class="logo__img" src="images/logo.png" alt="Логотип"
-              width="200" height="60">
-          </a>
-
-          <div class="header__dropdown dropdown">
-            <button class="dropdown__btn" type="button">
-              Каталог продуктов
-            </button>
-            <ul class="dropdown__list">
-              <li class="dropdown__item">
-                <a class="dropdown__link" href="#">Овощи и фрукты</a>
-              </li>
-              <li class="dropdown__item">
-                <a class="dropdown__link" href="#">Бакалея</a>
-              </li>
-              <li class="dropdown__item">
-                <a class="dropdown__link" href="#">Молочные продукты</a>
-              </li>
-              <li class="dropdown__item">
-                <a class="dropdown__link" href="#">Хлеб</a>
-              </li>
-              <li class="dropdown__item">
-                <a class="dropdown__link" href="#">Мясо</a>
-              </li>
-              <li class="dropdown__item">
-                <a class="dropdown__link" href="#">Колбаса</a>
-              </li>
-              <li class="dropdown__item">
-                <a class="dropdown__link" href="#">Рыба</a>
-              </li>
-              <li class="dropdown__item">
-                <a class="dropdown__link" href="#">Алкоголь</a>
-              </li>
-              <li class="dropdown__item">
-                <a class="dropdown__link" href="#">Напитки</a>
-              </li>
-              <li class="dropdown__item">
-                <a class="dropdown__link" href="#">Торты</a>
-              </li>
-              <li class="dropdown__item">
-                <a class="dropdown__link" href="#">Мясо</a>
-              </li>
-              <li class="dropdown__item">
-                <a class="dropdown__link" href="#">Чай, кофе</a>
-              </li>
-            </ul>
-          </div>
-
-          <form class="header__form form">
-            <input class="header__input form__input"
-              type="search"
-              name="search" aria-label="Поле ввода поиска товара"
-              placeholder="Найти в магазине ..." required>
-            <button class="header__button form__button"
-              type="submit">
-              Поиск
-            </button>
-          </form>
-
-          <ul class="icon">
-            <li class="icon__item">
-              <button class="icon-btn icon-btn--user"
-                type="button">
-                <span class="sr-only">Личный кабинет</span>
-              </button>
-            </li>
-            <li class="icon__item">
-              <button class="icon-btn icon-btn--favorite"
-                type="button">
-                <span class="sr-only">Избранные товары</span>
-                <span
-                  class="icon-btn__number icon-btn__number--favorite">12</span>
-              </button>
-            </li>
-            <li class="icon__item">
-              <button class="icon-btn icon-btn--cart"
-                type="button">
-                <span class="sr-only">Корзина</span>
-                <span class="icon-btn__number icon-btn__number--cart">12</span>
-              </button>
+            <li class="header-top__item--right">
+              <a class="header-top__link" href="#">Новости</a>
             </li>
           </ul>
         </div>
       </div>
     </nav>
+
+    <div class="container">
+      <nav class="header__inner">
+        <a class="header__logo logo" href="index.html">
+          <img class="logo__img" src="images/logo.png" alt="Логотип"
+            width="200" height="60">
+        </a>
+
+        <div class="header__dropdown dropdown">
+          <button class="dropdown__btn" type="button">
+            Каталог продуктов
+          </button>
+          <ul class="dropdown__list">
+            <li class="dropdown__item">
+              <a class="dropdown__link" href="#">Овощи и фрукты</a>
+            </li>
+            <li class="dropdown__item">
+              <a class="dropdown__link" href="#">Бакалея</a>
+            </li>
+            <li class="dropdown__item">
+              <a class="dropdown__link" href="#">Молочные продукты</a>
+            </li>
+            <li class="dropdown__item">
+              <a class="dropdown__link" href="#">Хлеб</a>
+            </li>
+            <li class="dropdown__item">
+              <a class="dropdown__link" href="#">Мясо</a>
+            </li>
+            <li class="dropdown__item">
+              <a class="dropdown__link" href="#">Колбаса</a>
+            </li>
+            <li class="dropdown__item">
+              <a class="dropdown__link" href="#">Рыба</a>
+            </li>
+            <li class="dropdown__item">
+              <a class="dropdown__link" href="#">Алкоголь</a>
+            </li>
+            <li class="dropdown__item">
+              <a class="dropdown__link" href="#">Напитки</a>
+            </li>
+            <li class="dropdown__item">
+              <a class="dropdown__link" href="#">Торты</a>
+            </li>
+            <li class="dropdown__item">
+              <a class="dropdown__link" href="#">Мясо</a>
+            </li>
+            <li class="dropdown__item">
+              <a class="dropdown__link" href="#">Чай, кофе</a>
+            </li>
+          </ul>
+        </div>
+
+        <form class="header__form form">
+          <input class="header__input form__input"
+            type="search"
+            name="search" aria-label="Поле ввода поиска товара"
+            placeholder="Найти в магазине ..." required>
+          <button class="header__button form__button"
+            type="submit">
+            Поиск
+          </button>
+        </form>
+
+        <ul class="icon">
+          <li class="icon__item">
+            <button class="icon-btn icon-btn--user"
+              type="button">
+              <span class="sr-only">Личный кабинет</span>
+            </button>
+          </li>
+          <li class="icon__item">
+            <button class="icon-btn icon-btn--favorite"
+              type="button">
+              <span class="sr-only">Избранные товары</span>
+              <span
+                class="icon-btn__number icon-btn__number--favorite">12</span>
+            </button>
+          </li>
+          <li class="icon__item">
+            <button class="icon-btn icon-btn--cart"
+              type="button">
+              <span class="sr-only">Корзина</span>
+              <span class="icon-btn__number icon-btn__number--cart">12</span>
+            </button>
+          </li>
+        </ul>
+      </nav>
+    </div>
   </header>
 
   <main class="main">
     <h1 class="sr-only">Фрешок - онлайн-маркет</h1>
 
-    <ul class="hero">
-      <li class="hero__item"
-        style="background-image: url('images/banner/001.jpg');">
-        <article class="hero__article">
-          <div class="hero__content">
-            <h2 class="hero__title">
-              Свежачок вам в хату
-              <span class="hero__accent">Скидка -50%</span>
-            </h2>
-            <p>
-              Только с 7 по 13 июля скидка на сезонные фрукты и овощи до
-              50%. Торопитесь!
-            </p>
-          </div>
-          <a class="button" href="#">Купить сейчас</a>
-        </article>
-      </li>
+    <section class="hero">
+      <h2 class="sr-only">Актуальные акции и предложения</h2>
 
-      <li class="hero__item"
-        style="background-image: url('images/banner/002.jpg');">
-        <article class="hero__article">
-          <div class="hero__content">
-            <h2 class="hero__title">
-              Накрути себе томатов
-              <span class="hero__accent">Акция: 3 кг по цене 1</span>
-            </h2>
-            <p>
-              Только с 12 по 15 июля скидка на домашние помидорчики
-            </p>
+      <ul class="hero__slider">
+        <li class="hero__item"
+          style="background-image: url('images/banner/001.jpg');">
+          <div class="hero__inner">
+            <div class="hero__content">
+              <h3 class="hero__title">
+                Свежачок вам в хату
+                <span class="hero__accent">Скидка -50%</span>
+              </h3>
+              <p>
+                Только с 7 по 13 июля скидка на сезонные фрукты и овощи до
+                50%. Торопитесь!
+              </p>
+            </div>
+            <a class="button" href="#">Купить сейчас</a>
           </div>
-          <a class="button" href="#">Купить сейчас</a>
-        </article>
-      </li>
+        </li>
 
-      <li class="hero__item"
-        style="background-image: url('images/banner/003.jpg');">
-        <article class="hero__article">
-          <div class="hero__content">
-            <h2 class="hero__title">
-              Пусть остальные позеленеют от зависти
-              <span class="hero__accent">Распродажа зелени</span>
-            </h2>
+        <li class="hero__item"
+          style="background-image: url('images/banner/002.jpg');">
+          <div class="hero__inner">
+            <div class="hero__content">
+              <h3 class="hero__title">
+                Накрути себе томатов
+                <span class="hero__accent">Акция: 3 кг по цене 1</span>
+              </h3>
+              <p>
+                Только с 12 по 15 июля скидка на домашние помидорчики
+              </p>
+            </div>
+            <a class="button" href="#">Купить сейчас</a>
           </div>
-          <a class="button" href="#">Купить сейчас</a>
-        </article>
-      </li>
-    </ul>
+        </li>
+
+        <li class="hero__item"
+          style="background-image: url('images/banner/003.jpg');">
+          <div class="hero__inner">
+            <div class="hero__content">
+              <h3 class="hero__title">
+                Пусть остальные позеленеют от зависти
+                <span class="hero__accent">Распродажа зелени</span>
+              </h3>
+            </div>
+            <a class="button" href="#">Купить сейчас</a>
+          </div>
+        </li>
+      </ul>
+    </section>
+
 
     <dl class="advantage">
       <div class="advantage__item advantage__item--delivery">
@@ -201,12 +205,12 @@
       </div>
     </dl>
 
-    <section class="best">
+    <section class="top-product">
       <div class="container">
-        <div class="best__inner">
+        <div class="top-product__inner">
           <h2 class="title">Топовые товары</h2>
 
-          <ul class="best__filter filter">
+          <ul class="top-product__filter filter">
             <li class="filter__item">
               <button class="filter__btn" type="button"
                 data-filter="all">
@@ -239,8 +243,8 @@
             </li>
           </ul>
 
-          <ul class="best__grid">
-            <li class="best__product product mix fruit">
+          <ul class="top-product__grid">
+            <li class="top-product__product product mix fruit">
               <div class="product__top">
                 <ul class="product__labels">
                   <li class="product__label product__label--green">
@@ -289,7 +293,7 @@
               </div>
             </li>
 
-            <li class="best__product product mix fruit">
+            <li class="top-product__product product mix fruit">
               <div class="product__top">
                 <ul class="product__labels">
                 </ul>
@@ -329,7 +333,7 @@
               </div>
             </li>
 
-            <li class="best__product product mix fruit">
+            <li class="top-product__product product mix fruit">
               <div class="product__top">
                 <ul class="product__labels">
                   <li class="product__label product__label--orange">
@@ -373,7 +377,7 @@
               </div>
             </li>
 
-            <li class="best__product product mix vegetable">
+            <li class="top-product__product product mix vegetable">
               <div class="product__top">
                 <ul class="product__labels">
                   <li class="product__label product__label--green">
@@ -416,7 +420,7 @@
               </div>
             </li>
 
-            <li class="best__product product mix vegetable">
+            <li class="top-product__product product mix vegetable">
               <div class="product__top">
                 <ul class="product__labels">
                   <li class="product__label product__label--orange">
@@ -459,7 +463,7 @@
               </div>
             </li>
 
-            <li class="best__product product mix drink">
+            <li class="top-product__product product mix drink">
               <div class="product__top">
                 <ul class="product__labels">
                   <li class="product__label product__label--red">
@@ -506,7 +510,7 @@
               </div>
             </li>
 
-            <li class="best__product product mix grocery">
+            <li class="top-product__product product mix grocery">
               <div class="product__top">
                 <ul class="product__labels">
                   <li class="product__label product__label--green">
@@ -549,7 +553,7 @@
               </div>
             </li>
 
-            <li class="best__product product mix grocery">
+            <li class="top-product__product product mix grocery">
               <div class="product__top">
                 <ul class="product__labels">
                   <li class="product__label product__label--green">
@@ -596,7 +600,7 @@
             </li>
           </ul>
 
-          <a class="best__button button" href="#">Показать еще</a>
+          <a class="top-product__button button" href="#">Показать еще</a>
         </div>
       </div>
     </section>

@@ -59,3 +59,10 @@ $black: #000000;
     box-shadow: 0 0 0 4px $green-200;
   }
 }
+
+@mixin line-clamp($lines) {
+  -webkit-line-clamp: $lines;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}

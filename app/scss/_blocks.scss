@@ -1,17 +1,4 @@
-.menu {
-  display: flex;
-
-  &__link {
-    @extend %animation-inline;
-  }
-
-  &__item:not(:last-child) {
-    margin-right: 24px;
-  }
-}
-
 .logo {
-  min-width: 200px;
   max-width: 200px;
   display: inline-block;
   border-radius: 5px;
