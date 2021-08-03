@@ -5,18 +5,18 @@
   @extend %animation-btn;
 
   &__img {
-    object-position: left;
     object-fit: contain;
   }
 }
 
-.dropdown {
+.catalog-dropdown {
   position: relative;
   z-index: 1;
 
   &__btn {
     position: relative;
     padding: 16px 48px 15px 61px;
+    display: block;
     font-weight: 600;
     white-space: nowrap;
     color: $green-900;
@@ -24,54 +24,55 @@
     border: none;
     border-radius: 6px;
     outline: 0;
+    cursor: pointer;
     transition: background-color 0.3s, box-shadow 0.3s;
-  }
 
-  &__btn::before {
-    content: "";
-    position: absolute;
-    top: 16px;
-    left: 18px;
-    width: 25px;
-    height: 17px;
-    background-image: url("../images/icons/nav.svg");
-    background-repeat: no-repeat;
-    background-size: contain;
-  }
+    &::before {
+      content: "";
+      position: absolute;
+      top: 16px;
+      left: 18px;
+      width: 25px;
+      height: 17px;
+      background-image: url("../images/icons/nav.svg");
+      background-repeat: no-repeat;
+      background-size: contain;
+    }
 
-  &__btn::after {
-    content: "";
-    position: absolute;
-    top: 23px;
-    right: 18px;
-    width: 8px;
-    height: 4px;
-    background-image: url("../images/icons/arrow-down.svg");
-    background-repeat: no-repeat;
-    background-size: contain;
-    transition: transform 0.3s;
-  }
+    &::after {
+      content: "";
+      position: absolute;
+      top: 23px;
+      right: 18px;
+      width: 8px;
+      height: 4px;
+      background-image: url("../images/icons/arrow-down.svg");
+      background-repeat: no-repeat;
+      background-size: contain;
+      transition: transform 0.3s;
+    }
 
-  &__btn:focus {
-    box-shadow: inset 0 0 0 3px $dark-500;
-  }
+    &:focus {
+      box-shadow: inset 0 0 0 3px $dark-500;
+    }
 
-  &__btn:hover,
-  &__btn--active {
-    background-color: $green-200;
-  }
+    &:hover,
+    &--active {
+      background-color: $green-200;
+    }
 
-  &__btn:active {
-    box-shadow: inset 0 4px 4px rgba($black, 0.5);
-  }
+    &:active {
+      box-shadow: inset 0 4px 4px rgba($black, 0.5);
+    }
 
-  &__btn--active {
-    border-bottom-right-radius: 0;
-    border-bottom-left-radius: 0;
-  }
+    &--active {
+      border-bottom-right-radius: 0;
+      border-bottom-left-radius: 0;
 
-  &__btn--active::after {
-    transform: scale(-1);
+      &::after {
+        transform: scale(-1);
+      }
+    }
   }
 
   &__list {
@@ -81,10 +82,10 @@
     background-color: $white;
     border: 1px solid $silver-400;
     border-radius: 0 0 6px 6px;
-  }
 
-  &__list--active {
-    display: block;
+    &--active {
+      display: block;
+    }
   }
 
   &__item:not(:last-child) {
@@ -100,44 +101,19 @@
     border-left: 3px solid transparent;
     outline: 0;
     transition: color 0.3s, border-left-color 0.3s, box-shadow 0.3s;
-  }
 
-  &__link:focus {
-    box-shadow: 0 0 0 3px $dark-500;
-  }
+    &:focus {
+      box-shadow: 0 0 0 3px $dark-500;
+    }
 
-  &__link:hover {
-    color: $green-900;
-    border-left-color: $green-900;
-  }
+    &:hover {
+      color: $green-900;
+      border-left-color: $green-900;
+    }
 
-  &__link:active {
-    box-shadow: inset 0 4px 4px rgba($black, 0.5);
-  }
-}
-
-.form {
-  display: flex;
-
-  &__input {
-    position: relative;
-    z-index: 2;
-    flex-grow: 1;
-    border: none;
-    border-top-left-radius: 6px;
-    border-bottom-left-radius: 6px;
-    @extend %animation-field;
-  }
-
-  &__button {
-    position: relative;
-    z-index: 1;
-    text-transform: uppercase;
-    color: $white;
-    border: none;
-    border-top-right-radius: 6px;
-    border-bottom-right-radius: 6px;
-    @extend %animation-btn;
+    &:active {
+      box-shadow: inset 0 4px 4px rgba($black, 0.5);
+    }
   }
 }
 
@@ -168,16 +144,10 @@
     background-color: rgba($white, 0.1);
   }
 
-  &--user {
-    background-image: url("../images/icons/user.svg");
-  }
-
-  &--favorite {
-    background-image: url("../images/icons/favorite.svg");
-  }
-
-  &--cart {
-    background-image: url("../images/icons/cart.svg");
+  svg {
+    fill: $white;
+    width: 32px;
+    height: 32px;
   }
 
   &__number {
@@ -194,7 +164,7 @@
 }
 
 .button {
-  padding: 12px 24px;
+  padding: 11px 25px;
   display: inline-block;
   font-weight: 400;
   font-size: 18px;
@@ -210,11 +180,12 @@
   font-weight: 700;
   font-size: 32px;
   font-family: "Signika", "OpenSans", "Trebuchet MS", sans-serif;
+  letter-spacing: 0.03em;
   text-transform: uppercase;
   color: $dark-900;
 }
 
-.filter {
+.mix-filter {
   display: flex;
   font-weight: 700;
   font-size: 15px;
@@ -231,26 +202,26 @@
     border-width: 0 0 3px 0;
     border-style: solid;
     border-bottom-color: transparent;
-    border-radius: 3px;
+    border-radius: 3px 3px 0 0;
     outline: 0;
     transition: border-bottom-color 0.3s, box-shadow 0.3s;
-  }
 
-  &__btn:focus {
-    box-shadow: 0 0 0 2px $green-900;
-  }
+    &:focus {
+      box-shadow: 0 0 0 4px $green-200;
+    }
 
-  &__btn--active,
-  &__btn:hover {
-    border-bottom-color: $green-200;
-  }
+    &--active,
+    &:hover {
+      border-bottom-color: $green-200;
+    }
 
-  &__btn:active {
-    box-shadow: inset 0 4px 4px rgba($black, 0.5);
+    &:active {
+      box-shadow: inset 0 4px 4px rgba($black, 0.5);
+    }
   }
 }
 
-.product {
+.product-card {
   max-width: 300px;
   display: flex;
   flex-direction: column;
@@ -264,7 +235,7 @@
 
   &__top {
     min-height: 52px;
-    padding: 12px 12px 0;
+    padding: 12px 12px 2px;
     display: flex;
     justify-content: space-between;
   }
@@ -273,70 +244,61 @@
     display: flex;
     flex-direction: column;
     align-items: flex-start;
+    font-weight: 700;
+    font-size: 10px;
+    text-transform: uppercase;
+    color: $white;
   }
 
   &__label {
     padding: 1px 6px;
-    font-weight: 700;
-    font-size: 10px;
-    text-align: center;
-    text-transform: uppercase;
-    color: $white;
     border-radius: 6px;
-  }
 
-  &__label:not(:last-child) {
-    margin-bottom: 6px;
-  }
+    &:not(:last-child) {
+      margin-bottom: 6px;
+    }
 
-  &__label--green {
-    background-color: $green-900;
-  }
+    &--green {
+      background-color: $green-900;
+    }
 
-  &__label--red {
-    background-color: $red-900;
-  }
+    &--red {
+      background-color: $red-900;
+    }
 
-  &__label--orange {
-    background-color: $orange-900;
+    &--orange {
+      background-color: $orange-900;
+    }
   }
 
   &__favorite {
     align-self: center;
     padding: 0;
     display: flex;
-    justify-content: center;
-    align-items: center;
     background-color: transparent;
     border: 0;
     border-radius: 3px;
     outline: 0;
     transition: box-shadow 0.3s;
-  }
 
-  &__favorite:focus {
-    box-shadow: 0 0 0 4px rgba($green-900, 0.5);
-  }
+    svg {
+      width: 32px;
+      height: 29px;
+      fill: $silver-600;
+      transition: fill 0.3s;
+    }
 
-  &__favorite-pic {
-    width: 32px;
-    height: 29px;
-    fill: $silver-600;
-    transition: fill 0.3s;
-  }
+    &:focus {
+      box-shadow: 0 0 0 4px rgba($yellow-900, 0.3);
+    }
 
-  &__favorite:hover &__favorite-pic {
-    fill: $yellow-900;
-  }
+    &:hover svg {
+      fill: $yellow-900;
+    }
 
-  &__favorite:active &__favorite-pic {
-    fill: $green-900;
-  }
-
-  &__figure {
-    position: relative;
-    flex-grow: 1;
-    min-height: 300px;
+    &:active svg {
+      fill: $green-900;
+    }
   }
 
   &__link {
@@ -346,87 +308,95 @@
     justify-content: center;
     align-items: center;
     outline: 0;
+
+    img {
+      object-fit: contain;
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      transition: background-color 0.3s;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: calc(50% - 24px);
+      left: calc(50% - 24px);
+      width: 48px;
+      height: 48px;
+      background-image: url("../images/icons/search-green.svg");
+      background-repeat: no-repeat;
+      background-size: 20px 20px;
+      background-position: center;
+      background-color: $white;
+      border-radius: 24px;
+      opacity: 0;
+      transition: background-color 0.3s, transform 0.2s, opacity 0.3s;
+    }
+
+    &:focus::before {
+      background-color: rgba($yellow-900, 0.1);
+    }
+
+    &:hover::before {
+      background-color: rgba($black, 0.1);
+    }
+
+    &:focus::after,
+    &:hover::after {
+      opacity: 1;
+    }
+
+    &:active::after {
+      transform: scale(1.2);
+    }
   }
 
-  &__link::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    transition: background-color 0.3s;
-  }
-
-  &__link::after {
-    content: "";
-    position: absolute;
-    top: calc(50% - 24px);
-    left: calc(50% - 24px);
-    width: 48px;
-    height: 48px;
-    background-image: url("../images/icons/search-green.svg");
-    background-repeat: no-repeat;
-    background-size: 20px 20px;
-    background-position: center;
-    background-color: $white;
-    border-radius: 24px;
-    opacity: 0;
-    transition: background-color 0.3s, transform 0.2s, opacity 0.3s;
-  }
-
-  &__link:focus::before {
-    background-color: rgba($yellow-900, 0.1);
-  }
-
-  &__link:hover::before {
-    background-color: rgba($black, 0.1);
-  }
-
-  &__link:focus::after,
-  &__link:hover::after {
-    opacity: 1;
-  }
-
-  &__link:active::after {
-    transform: scale(1.2);
-  }
-
-  &__image {
-    object-fit: contain;
-  }
-
-  &__figcaption {
+  &__title {
+    flex-grow: 1;
+    min-height: 72px;
     padding: 14px 18px 0;
     font-weight: 600;
     font-size: 14px;
+    @include line-clamp(3);
   }
 
   &__bottom {
-    padding: 5px 18px 18px 21px;
+    padding: 10px 16px 18px 21px;
     display: flex;
     justify-content: space-between;
     align-items: flex-end;
     line-height: 1.2;
   }
 
-  &__price-old {
+  &__price {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__old-price {
     position: relative;
     color: $silver-600;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 50%;
+      width: 100%;
+      height: 1px;
+      display: block;
+      background-color: $silver-600;
+      transform: rotate(-15deg);
+    }
   }
 
-  &__price-old::before {
-    content: "";
-    position: absolute;
-    top: 50%;
-    width: 100%;
-    height: 1px;
-    display: block;
-    background-color: $silver-600;
-    transform: rotate(-15deg);
-  }
-
-  &__price-new {
+  &__new-price {
     color: $dark-500;
   }
 
@@ -440,17 +410,17 @@
     border: none;
     border-radius: 3px;
     @extend %animation-btn;
-  }
 
-  &__cart-pic {
-    width: 16px;
-    height: 16px;
-    fill: $white;
-    transition: fill 0.3s;
-  }
+    svg {
+      width: 16px;
+      height: 16px;
+      fill: $white;
+      transition: fill 0.3s;
+    }
 
-  &__cart:active &__cart-pic {
-    fill: rgba($white, 0.5);
+    &:active svg {
+      fill: rgba($white, 0.5);
+    }
   }
 }
 
@@ -466,18 +436,18 @@
     border-radius: 3px;
     outline: 0;
     transition: box-shadow 0.3s, opacity 0.3s, outline-color 0.3s;
-  }
 
-  a:focus {
-    box-shadow: 0 0 0 2px $green-200;
-  }
+    &:focus {
+      box-shadow: 0 0 0 2px $green-200;
+    }
 
-  a:hover {
-    opacity: 0.7;
-  }
+    &:hover {
+      opacity: 0.7;
+    }
 
-  a:active {
-    opacity: 0.4;
+    &:active {
+      opacity: 0.4;
+    }
   }
 }
 
@@ -497,44 +467,19 @@
     background-size: contain;
     background-repeat: no-repeat;
     @extend %animation-inline;
-  }
 
-  &__link--facebook {
-    background-image: url("../images/icons/facebook.svg");
-  }
-
-  &__link--youtube {
-    background-image: url("../images/icons/youtube.svg");
-  }
-
-  &__link--telegram {
-    background-image: url("../images/icons/telegram.svg");
-  }
-
-  &__link--instagram {
-    background-image: url("../images/icons/instagram.svg");
+    svg {
+      width: 32px;
+      height: 32px;
+      fill: $white;
+    }
   }
 }
 
-.card {
+.bank-card {
   display: flex;
 
   &__item:not(:last-child) {
     margin-right: 24px;
-  }
-
-  &__block {
-    height: 29px;
-    background-position: center;
-    background-size: contain;
-    background-repeat: no-repeat;
-  }
-
-  &__block--visa {
-    width: 93px;
-  }
-
-  &__block--mastercard {
-    width: 49px;
   }
 }
