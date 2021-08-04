@@ -63,7 +63,7 @@ $black: #000000;
 
 %animation-card {
   outline: 0;
-  transition: box-shadow 0.3s, border-color 0.3s;
+  transition: color 0.3s, box-shadow 0.3s, border-color 0.3s;
 
   &:focus {
     box-shadow: 0 0 0 2px $green-900;
