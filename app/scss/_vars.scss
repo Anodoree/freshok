@@ -11,6 +11,7 @@ $orange-900: #ff7a00;
 $yellow-900: #ffb800;
 $silver-600: #c1c1c1;
 $silver-400: #ebebeb;
+$silver-200: #f5f5f5;
 $silver-100: #f6f6f6;
 $white: #ffffff;
 $black: #000000;
@@ -57,6 +58,23 @@ $black: #000000;
 
   &:focus {
     box-shadow: 0 0 0 4px $green-200;
+  }
+}
+
+%animation-card {
+  outline: 0;
+  transition: box-shadow 0.3s, border-color 0.3s;
+
+  &:focus {
+    box-shadow: 0 0 0 2px $green-900;
+  }
+
+  &:hover {
+    border-color: $green-900;
+  }
+
+  &:active {
+    box-shadow: 0 0 0 3px $silver-600;
   }
 }
 
