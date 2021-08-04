@@ -375,6 +375,29 @@
   }
 }
 
+.brand {
+  position: relative;
+  left: 4%;
+  max-width: 1480px;
+  margin: 0 auto;
+  padding: 72px 15px;
+
+  &__item {
+    opacity: 0.5;
+    transition: opacity 0.3s;
+
+    &:hover {
+      opacity: 1;
+    }
+  }
+
+  .slick-track {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+
 .footer {
   color: $white;
   background-color: $dark-800;

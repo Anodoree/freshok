@@ -196,7 +196,6 @@
       </ul>
     </section>
 
-
     <dl class="advantage">
       <div class="advantage__item advantage__item--delivery">
         <dt class="advantage__term">Бесплатная доставка</dt>
@@ -608,425 +607,479 @@
         </div>
       </div>
     </section>
-  </main>
 
-  <section class="banner">
-    <div class="container">
-      <h2 class="sr-only">Несколько интересных предложений</h2>
+    <section class="banner">
+      <div class="container">
+        <h2 class="sr-only">Несколько интересных предложений</h2>
 
-      <ul class="banner__inner">
-        <li class="banner__item" style="background-image: url('images/banner/004.jpg');">
-          <article class="banner__article">
-            <span class="banner__text">Свежайшие фрукты</span>
-            <h3 class="banner__title">
-              Начни фруктовое лето всего от 99 ₽
-            </h3>
-            <a class="banner__link" href="#">Перейти к покупкам</a>
-          </article>
+        <ul class="banner__inner">
+          <li class="banner__item"
+            style="background-image: url('images/banner/004.jpg');">
+            <article class="banner__article">
+              <span class="banner__text">Свежайшие фрукты</span>
+              <h3 class="banner__title">
+                Начни фруктовое лето всего от 99 ₽
+              </h3>
+              <a class="banner__link" href="#">Перейти к покупкам</a>
+            </article>
+          </li>
+
+          <li class="banner__item"
+            style="background-image: url('images/banner/005.jpg');">
+            <article class="banner__article">
+              <span class="banner__text">Сезонная распродажа</span>
+              <h3 class="banner__title">
+                Овощепад до -50%
+              </h3>
+              <a class="banner__link" href="#">Перейти к покупкам</a>
+            </article>
+          </li>
+
+          <li class="banner__item"
+            style="background-image: url('images/banner/006.jpg');">
+            <article class="banner__article">
+              <span class="banner__text">Ням-ням</span>
+              <h3 class="banner__title">
+                Свежий хлебчик
+              </h3>
+              <a class="banner__link" href="#">Перейти к покупкам</a>
+            </article>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="promo">
+      <div class="container">
+        <div class="promo__inner" data-ref="promo-mixitup">
+          <h2 class="title">Акции</h2>
+
+          <ul class="promo__mix-filter mix-filter">
+            <li class="mix-filter__item">
+              <button class="mix-filter__btn" type="button"
+                data-filter="all">
+                Все товары
+              </button>
+            </li>
+            <li class="mix-filter__item">
+              <button class="mix-filter__btn" type="button"
+                data-filter=".new">
+                Новинки
+              </button>
+            </li>
+            <li class="mix-filter__item">
+              <button class="mix-filter__btn" type="button"
+                data-filter=".hit">
+                Хиты
+              </button>
+            </li>
+          </ul>
+
+          <ul class="promo__grid">
+            <li class="promo__item mix new">
+              <a class="promo__link" href="#">
+                <article class="product-mini">
+                  <div class="product-mini__image" href="#">
+                    <img src="images/products/pineapple.jpg" alt="Ананасы"
+                      width="100" height="100">
+                    <span class="product-mini__label label label--green">
+                      Новинка
+                    </span>
+                  </div>
+
+                  <div class="product-mini__content">
+                    <h3 class="product-mini__title">
+                      Ананас, 1 кг
+                    </h3>
+
+                    <div class="available available--green">В наличии</div>
+
+                    <div class="product-mini__info">
+                      <span class="product-mini__new-price">
+                        <span class="sr-only">Цена со скидкой на данный момент</span>
+                        999<span class="product-mini__currency--new-price">₽</span>
+                      </span>
+
+                      <span class="product-mini__old-price">
+                        <span class="sr-only">Цена без скидки</span>
+                        1999 <span class="product-mini__currency">₽</span>
+                      </span>
+
+                      <div class="product-mini__rating rating">
+                        <span class="rating__number">
+                          4.5
+                        </span>
+                        <svg>
+                          <use xlink:href="images/sprite.svg#star"></use>
+                        </svg>
+                      </div>
+                    </div>
+                  </div>
+                </article>
+              </a>
+            </li>
+
+            <li class="promo__item mix new">
+              <a class="promo__link" href="#">
+                <article class="product-mini">
+                  <div class="product-mini__image" href="#">
+                    <img src="images/products/coffee.jpg"
+                      alt="Кофе с коноплей органический Caffé Salomoni 250г"
+                      width="100" height="100">
+                    <span class="product-mini__label label label--green">
+                      Новинка
+                    </span>
+                  </div>
+
+                  <div class="product-mini__content">
+                    <h3 class="product-mini__title">
+                      Кофе с коноплей органический Caffé Salomoni 250г
+                    </h3>
+
+                    <div class="available available--red">Заканчивается</div>
+
+                    <div class="product-mini__info">
+                      <span class="product-mini__new-price">
+                        <span class="sr-only">Цена со скидкой на данный момент</span>
+                        777<span class="product-mini__currency--new-price">₽</span>
+                      </span>
+
+                      <span class="product-mini__old-price">
+                        <span class="sr-only">Цена без скидки</span>
+                        877 <span class="product-mini__currency">₽</span>
+                      </span>
+
+                      <div class="product-mini__rating rating">
+                        <span class="rating__number">
+                          4.9
+                        </span>
+                        <svg>
+                          <use xlink:href="images/sprite.svg#star"></use>
+                        </svg>
+                      </div>
+                    </div>
+                  </div>
+                </article>
+              </a>
+            </li>
+
+            <li class="promo__item mix new">
+              <a class="promo__link" href="#">
+                <article class="product-mini">
+                  <div class="product-mini__image" href="#">
+                    <img src="images/products/strawberry.jpg" alt="Клубника"
+                      width="100" height="100">
+                    <span class="product-mini__label label label--green">
+                      Новинка
+                    </span>
+                  </div>
+
+                  <div class="product-mini__content">
+                    <h3 class="product-mini__title">
+                      Клубника, 1 кг
+                    </h3>
+
+                    <div class="available">Нет в наличии</div>
+
+                    <div class="product-mini__info">
+                      <span class="product-mini__new-price">
+                        <span class="sr-only">Цена со скидкой на данный момент</span>
+                        440<span class="product-mini__currency--new-price">₽</span>
+                      </span>
+
+                      <span class="product-mini__old-price">
+                        <span class="sr-only">Цена без скидки</span>
+                        600 <span class="product-mini__currency">₽</span>
+                      </span>
+
+                      <div class="product-mini__rating rating">
+                        <span class="rating__number">
+                          5.0
+                        </span>
+                        <svg>
+                          <use xlink:href="images/sprite.svg#star"></use>
+                        </svg>
+                      </div>
+                    </div>
+                  </div>
+                </article>
+              </a>
+            </li>
+
+            <li class="promo__item mix new">
+              <a class="promo__link" href="#">
+                <article class="product-mini">
+                  <div class="product-mini__image" href="#">
+                    <img src="images/products/mango.jpg" alt="Манго"
+                      width="100" height="100">
+                    <span class="product-mini__label label label--green">
+                      Новинка
+                    </span>
+                  </div>
+
+                  <div class="product-mini__content">
+                    <h3 class="product-mini__title">
+                      Манго, 1 шт
+                    </h3>
+
+                    <div class="available available--green">В наличии</div>
+
+                    <div class="product-mini__info">
+                      <span class="product-mini__new-price">
+                        <span class="sr-only">Цена со скидкой на данный момент</span>
+                        660<span class="product-mini__currency--new-price">₽</span>
+                      </span>
+
+                      <span class="product-mini__old-price">
+                        <span class="sr-only">Цена без скидки</span>
+                        960 <span class="product-mini__currency">₽</span>
+                      </span>
+
+                      <div class="product-mini__rating rating">
+                        <span class="rating__number">
+                          5.0
+                        </span>
+                        <svg>
+                          <use xlink:href="images/sprite.svg#star"></use>
+                        </svg>
+                      </div>
+                    </div>
+                  </div>
+                </article>
+              </a>
+            </li>
+
+            <li class="promo__item mix new">
+              <a class="promo__link" href="#">
+                <article class="product-mini">
+                  <div class="product-mini__image" href="#">
+                    <img src="images/products/salmon.jpg" alt="Лосось"
+                      width="100" height="100">
+                    <span class="product-mini__label label label--green">
+                      Новинка
+                    </span>
+                  </div>
+
+                  <div class="product-mini__content">
+                    <h3 class="product-mini__title">
+                      Лосось, 1 кг
+                    </h3>
+
+                    <div class="available available--green">В наличии</div>
+
+                    <div class="product-mini__info">
+                      <span class="product-mini__new-price">
+                        <span class="sr-only">Цена со скидкой на данный момент</span>
+                        999<span class="product-mini__currency--new-price">₽</span>
+                      </span>
+
+                      <span class="product-mini__old-price">
+                        <span class="sr-only">Цена без скидки</span>
+                        1999 <span class="product-mini__currency">₽</span>
+                      </span>
+
+                      <div class="product-mini__rating rating">
+                        <span class="rating__number">
+                          4.5
+                        </span>
+                        <svg>
+                          <use xlink:href="images/sprite.svg#star"></use>
+                        </svg>
+                      </div>
+                    </div>
+                  </div>
+                </article>
+              </a>
+            </li>
+
+            <li class="promo__item mix hit">
+              <a class="promo__link" href="#">
+                <article class="product-mini">
+                  <div class="product-mini__image" href="#">
+                    <img src="images/products/veg_juice.jpg"
+                      alt="Сок Granini овощной 100%, 0.5л"
+                      width="100" height="100">
+                    <span class="product-mini__label label label--orange">
+                      Хит
+                    </span>
+                  </div>
+
+                  <div class="product-mini__content">
+                    <h3 class="product-mini__title">
+                      Сок Granini овощной 100%, 0.5л
+                    </h3>
+
+                    <div class="available available--red">Заканчивается</div>
+
+                    <div class="product-mini__info">
+                      <span class="product-mini__new-price">
+                        <span class="sr-only">Цена со скидкой на данный момент</span>
+                        180<span class="product-mini__currency--new-price">₽</span>
+                      </span>
+
+                      <span class="product-mini__old-price">
+                        <span class="sr-only">Цена без скидки</span>
+                        230 <span class="product-mini__currency">₽</span>
+                      </span>
+
+                      <div class="product-mini__rating rating">
+                        <span class="rating__number">
+                          4.9
+                        </span>
+                        <svg>
+                          <use xlink:href="images/sprite.svg#star"></use>
+                        </svg>
+                      </div>
+                    </div>
+                  </div>
+                </article>
+              </a>
+            </li>
+
+            <li class="promo__item mix hit">
+              <a class="promo__link" href="#">
+                <article class="product-mini">
+                  <div class="product-mini__image" href="#">
+                    <img src="images/products/fruit-cart.jpg" alt="Фруктовая корзина"
+                      width="100" height="100">
+                    <span class="product-mini__label label label--orange">
+                      Хит
+                    </span>
+                  </div>
+
+                  <div class="product-mini__content">
+                    <h3 class="product-mini__title">
+                      Фруктовая корзина, 1 шт
+                    </h3>
+
+                    <div class="available available--green">В наличии</div>
+
+                    <div class="product-mini__info">
+                      <span class="product-mini__new-price">
+                        <span class="sr-only">Цена со скидкой на данный момент</span>
+                        3990<span class="product-mini__currency--new-price">₽</span>
+                      </span>
+
+                      <span class="product-mini__old-price">
+                        <span class="sr-only">Цена без скидки</span>
+                        5990 <span class="product-mini__currency">₽</span>
+                      </span>
+
+                      <div class="product-mini__rating rating">
+                        <span class="rating__number">
+                          4.8
+                        </span>
+                        <svg>
+                          <use xlink:href="images/sprite.svg#star"></use>
+                        </svg>
+                      </div>
+                    </div>
+                  </div>
+                </article>
+              </a>
+            </li>
+
+            <li class="promo__item mix hit">
+              <a class="promo__link" href="#">
+                <article class="product-mini">
+                  <div class="product-mini__image" href="#">
+                    <img src="images/products/pork.jpg" alt="Свинина мякоть"
+                      width="100" height="100">
+                    <span class="product-mini__label label label--orange">
+                      Хит
+                    </span>
+                  </div>
+
+                  <div class="product-mini__content">
+                    <h3 class="product-mini__title">
+                      Свинина мякоть, 1 шт
+                    </h3>
+
+                    <div class="available available--green">В наличии</div>
+
+                    <div class="product-mini__info">
+                      <span class="product-mini__new-price">
+                        <span class="sr-only">Цена со скидкой на данный момент</span>
+                        499<span class="product-mini__currency--new-price">₽</span>
+                      </span>
+
+                      <span class="product-mini__old-price">
+                        <span class="sr-only">Цена без скидки</span>
+                        599 <span class="product-mini__currency">₽</span>
+                      </span>
+
+                      <div class="product-mini__rating rating">
+                        <span class="rating__number">
+                          4.6
+                        </span>
+                        <svg>
+                          <use xlink:href="images/sprite.svg#star"></use>
+                        </svg>
+                      </div>
+                    </div>
+                  </div>
+                </article>
+              </a>
+            </li>
+          </ul>
+
+          <a class="button" href="#">Показать еще</a>
+        </div>
+      </div>
+    </section>
+
+    <div class="brand">
+      <ul class="brand__slider">
+        <li class="brand__item">
+          <img src="images/brands/sprite.svg" alt="Sprite">
         </li>
 
-        <li class="banner__item" style="background-image: url('images/banner/005.jpg');">
-          <article class="banner__article">
-            <span class="banner__text">Сезонная распродажа</span>
-            <h3 class="banner__title">
-              Овощепад до -50%
-            </h3>
-            <a class="banner__link" href="#">Перейти к покупкам</a>
-          </article>
+        <li class="brand__item">
+          <img src="images/brands/dr-pepper.svg" alt="Dr Pepper">
         </li>
 
-        <li class="banner__item" style="background-image: url('images/banner/006.jpg');">
-          <article class="banner__article">
-            <span class="banner__text">Ням-ням</span>
-            <h3 class="banner__title">
-              Свежий хлебчик
-            </h3>
-            <a class="banner__link" href="#">Перейти к покупкам</a>
-          </article>
+        <li class="brand__item">
+          <img src="images/brands/coca-cola.svg" alt="Coca Cola">
+        </li>
+
+        <li class="brand__item">
+          <img src="images/brands/pepsi.svg" alt="Pepsi">
+        </li>
+
+        <li class="brand__item">
+          <img src="images/brands/redbull.svg" alt="Red Bull">
+        </li>
+
+        <li class="brand__item">
+          <img src="images/brands/fanta.svg" alt="Fanta">
+        </li>
+
+        <li class="brand__item">
+          <img src="images/brands/sprite.svg" alt="Sprite">
+        </li>
+
+        <li class="brand__item">
+          <img src="images/brands/dr-pepper.svg" alt="Dr Pepper">
+        </li>
+
+        <li class="brand__item">
+          <img src="images/brands/coca-cola.svg" alt="Coca Cola">
+        </li>
+
+        <li class="brand__item">
+          <img src="images/brands/pepsi.svg" alt="Pepsi">
+        </li>
+
+        <li class="brand__item">
+          <img src="images/brands/redbull.svg" alt="Red Bull">
+        </li>
+
+        <li class="brand__item">
+          <img src="images/brands/fanta.svg" alt="Fanta">
         </li>
       </ul>
     </div>
-  </section>
-
-  <section class="promo">
-    <div class="container">
-      <div class="promo__inner" data-ref="promo-mixitup">
-        <h2 class="title">Акции</h2>
-
-        <ul class="promo__mix-filter mix-filter">
-          <li class="mix-filter__item">
-            <button class="mix-filter__btn" type="button"
-              data-filter="all">
-              Все товары
-            </button>
-          </li>
-          <li class="mix-filter__item">
-            <button class="mix-filter__btn" type="button"
-              data-filter=".new">
-              Новинки
-            </button>
-          </li>
-          <li class="mix-filter__item">
-            <button class="mix-filter__btn" type="button"
-              data-filter=".hit">
-              Хиты
-            </button>
-          </li>
-        </ul>
-
-        <ul class="promo__grid">
-          <li class="promo__item mix new">
-            <a class="promo__link" href="#">
-              <article class="product-mini">
-                <div class="product-mini__image" href="#">
-                  <img src="images/products/pineapple.jpg" alt="Ананасы"
-                    width="100" height="100">
-                  <span class="product-mini__label label label--green">
-                    Новинка
-                  </span>
-                </div>
-
-                <div class="product-mini__content">
-                  <h3 class="product-mini__title">
-                    Ананас, 1 кг
-                  </h3>
-
-                  <div class="available available--green">В наличии</div>
-
-                  <div class="product-mini__info">
-                    <span class="product-mini__new-price">
-                      <span class="sr-only">Цена со скидкой на данный момент</span>
-                      999<span class="product-mini__currency--new-price">₽</span>
-                    </span>
-
-                    <span class="product-mini__old-price">
-                      <span class="sr-only">Цена без скидки</span>
-                      1999 <span class="product-mini__currency">₽</span>
-                    </span>
-
-                    <div class="product-mini__rating rating">
-                      <span class="rating__number">
-                        4.5
-                      </span>
-                      <svg>
-                        <use xlink:href="images/sprite.svg#star"></use>
-                      </svg>
-                    </div>
-                  </div>
-                </div>
-              </article>
-            </a>
-          </li>
-
-          <li class="promo__item mix new">
-            <a class="promo__link" href="#">
-              <article class="product-mini">
-                <div class="product-mini__image" href="#">
-                  <img src="images/products/coffee.jpg"
-                    alt="Кофе с коноплей органический Caffé Salomoni 250г"
-                    width="100" height="100">
-                  <span class="product-mini__label label label--green">
-                    Новинка
-                  </span>
-                </div>
-
-                <div class="product-mini__content">
-                  <h3 class="product-mini__title">
-                    Кофе с коноплей органический Caffé Salomoni 250г
-                  </h3>
-
-                  <div class="available available--red">Заканчивается</div>
-
-                  <div class="product-mini__info">
-                    <span class="product-mini__new-price">
-                      <span class="sr-only">Цена со скидкой на данный момент</span>
-                      777<span class="product-mini__currency--new-price">₽</span>
-                    </span>
-
-                    <span class="product-mini__old-price">
-                      <span class="sr-only">Цена без скидки</span>
-                      877 <span class="product-mini__currency">₽</span>
-                    </span>
-
-                    <div class="product-mini__rating rating">
-                      <span class="rating__number">
-                        4.9
-                      </span>
-                      <svg>
-                        <use xlink:href="images/sprite.svg#star"></use>
-                      </svg>
-                    </div>
-                  </div>
-                </div>
-              </article>
-            </a>
-          </li>
-
-          <li class="promo__item mix new">
-            <a class="promo__link" href="#">
-              <article class="product-mini">
-                <div class="product-mini__image" href="#">
-                  <img src="images/products/strawberry.jpg" alt="Клубника"
-                    width="100" height="100">
-                  <span class="product-mini__label label label--green">
-                    Новинка
-                  </span>
-                </div>
-
-                <div class="product-mini__content">
-                  <h3 class="product-mini__title">
-                    Клубника, 1 кг
-                  </h3>
-
-                  <div class="available">Нет в наличии</div>
-
-                  <div class="product-mini__info">
-                    <span class="product-mini__new-price">
-                      <span class="sr-only">Цена со скидкой на данный момент</span>
-                      440<span class="product-mini__currency--new-price">₽</span>
-                    </span>
-
-                    <span class="product-mini__old-price">
-                      <span class="sr-only">Цена без скидки</span>
-                      600 <span class="product-mini__currency">₽</span>
-                    </span>
-
-                    <div class="product-mini__rating rating">
-                      <span class="rating__number">
-                        5.0
-                      </span>
-                      <svg>
-                        <use xlink:href="images/sprite.svg#star"></use>
-                      </svg>
-                    </div>
-                  </div>
-                </div>
-              </article>
-            </a>
-          </li>
-
-          <li class="promo__item mix new">
-            <a class="promo__link" href="#">
-              <article class="product-mini">
-                <div class="product-mini__image" href="#">
-                  <img src="images/products/mango.jpg" alt="Манго"
-                    width="100" height="100">
-                  <span class="product-mini__label label label--green">
-                    Новинка
-                  </span>
-                </div>
-
-                <div class="product-mini__content">
-                  <h3 class="product-mini__title">
-                    Манго, 1 шт
-                  </h3>
-
-                  <div class="available available--green">В наличии</div>
-
-                  <div class="product-mini__info">
-                    <span class="product-mini__new-price">
-                      <span class="sr-only">Цена со скидкой на данный момент</span>
-                      660<span class="product-mini__currency--new-price">₽</span>
-                    </span>
-
-                    <span class="product-mini__old-price">
-                      <span class="sr-only">Цена без скидки</span>
-                      960 <span class="product-mini__currency">₽</span>
-                    </span>
-
-                    <div class="product-mini__rating rating">
-                      <span class="rating__number">
-                        5.0
-                      </span>
-                      <svg>
-                        <use xlink:href="images/sprite.svg#star"></use>
-                      </svg>
-                    </div>
-                  </div>
-                </div>
-              </article>
-            </a>
-          </li>
-
-          <li class="promo__item mix new">
-            <a class="promo__link" href="#">
-              <article class="product-mini">
-                <div class="product-mini__image" href="#">
-                  <img src="images/products/salmon.jpg" alt="Лосось"
-                    width="100" height="100">
-                  <span class="product-mini__label label label--green">
-                    Новинка
-                  </span>
-                </div>
-
-                <div class="product-mini__content">
-                  <h3 class="product-mini__title">
-                    Лосось, 1 кг
-                  </h3>
-
-                  <div class="available available--green">В наличии</div>
-
-                  <div class="product-mini__info">
-                    <span class="product-mini__new-price">
-                      <span class="sr-only">Цена со скидкой на данный момент</span>
-                      999<span class="product-mini__currency--new-price">₽</span>
-                    </span>
-
-                    <span class="product-mini__old-price">
-                      <span class="sr-only">Цена без скидки</span>
-                      1999 <span class="product-mini__currency">₽</span>
-                    </span>
-
-                    <div class="product-mini__rating rating">
-                      <span class="rating__number">
-                        4.5
-                      </span>
-                      <svg>
-                        <use xlink:href="images/sprite.svg#star"></use>
-                      </svg>
-                    </div>
-                  </div>
-                </div>
-              </article>
-            </a>
-          </li>
-
-          <li class="promo__item mix hit">
-            <a class="promo__link" href="#">
-              <article class="product-mini">
-                <div class="product-mini__image" href="#">
-                  <img src="images/products/veg_juice.jpg"
-                    alt="Сок Granini овощной 100%, 0.5л"
-                    width="100" height="100">
-                  <span class="product-mini__label label label--orange">
-                    Хит
-                  </span>
-                </div>
-
-                <div class="product-mini__content">
-                  <h3 class="product-mini__title">
-                    Сок Granini овощной 100%, 0.5л
-                  </h3>
-
-                  <div class="available available--red">Заканчивается</div>
-
-                  <div class="product-mini__info">
-                    <span class="product-mini__new-price">
-                      <span class="sr-only">Цена со скидкой на данный момент</span>
-                      180<span class="product-mini__currency--new-price">₽</span>
-                    </span>
-
-                    <span class="product-mini__old-price">
-                      <span class="sr-only">Цена без скидки</span>
-                      230 <span class="product-mini__currency">₽</span>
-                    </span>
-
-                    <div class="product-mini__rating rating">
-                      <span class="rating__number">
-                        4.9
-                      </span>
-                      <svg>
-                        <use xlink:href="images/sprite.svg#star"></use>
-                      </svg>
-                    </div>
-                  </div>
-                </div>
-              </article>
-            </a>
-          </li>
-
-          <li class="promo__item mix hit">
-            <a class="promo__link" href="#">
-              <article class="product-mini">
-                <div class="product-mini__image" href="#">
-                  <img src="images/products/fruit-cart.jpg" alt="Фруктовая корзина"
-                    width="100" height="100">
-                  <span class="product-mini__label label label--orange">
-                    Хит
-                  </span>
-                </div>
-
-                <div class="product-mini__content">
-                  <h3 class="product-mini__title">
-                    Фруктовая корзина, 1 шт
-                  </h3>
-
-                  <div class="available available--green">В наличии</div>
-
-                  <div class="product-mini__info">
-                    <span class="product-mini__new-price">
-                      <span class="sr-only">Цена со скидкой на данный момент</span>
-                      3990<span class="product-mini__currency--new-price">₽</span>
-                    </span>
-
-                    <span class="product-mini__old-price">
-                      <span class="sr-only">Цена без скидки</span>
-                      5990 <span class="product-mini__currency">₽</span>
-                    </span>
-
-                    <div class="product-mini__rating rating">
-                      <span class="rating__number">
-                        4.8
-                      </span>
-                      <svg>
-                        <use xlink:href="images/sprite.svg#star"></use>
-                      </svg>
-                    </div>
-                  </div>
-                </div>
-              </article>
-            </a>
-          </li>
-
-          <li class="promo__item mix hit">
-            <a class="promo__link" href="#">
-              <article class="product-mini">
-                <div class="product-mini__image" href="#">
-                  <img src="images/products/pork.jpg" alt="Свинина мякоть"
-                    width="100" height="100">
-                  <span class="product-mini__label label label--orange">
-                    Хит
-                  </span>
-                </div>
-
-                <div class="product-mini__content">
-                  <h3 class="product-mini__title">
-                    Свинина мякоть, 1 шт
-                  </h3>
-
-                  <div class="available available--green">В наличии</div>
-
-                  <div class="product-mini__info">
-                    <span class="product-mini__new-price">
-                      <span class="sr-only">Цена со скидкой на данный момент</span>
-                      499<span class="product-mini__currency--new-price">₽</span>
-                    </span>
-
-                    <span class="product-mini__old-price">
-                      <span class="sr-only">Цена без скидки</span>
-                      599 <span class="product-mini__currency">₽</span>
-                    </span>
-
-                    <div class="product-mini__rating rating">
-                      <span class="rating__number">
-                        4.6
-                      </span>
-                      <svg>
-                        <use xlink:href="images/sprite.svg#star"></use>
-                      </svg>
-                    </div>
-                  </div>
-                </div>
-              </article>
-            </a>
-          </li>
-        </ul>
-
-        <a class="button" href="#">Показать еще</a>
-      </div>
-    </div>
-  </section>
-
+  </main>
 
   <footer class="footer">
     <div class="footer__top">
