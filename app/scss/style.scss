@@ -335,6 +335,20 @@
     font-weight: 700;
     font-size: 14px;
     border-bottom: 2px solid $dark-500;
+    outline: 0;
+    transition: box-shadow 0.3s, background-color 0.3s, opacity 0.3s;
+
+    &:focus {
+      box-shadow: 0 0 0 3px rgba($green-900, 0.8)
+    }
+
+    &:hover {
+      background-color: rgba($yellow-900, 0.5);
+    }
+
+    &:active {
+      opacity: 0.7;
+    }
   }
 }
 
@@ -417,7 +431,7 @@
     border-radius: 4px 4px 0 0;
     outline: 0;
     transition: box-shadow 0.3s, color 0.3s;
-  
+
     &:focus {
       box-shadow: 0 0 0 2px $green-900;
     }
@@ -426,7 +440,7 @@
       color: $green-800;
       border-color: $green-800;
     }
-  
+
     &:active {
       box-shadow: 0 0 0 2px $green-800;
       color: $green-800;
@@ -452,11 +466,8 @@
     max-width: 410px;
     height: 350px;
     display: flex;
-    flex-direction: column-reverse;
+    flex-direction: column;
     color: $dark-900;
-    background-position: top center;
-    background-size: contain;
-    background-repeat: no-repeat;
     border-radius: 6px;
     box-shadow: 0px 3px 3px rgba($black, 0.3);
     @extend %animation-card;
@@ -464,6 +475,15 @@
     &:hover p {
       color: $green-900;
     }
+  }
+
+  &__background {
+    height: 240px;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-top-left-radius: 6px;
+    border-top-right-radius: 6px;
   }
 
   &__meta {
