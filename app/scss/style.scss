@@ -390,8 +390,6 @@
 }
 
 .brand {
-  position: relative;
-  left: 4%;
   max-width: 1480px;
   margin: 0 auto;
   padding: 71px 15px;
@@ -403,6 +401,10 @@
     &:hover {
       opacity: 1;
     }
+
+    img {
+      margin: 0 auto;
+    }
   }
 
   .slick-track {
@@ -413,7 +415,7 @@
 }
 
 .news {
-  margin-bottom: 72px;
+  margin-bottom: 74px;
 
   &__top {
     display: flex;
