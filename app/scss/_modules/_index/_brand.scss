@@ -1,0 +1,24 @@
+.brand {
+  max-width: 1480px;
+  margin: 0 auto;
+  padding: 71px 15px;
+
+  &__item {
+    opacity: 0.5;
+    transition: opacity 0.3s;
+
+    &:hover {
+      opacity: 1;
+    }
+
+    img {
+      margin: 0 auto;
+    }
+  }
+
+  .slick-track {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+}

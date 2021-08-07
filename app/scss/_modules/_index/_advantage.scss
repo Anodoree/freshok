@@ -1,0 +1,42 @@
+.advantage {
+  padding: 48px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: $silver-100;
+
+  &__item {
+    flex-basis: 275px;
+    padding-left: 74px;
+    background-position: left center;
+    background-size: 50px 50px;
+    background-repeat: no-repeat;
+
+    &:not(:last-child) {
+      margin-right: 48px;
+    }
+
+    &--delivery {
+      background-image: url("../images/icons/delivery-moto.svg");
+    }
+
+    &--return {
+      background-image: url("../images/icons/return-box.svg");
+    }
+
+    &--24h {
+      background-image: url("../images/icons/24h.svg");
+    }
+  }
+
+  &__term {
+    margin-bottom: 8px;
+    font-weight: 700;
+    font-size: 16px;
+    color: $dark-900;
+  }
+
+  &__desc {
+    color: $dark-500;
+  }
+}

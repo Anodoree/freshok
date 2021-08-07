@@ -1,0 +1,102 @@
+.footer {
+  color: $white;
+  background-color: $dark-800;
+
+  &__top {
+    padding-top: 30px;
+    border-bottom: 1px solid rgba($white, 0.1);
+  }
+
+  &__logo {
+    margin-bottom: 28px;
+
+    &:hover {
+      background-color: $dark-500;
+    }
+  }
+
+  &__top-inner {
+    margin-bottom: 30px;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__subscription {
+    flex-basis: 300px;
+  }
+
+  &__text {
+    margin-bottom: 16px;
+    display: block;
+    line-height: 1;
+  }
+
+  &__sub-form {
+    display: flex;
+  }
+
+  &__input {
+    position: relative;
+    z-index: 2;
+    flex-grow: 1;
+    padding: 10px 12px;
+    border: none;
+    border-top-left-radius: 6px;
+    border-bottom-left-radius: 6px;
+    @extend %animation-field;
+
+    &::placeholder {
+      color: $dark-700;
+    }
+  }
+
+  &__button {
+    position: relative;
+    z-index: 1;
+    padding: 12px;
+    font-weight: 700;
+    font-size: 12px;
+    text-transform: uppercase;
+    color: $white;
+    background-color: $green-900;
+    border: none;
+    border-top-right-radius: 6px;
+    border-bottom-right-radius: 6px;
+    @extend %animation-btn;
+  }
+
+  &__menu {
+    display: grid;
+    grid-template: auto / repeat(3, auto);
+    grid-gap: 6px 84px;
+  }
+
+  &__item {
+    max-width: 200px;
+  }
+
+  &__link {
+    @extend %animation-inline;
+  }
+
+  &__bottom-inner {
+    padding-top: 24px;
+    padding-bottom: 24px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__contact {
+    max-width: 220px;
+  }
+
+  &__address {
+    margin-bottom: 18px;
+  }
+
+  &__copy {
+    padding-left: 6px;
+    text-transform: uppercase;
+  }
+}

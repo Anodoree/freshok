@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  @@include('_modules/_components/_head.html', {
+    "page": "Главная страница"
+  })
+</head>
+
+<body>
+
+  @@include('_modules/_components/_header.html')
+
+  <main class="main">
+    <h1 class="sr-only">Фрешок - онлайн-маркет</h1>
+
+    @@include('_modules/_index/_hero.html')
+    @@include('_modules/_index/_advantage.html')
+    @@include('_modules/_index/_top-product.html')
+    @@include('_modules/_index/_banner.html')
+    @@include('_modules/_index/_promo.html')
+    @@include('_modules/_index/_brand.html')
+    @@include('_modules/_index/_news.html')
+  </main>
+
+  @@include('_modules/_components/_footer.html')
+
+  <script src="js/main.min.js"></script>
+
+</body>
+</html>
