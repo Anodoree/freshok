@@ -1,42 +1,45 @@
 .advantage {
-  padding: 48px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: $silver-100;
+
+  &__list {
+    padding: 48px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: $silver-100;
+  }
 
   &__item {
     flex-basis: 275px;
-    padding-left: 74px;
+    min-height: 50px;
+    display: flex;
+    align-items: center;
     background-position: left center;
     background-size: 50px 50px;
     background-repeat: no-repeat;
 
+    svg {
+      flex-shrink: 0;
+      width: 50px;
+      height: 50px;
+      margin-right: 24px;
+      fill: $green-900;
+    }
+
     &:not(:last-child) {
       margin-right: 48px;
     }
-
-    &--delivery {
-      background-image: url("../images/icons/delivery-moto.svg");
-    }
-
-    &--return {
-      background-image: url("../images/icons/return-box.svg");
-    }
-
-    &--24h {
-      background-image: url("../images/icons/24h.svg");
-    }
   }
 
-  &__term {
-    margin-bottom: 8px;
+  &__title {
+    margin-bottom: 7px;
     font-weight: 700;
     font-size: 16px;
     color: $dark-900;
+    @include line-clamp(2);
   }
 
-  &__desc {
+  &__text {
     color: $dark-500;
+    @include line-clamp(2);
   }
 }

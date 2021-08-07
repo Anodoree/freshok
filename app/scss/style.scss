@@ -4,6 +4,17 @@
 @import 'libs';
 @import 'global';
 
+@import '_modules/_components/_interactive/delivery';
+@import '_modules/_components/_interactive/hotline';
+@import '_modules/_components/_interactive/logo';
+@import '_modules/_components/_interactive/catalog-dropdown';
+@import '_modules/_components/_forms/search-form';
+@import '_modules/_components/_interactive/icon-btn';
+
+@import '_modules/_components/_interactive/button';
+
+@import '_modules/_components/_cards/news-card';
+
 @import '_modules/_components/header';
 
 @import '_modules/_index/hero';

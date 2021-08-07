@@ -20,20 +20,4 @@
     grid-template: auto / repeat(4, 1fr);
     grid-gap: 28px 30px;
   }
-
-  &__button {
-    padding: 9px 23px;
-    color: $green-900;
-    background-color: $white;
-    border: 1px solid $green-900;
-
-    &:hover {
-      color: $green-900;
-      background-color: $green-100;
-    }
-
-    &:active {
-      color: rgba($green-900, 0.5);
-    }
-  }
 }

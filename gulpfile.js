@@ -40,6 +40,7 @@ function svgSprites () {
     }
   }))
   .pipe(dest('app/images'))
+  .pipe(browserSync.stream())
 };
 
 function styles() {

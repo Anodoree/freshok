@@ -1,0 +1,27 @@
+.button {
+  padding: 11px 25px;
+  display: inline-block;
+  font-weight: 400;
+  font-size: 18px;
+  letter-spacing: 0.03em;
+  color: $white;
+  background-color: $green-900;
+  border-radius: 6px;
+  @extend %animation-btn;
+
+  &--inverted {
+    padding: 9px 23px;
+    color: $green-900;
+    background-color: $white;
+    border: 1px solid $green-900;
+
+    &:hover {
+      color: $green-900;
+      background-color: $green-100;
+    }
+
+    &:active {
+      color: rgba($green-900, 0.5);
+    }
+  }
+}

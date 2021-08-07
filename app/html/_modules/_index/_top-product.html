@@ -390,7 +390,10 @@
         </li>
       </ul>
 
-      <a class="top-product__button button" href="#">Показать еще</a>
+      @@include('../_components/_interactive/_button.html', {
+        "text": "Показать еще",
+        "mod": "button--inverted"
+      })
     </div>
   </div>
 </section>

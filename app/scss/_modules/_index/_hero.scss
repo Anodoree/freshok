@@ -43,9 +43,9 @@
     color: $red-900;
   }
 
-  &__content p {
+  &__text {
     font-size: 16px;
-    @include line-clamp(3);
+    @include line-clamp(4);
   }
 
   &__arrow {

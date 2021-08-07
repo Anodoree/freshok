@@ -10,12 +10,17 @@
             Свежачок вам в хату
             <span class="hero__accent">Скидка -50%</span>
           </h3>
-          <p>
-            Только с 7 по 13 июля скидка на сезонные фрукты и овощи до
-            50%. Торопитесь!
-          </p>
+          <div class="hero__text">
+            <p>
+              Только с 7 по 13 июля скидка на сезонные фрукты и овощи до
+              50%. Торопитесь!
+            </p>
+          </div>
         </div>
-        <a class="button" href="#">Купить сейчас</a>
+        @@include('../_components/_interactive/_button.html', {
+          "text": "Купить сейчас",
+          "mod": ""
+        })
       </div>
     </li>
 
@@ -27,11 +32,16 @@
             Накрути себе томатов
             <span class="hero__accent">Акция: 3 кг по цене 1</span>
           </h3>
-          <p>
-            Только с 12 по 15 июля скидка на домашние помидорчики
-          </p>
+          <div class="hero__text">
+            <p>
+              Только с 12 по 15 июля скидка на домашние помидорчики
+            </p>
+          </div>
         </div>
-        <a class="button" href="#">Купить сейчас</a>
+        @@include('../_components/_interactive/_button.html', {
+          "text": "Купить сейчас",
+          "mod": ""
+        })
       </div>
     </li>
 
@@ -43,8 +53,13 @@
             Пусть остальные позеленеют от зависти
             <span class="hero__accent">Распродажа зелени</span>
           </h3>
+          <div class="hero__text">
+          </div>
         </div>
-        <a class="button" href="#">Купить сейчас</a>
+        @@include('../_components/_interactive/_button.html', {
+          "text": "Купить сейчас",
+          "mod": ""
+        })
       </div>
     </li>
   </ul>

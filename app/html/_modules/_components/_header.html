@@ -1,30 +1,25 @@
 <header class="header">
-  <nav class="header-top">
+  <nav class="header__top">
     <div class="container">
-      <div class="header-top__inner">
-        <ul class="header-top__menu">
-          <li class="header-top__item">
-            <a class="header-top__link header-top__link--delivery" href="#">
-              Адрес и время доставки
-            </a>
-          </li>
-          <li class="header-top__item">
-            <a class="header-top__link header-top__link--hotline"
-              href="tel:+7907288365">
-              Горячая линия 24/7
-            </a>
-          </li>
-        </ul>
+      <div class="header__top-inner">
+        <div class="header__contacts">
+          @@include('_interactive/_delivery.html', {
+            "text": "Адрес и время доставки"
+          })
+          @@include('_interactive/_hotline.html', {
+            "text": "Горячая линия 24/7"
+          })
+        </div>
 
-        <ul class="header-top__menu">
-          <li class="header-top__item">
-            <a class="header-top__link" href="#">Доставка</a>
+        <ul class="header__menu">
+          <li class="header__item">
+            <a class="header__link" href="#">Доставка</a>
           </li>
-          <li class="header-top__item">
-            <a class="header-top__link" href="#">О нас</a>
+          <li class="header__item">
+            <a class="header__link" href="#">О нас</a>
           </li>
-          <li class="header-top__item">
-            <a class="header-top__link" href="#">Новости</a>
+          <li class="header__item">
+            <a class="header__link" href="#">Новости</a>
           </li>
         </ul>
       </div>
@@ -33,93 +28,45 @@
 
   <div class="container">
     <nav class="header__inner">
-      <a class="header__logo logo" href="index.html">
-        <img class="logo__img" src="images/logo.png" alt="Логотип"
-          width="200" height="60">
-      </a>
+      @@include('_interactive/_logo.html', {
+        "class": "header__logo"
+      })
 
-      <div class="header__catalog-dropdown catalog-dropdown">
-        <button class="catalog-dropdown__btn" type="button">
-          Каталог продуктов
-        </button>
-        <ul class="catalog-dropdown__list">
-          <li class="catalog-dropdown__item">
-            <a class="catalog-dropdown__link" href="#">Овощи и фрукты</a>
-          </li>
-          <li class="catalog-dropdown__item">
-            <a class="catalog-dropdown__link" href="#">Бакалея</a>
-          </li>
-          <li class="catalog-dropdown__item">
-            <a class="catalog-dropdown__link" href="#">Молочные продукты</a>
-          </li>
-          <li class="catalog-dropdown__item">
-            <a class="catalog-dropdown__link" href="#">Хлеб</a>
-          </li>
-          <li class="catalog-dropdown__item">
-            <a class="catalog-dropdown__link" href="#">Мясо</a>
-          </li>
-          <li class="catalog-dropdown__item">
-            <a class="catalog-dropdown__link" href="#">Колбаса</a>
-          </li>
-          <li class="catalog-dropdown__item">
-            <a class="catalog-dropdown__link" href="#">Рыба</a>
-          </li>
-          <li class="catalog-dropdown__item">
-            <a class="catalog-dropdown__link" href="#">Алкоголь</a>
-          </li>
-          <li class="catalog-dropdown__item">
-            <a class="catalog-dropdown__link" href="#">Напитки</a>
-          </li>
-          <li class="catalog-dropdown__item">
-            <a class="catalog-dropdown__link" href="#">Торты</a>
-          </li>
-          <li class="catalog-dropdown__item">
-            <a class="catalog-dropdown__link" href="#">Мясо</a>
-          </li>
-          <li class="catalog-dropdown__item">
-            <a class="catalog-dropdown__link" href="#">Чай, кофе</a>
-          </li>
-        </ul>
-      </div>
+      @@include('_interactive/_catalog-dropdown.html', {
+        "class": "header__catalog-dropdown"
+      })
 
-      <form class="header__search-form">
-        <input class="header__input" type="search"
-          name="search" aria-label="Поле ввода поиска товара"
-          placeholder="Найти в магазине ..." required>
-        <button class="header__button" type="submit">
-          Поиск
-        </button>
-      </form>
+      @@include('_forms/_search-form.html', {
+        "class": "header__search-form"
+      })
 
-      <ul class="icon">
-        <li class="icon__item">
-          <button class="icon-btn icon-btn--user"
-            type="button">
+      <ul class="header__icon">
+        <li class="header__icon-item">
+          <button class="icon-btn" type="button">
             <svg>
               <use xlink:href="images/sprite.svg#user"></use>
             </svg>
             <span class="sr-only">Меню пользователя</span>
           </button>
         </li>
-        <li class="icon__item">
-          <button class="icon-btn icon-btn--favorite"
-            type="button">
+
+        <li class="header__icon-item">
+          <button class="icon-btn" type="button">
             <svg>
               <use xlink:href="images/sprite.svg#favorite"></use>
             </svg>
             <span class="sr-only">Избранные товары</span>
-            <span
-              class="icon-btn__number icon-btn__number--favorite">12</span>
+            <span class="icon-btn__number">12</span>
           </button>
         </li>
-        <li class="icon__item">
-          <button class="icon-btn icon-btn--cart"
-            type="button">
+
+        <li class="header__icon-item">
+          <button class="icon-btn" type="button">
             <svg>
               <use xlink:href="images/sprite.svg#cart"></use>
             </svg>
             <span class="sr-only">Корзина</span>
-            <span class="icon-btn__number icon-btn__number--cart">12</span>
+            <span class="icon-btn__number">12</span>
           </button>
         </li>
       </ul>
