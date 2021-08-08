@@ -1,0 +1,23 @@
+.badge {
+  padding: 1px 6px;
+  display: block;
+  font-weight: 700;
+  font-size: 10px;
+  text-transform: uppercase;
+  color: $white;
+  background-color: $green-900;
+  border-radius: 6px;
+  @include line-clamp(1);
+
+  &:not(:last-child) {
+    margin-bottom: 6px;
+  }
+
+  &--red {
+    background-color: $red-900;
+  }
+
+  &--orange {
+    background-color: $orange-900;
+  }
+}
