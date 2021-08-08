@@ -140,22 +140,6 @@
     color: $dark-500;
   }
 
-  &__old-price {
-    position: relative;
-    color: $silver-600;
-
-    &::before {
-      content: "";
-      position: absolute;
-      top: 50%;
-      width: 100%;
-      height: 1px;
-      display: block;
-      background-color: $silver-600;
-      transform: rotate(-15deg);
-    }
-  }
-
   &__cart {
     width: 32px;
     height: 32px;

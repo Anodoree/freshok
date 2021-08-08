@@ -8,25 +8,36 @@
 @import '_modules/_components/_interactive/hotline';
 @import '_modules/_components/_interactive/logo';
 @import '_modules/_components/_interactive/catalog-dropdown';
-@import '_modules/_components/_forms/search-form';
 @import '_modules/_components/_interactive/icon-btn';
+@import '_modules/_components/_interactive/button';
+@import '_modules/_components/_interactive/social';
+
+@import '_modules/_components/_forms/search-form';
+@import '_modules/_components/_forms/sub-form';
+
 @import '_modules/_components/_filters/mix-filter';
+
 @import '_modules/_components/_objects/badge';
+@import '_modules/_components/_objects/bank-card';
+@import '_modules/_components/_objects/avaliable';
+@import '_modules/_components/_objects/rating';
+@import '_modules/_components/_objects/old-price';
+
 @import '_modules/_components/_cards/product-card';
+@import '_modules/_components/_cards/news-card';
 @import '_modules/_components/_cards/product-mini';
 
-@import '_modules/_components/_interactive/button';
-
-@import '_modules/_components/_cards/news-card';
+@import '_modules/_components/menu';
+@import '_modules/_components/address';
 
 @import '_modules/_components/header';
 
-@import '_modules/_index/hero';
-@import '_modules/_index/advantage';
-@import '_modules/_index/top-product';
-@import '_modules/_index/banner';
-@import '_modules/_index/promo';
-@import '_modules/_index/brand';
-@import '_modules/_index/news';
+@import '_modules/_sections/hero';
+@import '_modules/_sections/advantage';
+@import '_modules/_sections/top-product';
+@import '_modules/_sections/banner';
+@import '_modules/_sections/promo';
+@import '_modules/_sections/brand';
+@import '_modules/_sections/news';
 
 @import '_modules/_components/footer';

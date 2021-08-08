@@ -3,18 +3,21 @@
     <div class="product-card__badges">
       @@if (new_boolean === true) {
         @@include('../_objects/_badge.html', {
+          "class": "",
           "mod": "",
           "text": "Новинка",
           "suffix": ""
         })
       }@@if (hit_boolean === true) {
         @@include('../_objects/_badge.html', {
+          "class": "",
           "mod": "badge--orange",
           "text": "Хит",
           "suffix": ""
         })
       }@@if (sale_boolean === true) {
         @@include('../_objects/_badge.html', {
+          "class": "",
           "mod": "badge--red",
           "text": @@text,
           "suffix": "%"
@@ -43,6 +46,7 @@
     <div class="product-card__cost">
     @@if (old_price_boolean === true) {
       @@include('../_objects/_old-price.html', {
+        "class": "",
         "old_price": @@old_price
       })
     }

@@ -88,3 +88,9 @@ $black: #000000;
   -webkit-box-orient: vertical;
   overflow: hidden;
 }
+
+@mixin text-overflow() {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}

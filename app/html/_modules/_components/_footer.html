@@ -1,103 +1,36 @@
 <footer class="footer">
   <div class="footer__top">
     <div class="container">
-      <a class="footer__logo logo" href="index.html">
-        <img class="logo__img" src="images/logo.png" alt="Логотип"
-          width="200" height="60">
-      </a>
+      @@include('_interactive/_logo.html', {
+        "class": "footer__logo"
+      })
 
       <div class="footer__top-inner">
         <div class="footer__subscription">
-          <p class="footer__text">
-            Следите за нашими акциями
-          </p>
-          <form class="footer__sub-form">
-            <input class="footer__input" type="email" name="email"
-              aria-label="Поле ввода вашей электронной почты для подписки на акции"
-              placeholder="email@email.com" required>
-            <button class="footer__button" type="submit">
-              Подписаться
-            </button>
-          </form>
+          <div class="footer__text">
+            <p>
+              Следите за нашими акциями
+            </p>
+          </div>
+          @@include('_forms/_sub-form.html', {
+            "class": "footer__sub-form"
+          })
         </div>
 
-        <ul class="footer__menu">
-          <li class="footer__item">
-            <a class="footer__link" href="#">О нас</a>
-          </li>
-          <li class="footer__item">
-            <a class="footer__link" href="#">Оплата и доставка</a>
-          </li>
-          <li class="footer__item">
-            <a class="footer__link" href="#">Отзывы</a>
-          </li>
-          <li class="footer__item">
-            <a class="footer__link" href="#">Контакты</a>
-          </li>
-          <li class="footer__item">
-            <a class="footer__link" href="#">Вакансии</a>
-          </li>
-          <li class="footer__item">
-            <a class="footer__link" href="#">Новости</a>
-          </li>
-          <li class="footer__item">
-            <a class="footer__link" href="#">Публичная оферта</a>
-          </li>
-          <li class="footer__item">
-            <a class="footer__link" href="#">Акции</a>
-          </li>
-        </ul>
+        <nav class="footer__nav">
+          @@include('_menu.html', {
+            "mod": "footer__menu"
+          })
+        </nav>
 
         <div class="footer__contact">
-          <address class="footer__address address">
-            <ul class="address__list">
-              <li>
-                Горячая линия <a href="tel:+7907288365">+7 907 288 365</a>
-              </li>
-              <li>
-                Санкт-Петербург, Ул. Ленина, 1
-              </li>
-            </ul>
-          </address>
+          @@include('_address.html', {
+            "class": "footer__address",
+            "tel": "+7907288365",
+            "teltext": "+7 907 288 365"
+          })
 
-          <ul class="social">
-            <li class="social__item">
-              <a class="social__link"
-                href="#" target="_blank" rel="nofollow">
-                <svg>
-                  <use xlink:href="images/sprite.svg#facebook"></use>
-                </svg>
-                <span class="sr-only">Facebook</span>
-              </a>
-            </li>
-            <li class="social__item">
-              <a class="social__link"
-                href="#" target="_blank" rel="nofollow">
-                <svg>
-                  <use xlink:href="images/sprite.svg#youtube"></use>
-                </svg>
-                <span class="sr-only">YouTube</span>
-              </a>
-            </li>
-            <li class="social__item">
-              <a class="social__link"
-                href="#" target="_blank" rel="nofollow">
-                <svg>
-                  <use xlink:href="images/sprite.svg#telegram"></use>
-                </svg>
-                <span class="sr-only">Telegram</span>
-              </a>
-            </li>
-            <li class="social__item">
-              <a class="social__link"
-                href="#" target="_blank" rel="nofollow">
-                <svg>
-                  <use xlink:href="images/sprite.svg#instagram"></use>
-                </svg>
-                <span class="sr-only">Instagram</span>
-              </a>
-            </li>
-          </ul>
+          @@include('_interactive/_social.html')
         </div>
       </div>
     </div>
@@ -106,16 +39,10 @@
   <div class="footer__bottom">
     <div class="container">
       <div class="footer__bottom-inner">
-        <p class="footer__copy">© 2021 Фрешок</p>
-        <ul class="bank-card">
-          <li class="bank-card__item">
-            <img src="images/icons/visa.svg" alt="Visa" width="93" height="29">
-          </li>
-          <li class="bank-card__item">
-            <img src="images/icons/mastercard.svg" alt="Mastercard" width="49"
-              height="29">
-          </li>
-        </ul>
+        <div class="footer__copy">
+          <p>© 2021 Фрешок</p>
+        </div>
+        @@include('_objects/_bank-card.html')
       </div>
     </div>
   </div>

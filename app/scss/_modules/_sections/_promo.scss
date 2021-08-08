@@ -23,14 +23,7 @@
     align-self: stretch;
     margin-bottom: 48px;
     display: grid;
-    grid-template: 126px / repeat(4, 1fr);
+    grid-template: auto / repeat(4, 1fr);
     grid-gap: 28px 2.3%;
-  }
-
-  &__link {
-    display: block;
-    border: 1px solid rgba($black, 0.2);
-    border-radius: 6px;
-    @extend %animation-card;
   }
 }
