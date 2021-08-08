@@ -3,10 +3,10 @@
     <div class="container">
       <div class="header__top-inner">
         <div class="header__contacts">
-          @@include('_interactive/_delivery.html', {
+          @@include('_components/_interactive/_delivery.html', {
             "text": "Адрес и время доставки"
           })
-          @@include('_interactive/_hotline.html', {
+          @@include('_components/_interactive/_hotline.html', {
             "text": "Горячая линия 24/7"
           })
         </div>
@@ -28,15 +28,15 @@
 
   <div class="container">
     <nav class="header__inner">
-      @@include('_interactive/_logo.html', {
+      @@include('_components/_interactive/_logo.html', {
         "class": "header__logo"
       })
 
-      @@include('_interactive/_catalog-dropdown.html', {
+      @@include('_components/_interactive/_catalog-dropdown.html', {
         "class": "header__catalog-dropdown"
       })
 
-      @@include('_forms/_search-form.html', {
+      @@include('_components/_forms/_search-form.html', {
         "class": "header__search-form"
       })
 
