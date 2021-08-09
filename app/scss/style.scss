@@ -23,8 +23,9 @@
 @import '_modules/_components/_filters/mix-filter';
 
 @import '_modules/_components/_cards/product-card';
-@import '_modules/_components/_cards/news-card';
 @import '_modules/_components/_cards/product-mini';
+@import '_modules/_components/_cards/cart-card';
+@import '_modules/_components/_cards/news-card';
 
 @import '_modules/_components/menu';
 @import '_modules/_components/catalog-dropdown';
@@ -32,6 +33,8 @@
 @import '_modules/_components/social';
 
 @import '_modules/header';
+
+@import '_modules/cart';
 
 @import '_modules/hero';
 @import '_modules/advantage';

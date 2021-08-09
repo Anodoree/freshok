@@ -1,0 +1,92 @@
+.cart {
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: 8;
+  width: 476px;
+  max-width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  letter-spacing: 0.03em;
+  background-color: $silver-100;
+  transform: translateX(100%);
+  transition: transform 0.5s;
+
+  &--active {
+    transform: translateX(0);
+  }
+
+  &__header {
+    position: relative;
+    padding: 21px 75px 0 23px;
+    background-color: $white;
+    border: 1px solid rgba($silver-600, 0.3);
+  }
+
+  &__clean {
+    padding: 13px 0;
+    font-weight: 300;
+    color: $black;
+    background-color: transparent;
+    border: none;
+  }
+
+  &__close {
+    position: absolute;
+    top: 19px;
+    right: 13px;
+    padding: 13px;
+    display: flex;
+    background-color: transparent;
+    border: none;
+    transition: background-color 0.3s;
+
+    svg {
+      width: 24px;
+      height: 24px;
+      fill: $black;
+    }
+
+    &:hover {
+      background-color: rgba($silver-600, 0.3);
+    }
+  }
+
+  &__list {
+    flex-grow: 1;
+    padding: 9px 13px 9px 11px;
+    overflow-y: auto;
+  }
+
+  &__footer-inner {
+    padding: 24px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: $white;
+  }
+
+  &__total {
+    padding-left: 30px;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 1;
+    letter-spacing: 0.04em;
+    color: $dark-500;
+  }
+
+  &__currency {
+    font-size: 18px;
+  }
+
+  &__submit {
+    width: 100%;
+    padding: 22px;
+    font-size: 18px;
+    color: $white;
+    background-color: $green-900;
+    border: none;
+  }
+}

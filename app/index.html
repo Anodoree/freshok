@@ -143,6 +143,128 @@
   <main class="main">
     <h1 class="sr-only">Фрешок - онлайн-маркет</h1>
 
+    <div class="overlay"></div>
+    <form class="cart">
+      <header class="cart__header">
+        <h2 class="title2">Корзина</h2>
+        <button class="cart__clean" type="reset">
+          очистить корзину
+        </button>
+        <button class="cart__close" type="button">
+          <svg>
+            <use xlink:href="images/sprite.svg#close"></use>
+          </svg>
+          <span class="sr-only">Закрыть корзину</span>
+        </button>
+      </header>
+
+      <div class="cart__list">
+        <article class="cart-card">
+          <div class="cart-card__img-box">
+            <img src="images/products/pineapple.jpg" alt="Ананасы">
+          </div>
+
+          <div class="cart-card__info">
+            <h3 class="cart-card__title">
+              Ананас, 1 кг
+            </h3>
+            <span class="cart-card__price">
+              999<span class="cart-card__currency">₽</span>
+            </span>
+          </div>
+
+          <div class="cart-card__sum">
+            <div class="cart-card__number-box">
+              <span class="sr-only">Изменить количество товара</span>
+              <button class="cart-card__btn" type="button">
+                <svg>
+                  <use xlink:href="images/sprite.svg#minus"></use>
+                </svg>
+                <span class="sr-only">Убавить на один</span>
+              </button>
+              <span class="cart-card__number">
+                2
+              </span>
+              <button class="cart-card__btn" type="button">
+                <svg>
+                  <use xlink:href="images/sprite.svg#plus"></use>
+                </svg>
+                <span class="sr-only">Прибавить на один</span>
+              </button>
+            </div>
+  
+            <span class="cart-card__price">
+              1998<span class="cart-card__currency">₽</span>
+            </span>
+          </div>
+
+          <button class="cart-card__close" type="button">
+            <svg>
+              <use xlink:href="images/sprite.svg#close"></use>
+            </svg>
+          </button>
+        </article>
+        <article class="cart-card">
+          <div class="cart-card__img-box">
+            <img src="images/products/dragon-fruit.jpg" alt="Питахайя красная с белой мякотью">
+          </div>
+
+          <div class="cart-card__info">
+            <h3 class="cart-card__title">
+              Питахайя красная с белой мякотью, 1шт
+            </h3>
+            <span class="cart-card__price">
+              1019<span class="cart-card__currency">₽</span>
+            </span>
+          </div>
+
+          <div class="cart-card__sum">
+            <div class="cart-card__number-box">
+              <span class="sr-only">Изменить количество товара</span>
+              <button class="cart-card__btn" type="button">
+                <svg>
+                  <use xlink:href="images/sprite.svg#minus"></use>
+                </svg>
+                <span class="sr-only">Убавить на один</span>
+              </button>
+              <span class="cart-card__number">
+                2
+              </span>
+              <button class="cart-card__btn" type="button">
+                <svg>
+                  <use xlink:href="images/sprite.svg#plus"></use>
+                </svg>
+                <span class="sr-only">Прибавить на один</span>
+              </button>
+            </div>
+  
+            <span class="cart-card__price">
+              2038<span class="cart-card__currency">₽</span>
+            </span>
+          </div>
+
+          <button class="cart-card__close" type="button">
+            <svg>
+              <use xlink:href="images/sprite.svg#close"></use>
+            </svg>
+          </button>
+        </article>
+      </div>
+
+      <footer class="cart__footer">
+        <div class="cart__footer-inner">
+          <h3 class="title2">Товаров на сумму</h3>
+          <span class="cart__total">
+            2038<span class="cart__currency">₽</span>
+          </span>
+        </div>
+
+        <button class="cart__submit" type="submit">
+          Оформить заказ
+        </button>
+      </footer>
+    </form>
+
     <section class="hero">
       <h2 class="sr-only">Актуальные акции и предложения</h2>
 

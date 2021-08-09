@@ -1,0 +1,45 @@
+<article class="cart-card">
+  <div class="cart-card__img-box">
+    <img src="images/products/@@image" alt="@@alt">
+  </div>
+
+  <div class="cart-card__info">
+    <h3 class="cart-card__title">
+      @@title
+    </h3>
+    <span class="cart-card__price">
+      @@price<span class="cart-card__currency">₽</span>
+    </span>
+  </div>
+
+  <div class="cart-card__sum">
+    <div class="cart-card__number-box">
+      <span class="sr-only">Изменить количество товара</span>
+      <button class="cart-card__btn" type="button">
+        <svg>
+          <use xlink:href="images/sprite.svg#minus"></use>
+        </svg>
+        <span class="sr-only">Убавить на один</span>
+      </button>
+      <span class="cart-card__number">
+        @@number
+      </span>
+      <button class="cart-card__btn" type="button">
+        <svg>
+          <use xlink:href="images/sprite.svg#plus"></use>
+        </svg>
+        <span class="sr-only">Прибавить на один</span>
+      </button>
+    </div>
+  
+    <span class="cart-card__price">
+      @@cost<span class="cart-card__currency">₽</span>
+    </span>
+  </div>
+
+  <button class="cart-card__close" type="button">
+    <svg>
+      <use xlink:href="images/sprite.svg#close"></use>
+    </svg>
+  </button>
+</article>

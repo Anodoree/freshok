@@ -18,6 +18,25 @@ body {
   flex-grow: 1;
 }
 
+.overflow-hidden {
+  overflow: hidden;
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 100%;
+  z-index: 7;
+  transition: left 0.5s, background-color 0.5s;
+
+  &--active {
+    left: 0;
+    background-color: rgba($black, 0.2);
+  }
+}
+
 .container {
   max-width: 1320px;
   margin: 0 auto;
@@ -45,4 +64,12 @@ body {
   letter-spacing: 0.03em;
   text-transform: uppercase;
   color: $dark-900;
+}
+
+.title2 {
+  font-weight: inherit;
+  font-size: 24px;
+  line-height: 1;
+  letter-spacing: 0.03em;
+  color: $black;
 }
