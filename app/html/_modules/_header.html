@@ -3,10 +3,10 @@
     <div class="container">
       <div class="header__top-inner">
         <div class="header__contacts">
-          @@include('_components/_interactive/_delivery.html', {
+          @@include('_components/_links/_delivery.html', {
             "text": "Адрес и время доставки"
           })
-          @@include('_components/_interactive/_hotline.html', {
+          @@include('_components/_links/_hotline.html', {
             "text": "Горячая линия 24/7"
           })
         </div>
@@ -28,11 +28,11 @@
 
   <div class="container">
     <nav class="header__inner">
-      @@include('_components/_interactive/_logo.html', {
+      @@include('_components/_links/_logo.html', {
         "class": "header__logo"
       })
 
-      @@include('_components/_interactive/_catalog-dropdown.html', {
+      @@include('_components/_catalog-dropdown.html', {
         "class": "header__catalog-dropdown"
       })
 
@@ -42,32 +42,15 @@
 
       <ul class="header__icon">
         <li class="header__icon-item">
-          <button class="icon-btn" type="button">
-            <svg>
-              <use xlink:href="images/sprite.svg#user"></use>
-            </svg>
-            <span class="sr-only">Меню пользователя</span>
-          </button>
+          @@include('_components/_buttons/_icon-btn/_user-btn.html')
         </li>
 
         <li class="header__icon-item">
-          <button class="icon-btn" type="button">
-            <svg>
-              <use xlink:href="images/sprite.svg#favorite"></use>
-            </svg>
-            <span class="sr-only">Избранные товары</span>
-            <span class="icon-btn__number">12</span>
-          </button>
+          @@include('_components/_buttons/_icon-btn/_favorite-btn.html')
         </li>
 
         <li class="header__icon-item">
-          <button class="icon-btn" type="button">
-            <svg>
-              <use xlink:href="images/sprite.svg#cart"></use>
-            </svg>
-            <span class="sr-only">Корзина</span>
-            <span class="icon-btn__number">12</span>
-          </button>
+          @@include('_components/_buttons/_icon-btn/_cart-btn.html')
         </li>
       </ul>
     </nav>
