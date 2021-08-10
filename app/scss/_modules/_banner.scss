@@ -29,6 +29,11 @@
       & .banner__link {
         border-bottom: 2px solid $white;
       }
+
+      & .banner__link:hover {
+        color: $silver-400;
+        border-color: $silver-400;
+      }
     }
   }
 
@@ -36,12 +41,12 @@
     max-width: 86%;
   }
 
-  &__text {
+  &__text-box {
     margin-bottom: 13px;
-    display: inline-block;
     font-weight: 700;
     font-size: 12px;
     letter-spacing: 0.1em;
+    @include line-clamp(1);
   }
 
   &__title {
@@ -59,15 +64,19 @@
     font-weight: 700;
     font-size: 14px;
     border-bottom: 2px solid $dark-500;
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
     outline: 0;
-    transition: box-shadow 0.3s, background-color 0.3s, opacity 0.3s;
+    transition: box-shadow 0.3s, color 0.3s, opacity 0.3s,
+      border-color 0.3s;
 
     &:focus {
-      box-shadow: 0 0 0 3px rgba($green-900, 0.8)
+      box-shadow: 0 0 0 3px rgba($green-900, 0.6)
     }
 
     &:hover {
-      background-color: rgba($yellow-900, 0.5);
+      color: $black;
+      border-color: $black;
     }
 
     &:active {
