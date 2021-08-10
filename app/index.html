@@ -146,7 +146,7 @@
     <div class="overlay"></div>
     <form class="cart">
       <header class="cart__header">
-        <h2 class="title2">Корзина</h2>
+        <h2 class="title-cart">Корзина</h2>
         <button class="cart__clean" type="reset">
           очистить корзину
         </button>
@@ -174,25 +174,9 @@
           </div>
 
           <div class="cart-card__sum">
-            <div class="cart-card__number-box">
-              <span class="sr-only">Изменить количество товара</span>
-              <button class="cart-card__btn" type="button">
-                <svg>
-                  <use xlink:href="images/sprite.svg#minus"></use>
-                </svg>
-                <span class="sr-only">Убавить на один</span>
-              </button>
-              <span class="cart-card__number">
-                2
-              </span>
-              <button class="cart-card__btn" type="button">
-                <svg>
-                  <use xlink:href="images/sprite.svg#plus"></use>
-                </svg>
-                <span class="sr-only">Прибавить на один</span>
-              </button>
-            </div>
-  
+            <input class="cart-card__number-box" type="number" name="number"
+              min="1" max="99" value="2">
+
             <span class="cart-card__price">
               1998<span class="cart-card__currency">₽</span>
             </span>
@@ -219,25 +203,9 @@
           </div>
 
           <div class="cart-card__sum">
-            <div class="cart-card__number-box">
-              <span class="sr-only">Изменить количество товара</span>
-              <button class="cart-card__btn" type="button">
-                <svg>
-                  <use xlink:href="images/sprite.svg#minus"></use>
-                </svg>
-                <span class="sr-only">Убавить на один</span>
-              </button>
-              <span class="cart-card__number">
-                2
-              </span>
-              <button class="cart-card__btn" type="button">
-                <svg>
-                  <use xlink:href="images/sprite.svg#plus"></use>
-                </svg>
-                <span class="sr-only">Прибавить на один</span>
-              </button>
-            </div>
-  
+            <input class="cart-card__number-box" type="number" name="number"
+              min="1" max="99" value="2">
+
             <span class="cart-card__price">
               2038<span class="cart-card__currency">₽</span>
             </span>
@@ -253,7 +221,7 @@
 
       <footer class="cart__footer">
         <div class="cart__footer-inner">
-          <h3 class="title2">Товаров на сумму</h3>
+          <h3 class="title-cart">Товаров на сумму</h3>
           <span class="cart__total">
             2038<span class="cart__currency">₽</span>
           </span>

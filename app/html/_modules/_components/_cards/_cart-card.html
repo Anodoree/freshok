@@ -13,25 +13,9 @@
   </div>
 
   <div class="cart-card__sum">
-    <div class="cart-card__number-box">
-      <span class="sr-only">Изменить количество товара</span>
-      <button class="cart-card__btn" type="button">
-        <svg>
-          <use xlink:href="images/sprite.svg#minus"></use>
-        </svg>
-        <span class="sr-only">Убавить на один</span>
-      </button>
-      <span class="cart-card__number">
-        @@number
-      </span>
-      <button class="cart-card__btn" type="button">
-        <svg>
-          <use xlink:href="images/sprite.svg#plus"></use>
-        </svg>
-        <span class="sr-only">Прибавить на один</span>
-      </button>
-    </div>
-  
+    <input class="cart-card__number-box" type="number" name="number"
+      min="1" max="99" value="2">
+
     <span class="cart-card__price">
       @@cost<span class="cart-card__currency">₽</span>
     </span>

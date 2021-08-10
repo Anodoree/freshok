@@ -29,9 +29,10 @@ body {
   bottom: 0;
   left: 100%;
   z-index: 7;
-  transition: left 0.5s, background-color 0.5s;
+  transition: left 0s 0.5s, background-color 0.5s;
 
   &--active {
+    transition: background-color 1s;
     left: 0;
     background-color: rgba($black, 0.2);
   }
@@ -66,7 +67,7 @@ body {
   color: $dark-900;
 }
 
-.title2 {
+.title-cart {
   font-weight: inherit;
   font-size: 24px;
   line-height: 1;

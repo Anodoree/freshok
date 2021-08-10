@@ -65,7 +65,7 @@
     align-items: center;
   }
 
-  &__number-box {
+  .jq-number {
     flex-shrink: 0;
     width: 84px;
     height: 24px;
@@ -74,25 +74,40 @@
     justify-content: space-between;
     align-items: center;
     background-color: rgba($green-900, 0.1);
-  }
 
-  &__btn {
-    padding: 4px;
-    display: flex;
-    background-color: $green-900;
-    border: 0;
-
-    svg {
-      width: 16px;
-      height: 16px;
-      fill: $white;
+    &__field {
+      order: 2;
     }
-  }
 
-  &__number {
-    font-size: 16px;
-    padding: 5px;
-    color: $dark-500;
+    input {
+      width: 36px;
+      padding: 1px 5px;
+      font-size: 16px;
+      text-align: center;
+      color: $dark-500;
+      background-color: transparent;
+      border: none;
+    }
+
+    &__spin {
+      width: 24px;
+      height: 24px;
+      background-color: $green-900;
+      background-position: center;
+      background-repeat: no-repeat;
+    }
+
+    .minus {
+      order: 1;
+      background-image: url('../images/sprite.svg#minus');
+      background-size: 16px 16px;
+    }
+
+    .plus {
+      order: 3;
+      background-image: url('../images/sprite.svg#plus');
+      background-size: 28px 28px;
+    }
   }
 
   &__close {
