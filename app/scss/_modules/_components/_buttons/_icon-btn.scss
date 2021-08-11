@@ -44,7 +44,7 @@
     color: $red-900;
     background-color: $white;
     border-radius: 9px;
-    @include text-overflow();
+    @include text-overflow($el);
 
     @include media-w($lg) {
       top: 2px;

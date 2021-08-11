@@ -25,6 +25,9 @@ $md: 992px;
 $sm: 768px;
 $xs: 576px;
 
+$el: ellipsis;
+$cl: clip;
+
 @mixin media-w($point) {
   @media (max-width: $point) {
     @content;
@@ -38,8 +41,8 @@ $xs: 576px;
   overflow: hidden;
 }
 
-@mixin text-overflow() {
+@mixin text-overflow($value) {
   white-space: nowrap;
   overflow: hidden;
-  text-overflow: ellipsis;
+  text-overflow: $value;
 }

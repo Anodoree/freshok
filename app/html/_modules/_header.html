@@ -41,11 +41,15 @@
       })
 
       <ul class="header__icon">
-        <li class="header__icon-item">
+        <li class="header__icon-item header__icon-item--search">
+          @@include('_components/_buttons/_icon-btn/_search-btn.html')
+        </li>
+
+        <li class="header__icon-item header__icon-item--user">
           @@include('_components/_buttons/_icon-btn/_user-btn.html')
         </li>
 
-        <li class="header__icon-item">
+        <li class="header__icon-item header__icon-item--favorite">
           @@include('_components/_buttons/_icon-btn/_favorite-btn.html')
         </li>
 

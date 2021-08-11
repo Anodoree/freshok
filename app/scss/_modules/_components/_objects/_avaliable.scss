@@ -6,7 +6,7 @@
   letter-spacing: 0.03em;
   text-transform: uppercase;
   color: $silver-600;
-  @include text-overflow;
+  @include text-overflow($el);
 
   &--green {
     color: $green-900;

@@ -41,13 +41,32 @@
   &__list {
     display: flex;
     justify-content: space-between;
+
+    @include media-w($md) {
+      flex-direction: column;
+      max-width: 410px;
+      margin-right: auto;
+      margin-left: auto;
+    }
   }
 
   &__item {
     flex-basis: 410px;
+    width: 100%;
+
+    @include media-w($md) {
+      flex-basis: auto;
+      margin-right: auto;
+      margin-left: auto;
+    }
 
     &:not(:last-child) {
       margin-right: 30px;
+
+      @include media-w($md) {
+        margin-right: auto;
+        margin-bottom: 30px;
+      }
     }
   }
 }

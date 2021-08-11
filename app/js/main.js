@@ -5,6 +5,10 @@ $(function() {
     $('.catalog-dropdown__btn').toggleClass('catalog-dropdown__btn--active');
   });
 
+  $('#search-btn').on('click', function() {
+    $('.header__search-form').toggleClass('header__search-form--active');
+  });
+
   $('#cart-btn').on('click', function() {
     $('body').addClass('overflow-hidden');
     $('.overlay').addClass('overlay--active');

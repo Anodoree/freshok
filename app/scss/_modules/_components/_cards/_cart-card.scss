@@ -50,7 +50,7 @@
     font-weight: 600;
     font-size: 20px;
     color: $dark-500;
-    @include text-overflow;
+    @include text-overflow($el);
   }
 
   &__currency {

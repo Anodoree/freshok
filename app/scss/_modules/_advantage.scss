@@ -1,5 +1,4 @@
 .advantage {
-
   &__list {
     padding: 48px;
     display: flex;
@@ -9,6 +8,18 @@
 
     @include media-w($lg) {
       padding: 30px 15px;
+    }
+
+    @include media-w($md) {
+      flex-wrap: wrap;
+    }
+
+    @include media-w($sm) {
+      flex-direction: column;
+    }
+
+    @include media-w($xs) {
+      align-items: flex-start;
     }
   }
 
@@ -22,12 +33,15 @@
     background-size: 50px 50px;
     background-repeat: no-repeat;
 
-    svg {
-      flex-shrink: 0;
-      width: 50px;
-      height: 50px;
-      margin-right: 24px;
-      fill: $green-900;
+    @include media-w($md) {
+      justify-content: center;
+      flex-basis: 49%;
+    }
+
+    @include media-w($sm) {
+      justify-content: flex-start;
+      flex-basis: auto;
+      width: 275px;
     }
 
     &:not(:last-child) {
@@ -36,6 +50,19 @@
       @include media-w($lg) {
         margin-right: 30px;
       }
+
+      @include media-w($md) {
+        margin-right: 0;
+        margin-bottom: 30px;
+      }
+    }
+
+    svg {
+      flex-shrink: 0;
+      width: 50px;
+      height: 50px;
+      margin-right: 24px;
+      fill: $green-900;
     }
   }
 

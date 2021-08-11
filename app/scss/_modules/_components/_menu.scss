@@ -6,7 +6,7 @@
   }
 
   &__link {
-    @include line-clamp(1);
+    display: inline-block;
     @extend %animation-inline;
 
     @include media-w($lg) {
