@@ -29,7 +29,23 @@ $(function() {
     slidesToShow: 6,
     slidesToScroll: 6,
     swipeToSlide: true,
-    infinite: true
+    infinite: true,
+    responsive: [{
+      breakpoint: 992,
+      settings: {
+        slidesToShow: 4
+      }
+    }, {
+      breakpoint: 768,
+      settings: {
+        slidesToShow: 3
+      }
+    }, {
+      breakpoint: 576,
+      settings: {
+        slidesToShow: 2
+      }
+    }]
   });
 
   var containerEl1 = document.querySelector('[data-ref="top-product-mixitup"]');

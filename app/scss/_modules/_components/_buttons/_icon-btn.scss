@@ -13,6 +13,11 @@
   border-radius: 3px;
   @extend %animation-btn;
 
+  @include media-w($lg) {
+    width: 44px;
+    height: 44px;
+  }
+
   &:hover {
     background-color: rgba($white, 0.1);
   }
@@ -21,6 +26,11 @@
     fill: $white;
     width: 32px;
     height: 32px;
+
+    @include media-w($lg) {
+      width: 24px;
+      height: 24px;
+    }
   }
 
   &__number {
@@ -35,5 +45,10 @@
     background-color: $white;
     border-radius: 9px;
     @include text-overflow();
+
+    @include media-w($lg) {
+      top: 2px;
+      left: 1px;
+    }
   }
 }

@@ -1,12 +1,13 @@
 .product-mini {
+  width: 300px;
+  // height: 124px;
   display: block;
   border: 1px solid rgba($black, 0.2);
   border-radius: 6px;
   @extend %animation-card;
 
   &__article {
-    max-width: 300px;
-    padding: 12px;
+    padding: 11px;
     display: flex;
     letter-spacing: 0.03em;
     background-color: $white;
@@ -15,6 +16,7 @@
 
   &__image-box {
     position: relative;
+    flex-shrink: 0;
   }
 
   img {
@@ -30,8 +32,8 @@
 
   &__content {
     flex-grow: 1;
-    max-width: 164px;
-    margin-left: auto;
+    max-width: 176px;
+    padding-left: 12px;
     display: flex;
     flex-direction: column;
   }
@@ -40,6 +42,7 @@
     flex-grow: 1;
     font-weight: 600;
     font-size: 14px;
+    line-height: 1.5;
     @include line-clamp(3);
   }
 
@@ -49,7 +52,8 @@
   }
 
   &__price {
-    margin-right: 9%;
+    flex-grow: 1;
+    margin-right: 5px;
     font-weight: 600;
     font-size: 20px;
     line-height: 1;
@@ -66,6 +70,6 @@
   }
 
   &__rating {
-    flex-grow: 1;
+    flex-grow: 3;
   }
 }

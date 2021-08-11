@@ -1,10 +1,24 @@
 .mix-filter {
   display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
   font-weight: 700;
   font-size: 15px;
 
   &__item:not(:last-child) {
     margin-right: 25px;
+
+    @include media-w($md) {
+      margin-right: 0;
+    }
+  }
+
+  &__item {
+    @include media-w($md) {
+      padding-right: 12px;
+      padding-left: 12px;
+    }
   }
 
   &__btn {
@@ -30,6 +44,10 @@
 
     &:active {
       box-shadow: inset 0 4px 4px rgba($black, 0.5);
+    }
+
+    @include media-w($lg) {
+      padding-top: 11px;
     }
   }
 }

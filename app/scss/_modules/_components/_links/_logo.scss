@@ -6,5 +6,10 @@
 
   &__img {
     object-fit: contain;
+
+    @include media-w($lg) {
+      max-height: 50px;
+      max-width: 170px;
+    }
   }
 }

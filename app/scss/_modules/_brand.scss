@@ -1,9 +1,17 @@
 .brand {
-  max-width: 1480px;
+  max-width: 1450px;
   margin: 0 auto;
-  padding: 71px 15px;
+  padding-top: 71px;
+  padding-bottom: 71px;
+
+  @include media-w($lg) {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
 
   &__item {
+    padding-right: 10px;
+    padding-left: 10px;
     opacity: 0.5;
     transition: opacity 0.3s;
 

@@ -1,5 +1,9 @@
 .news {
-  margin-bottom: 74px;
+  margin-bottom: 76px;
+
+  @include media-w($lg) {
+    margin-bottom: 60px;
+  }
 
   &__top {
     display: flex;

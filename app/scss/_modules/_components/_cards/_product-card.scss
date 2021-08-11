@@ -1,5 +1,7 @@
 .product-card {
+  flex-grow: 1;
   max-width: 300px;
+  min-width: 170px;
   display: flex;
   flex-direction: column;
   border: 1px solid rgba($black, 0.2);
@@ -69,6 +71,10 @@
     img {
       width: 100%;
       object-fit: contain;
+
+      @include media-w($lg) {
+        max-height: 200px;
+      }
     }
 
     &::before {

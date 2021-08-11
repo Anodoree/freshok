@@ -1,7 +1,12 @@
 .promo {
-  padding-top: 74px;
+  padding-top: 73px;
   padding-bottom: 70px;
   background-color: $silver-200;
+
+  @include media-w($lg) {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
 
   &__inner {
     display: flex;
@@ -10,20 +15,34 @@
   }
 
   &__mix-filter {
-    margin-bottom: 50px;
-    justify-content: center;
+    margin-bottom: 35px;
     letter-spacing: 0.1em;
+
+    @include media-w($lg) {
+      margin-bottom: 20px;
+    }
 
     li:not(:last-child) {
       margin-right: 23px;
     }
   }
 
-  &__grid {
+  &__flex {
     align-self: stretch;
-    margin-bottom: 48px;
-    display: grid;
-    grid-template: auto / repeat(4, 1fr);
-    grid-gap: 28px 2.3%;
+    margin-right: -15px;
+    margin-bottom: 32px;
+    margin-left: -15px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    @include media-w($lg) {
+    }
+  }
+
+  &__item {
+    padding: 15px;
+    display: flex;
+    justify-content: center;
   }
 }

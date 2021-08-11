@@ -46,19 +46,42 @@
     padding-bottom: 25px;
     display: flex;
     align-items: center;
+
+    @include media-w($lg) {
+      padding-top: 18px;
+      padding-bottom: 18px;
+    }
   }
 
   &__logo {
+    flex-shrink: 0;
     margin-right: 24px;
+
+    @include media-w($lg) {
+      margin-right: 15px;
+
+      img {
+        max-height: 50px;
+        max-width: 170px;
+      }
+    }
   }
 
   &__catalog-dropdown {
     margin-right: 30px;
+
+    @include media-w($lg) {
+      margin-right: 15px;
+    }
   }
 
   &__search-form {
     flex-basis: 577px;
     margin-right: 32px;
+
+    @include media-w($lg) {
+      margin-right: 15px;
+    }
   }
 
   &__icon {
@@ -67,5 +90,9 @@
 
   &__icon-item:not(:last-child) {
     margin-right: 12px;
+
+    @include media-w($lg) {
+      margin-right: 6px;
+    }
   }
 }

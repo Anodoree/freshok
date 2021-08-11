@@ -3,6 +3,11 @@
   letter-spacing: 0.03em;
   margin-bottom: 72px;
 
+  @include media-w($lg) {
+    padding-top: 60px;
+    margin-bottom: 60px;
+  }
+
   &__inner {
     display: flex;
     flex-direction: column;
@@ -11,6 +16,10 @@
 
   &__mix-filter {
     margin-bottom: 48px;
+
+    @include media-w($lg) {
+      margin-bottom: 30px;
+    }
   }
 
   &__grid {
@@ -19,5 +28,26 @@
     display: grid;
     grid-template: auto / repeat(4, 1fr);
     grid-gap: 28px 30px;
+
+    @include media-w($md) {
+      grid-template-columns: repeat(2, 1fr);
+      margin-right: auto;
+      margin-left: auto;
+    }
+
+    @include media-w($sm) {
+      grid-template: auto / repeat(2, 1fr);
+      grid-gap: 15px;
+    }
+    
+    @include media-w($xs) {
+      grid-template: auto / repeat(2, 1fr);
+      grid-gap: 5px;
+    }
+  }
+
+  &__item {
+    display: flex;
+    justify-content: center;
   }
 }

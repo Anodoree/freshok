@@ -9,6 +9,10 @@
   border-radius: 6px;
   @extend %animation-btn;
 
+  @include media-w($lg) {
+    font-size: 16px;
+  }
+
   &--inverted {
     padding: 9px 23px;
     color: $green-900;

@@ -15,6 +15,10 @@
     outline: 0;
     transition: background-color 0.3s, box-shadow 0.3s;
 
+    @include media-w($lg) {
+      padding: 12px 40px 13px 58px;
+    }
+
     &::before {
       content: "";
       position: absolute;
@@ -25,6 +29,11 @@
       background-image: url("../images/icons/nav.svg");
       background-repeat: no-repeat;
       background-size: contain;
+
+      @include media-w($lg) {
+        top: 13px;
+        left: 13px;
+      }
     }
 
     &::after {
@@ -38,6 +47,11 @@
       background-repeat: no-repeat;
       background-size: contain;
       transition: transform 0.3s;
+
+      @include media-w($lg) {
+        top: 20px;
+        right: 13px;
+      }
     }
 
     &:focus {
