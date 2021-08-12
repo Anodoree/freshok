@@ -8,10 +8,5 @@
   &__link {
     display: inline-block;
     @extend %animation-inline;
-
-    @include media-w($lg) {
-      padding-top: 13px;
-      padding-bottom: 13px;
-    }
   }
 }

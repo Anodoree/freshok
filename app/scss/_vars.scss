@@ -24,6 +24,7 @@ $lg: 1200px;
 $md: 992px;
 $sm: 768px;
 $xs: 576px;
+$xxs: 374px;
 
 $el: ellipsis;
 $cl: clip;
@@ -45,4 +46,22 @@ $cl: clip;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: $value;
+}
+
+@mixin overlay() {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 100%;
+  left: 0;
+  z-index: 7;
+  transition: bottom 0s 0.5s, background-color 0.5s;
+
+  @include media-w($sm) {
+    &--active {
+      transition: background-color 1s;
+      bottom: 0;
+      background-color: rgba($black, 0.2);
+    }
+  }
 }

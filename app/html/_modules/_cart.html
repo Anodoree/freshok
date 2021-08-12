@@ -4,12 +4,11 @@
     <button class="cart__clean" type="reset">
       очистить корзину
     </button>
-    <button class="cart__close" type="button">
-      <svg>
-        <use xlink:href="images/sprite.svg#close"></use>
-      </svg>
-      <span class="sr-only">Закрыть корзину</span>
-    </button>
+    @@include('_components/_buttons/_close-btn.html', {
+      "class": "cart__close-btn",
+      "id": "close-cart",
+      "sr-only-text": "Закрыть корзину"
+    })
   </header>
 
   <div class="cart__list">

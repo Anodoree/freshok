@@ -17,7 +17,7 @@
 
   &__top {
     position: relative;
-    z-index: 2;
+    z-index: 3;
     font-weight: 700;
     font-size: 13px;
     text-transform: uppercase;
@@ -64,6 +64,49 @@
     @extend %animation-inline;
   }
 
+  &__burger {
+    order: -1;
+    width: 44px;
+    height: 44px;
+    padding: 0;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    background-color: transparent;
+    border: none;
+    @extend %animation-inline;
+
+    @include media-w($sm) {
+      display: flex;
+    }
+  }
+
+  &__burger-line {
+    position: relative;
+    width: 30px;
+    height: 2px;
+    display: block;
+    background-color: $white;
+
+    &::before,
+    &::after {
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      display: block;
+      background-color: $white;
+    }
+
+    &::before {
+      top: -10px;
+    }
+
+    &::after {
+      top: 10px;
+    }
+  }
+
   &__inner {
     padding-top: 25px;
     padding-bottom: 25px;
@@ -105,7 +148,6 @@
       align-items: center;
 
       img {
-        object-fit: cover;
         max-width: 40px;
         max-height: 40px;
       }
@@ -119,6 +161,10 @@
 
     @include media-w($lg) {
       margin-right: 15px;
+    }
+
+    @include media-w($xxs) {
+      display: none;
     }
   }
 

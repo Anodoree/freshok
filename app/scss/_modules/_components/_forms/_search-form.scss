@@ -19,6 +19,11 @@
       padding: 12px 12px 13px 45px;
     }
 
+    @include media-w($xxs) {
+      padding-right: 5px;
+      padding-left: 40px;
+    }
+
     &::placeholder {
       color: $dark-800;
     }

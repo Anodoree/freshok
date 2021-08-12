@@ -42,6 +42,11 @@
               <a class="header__link" href="#">Новости</a>
             </li>
           </ul>
+
+          <button class="header__burger">
+            <span class="header__burger-line"></span>
+            <span class="sr-only">Мобильное меню</span>
+          </button>
         </div>
       </div>
     </nav>
@@ -49,12 +54,16 @@
     <div class="container">
       <nav class="header__inner">
         <a class="header__logo logo" href="index.html">
-          <img class="logo__img" src="images/logo.png" alt="Логотип" width="200" height="60">
+          <picture class="logo__picture">
+            <source media="(max-width: 768px)" srcset="images/logo-short.png">
+            <source media="(min-width: 767px)" srcset="images/logo.png">
+            <img class="logo__img" src="images/logo.png" alt="Логотип" width="200" height="60">
+          </picture>
         </a>
 
         <div class="header__catalog-dropdown catalog-dropdown">
           <button class="catalog-dropdown__btn" type="button">
-            <span>Каталог продуктов</span>
+            Каталог <span>продуктов</span>
           </button>
           <ul class="catalog-dropdown__list">
             <li class="catalog-dropdown__item">
@@ -146,10 +155,127 @@
         </ul>
       </nav>
     </div>
-  </header>
+    <div class="mobile">
+      <div class="mobile__container">
+        <nav class="mobile__header">
+          <div class="mobile__header-top">
+            <a class="mobile__logo logo" href="index.html">
+              <img class="logo__img" src="images/logo-green.png" alt="Логотип" width="200" height="60">
+            </a>
+            <button class="mobile__close-btn close-btn" id="close-mobile" type="button">
+              <svg>
+                <use xlink:href="images/sprite.svg#close"></use>
+              </svg>
+              <span class="sr-only">Закрыть мобильное меню</span>
+            </button>
+          </div>
 
-  <main class="main">
-    <h1 class="sr-only">Фрешок - онлайн-маркет</h1>
+          <div class="mobile__user">
+            <svg>
+              <use xlink:href="images/sprite.svg#user"></use>
+            </svg>
+            <ul class="mobile__list">
+              <li class="mobile__item">
+                <a class="mobile__link" href="#">
+                  Вход
+                </a>
+              </li>
+              <li class="mobile__item">
+                <a class="mobile__link" href="#">
+                  Регистрация
+                </a>
+              </li>
+            </ul>
+          </div>
+
+          <a class="mobile__catalog" href="#">
+            <svg>
+              <use xlink:href="images/sprite.svg#nav-dark"></use>
+            </svg>
+            Каталог товаров
+          </a>
+
+          <address class="mobile__address-mobile address-mobile">
+            <ul class="address-mobile__list">
+              <li>
+                <svg>
+                  <use xlink:href="images/sprite.svg#hotline"></use>
+                </svg>
+                <a href="tel:+7907288365">+7 907 288 365</a>
+              </li>
+              <li>
+                <svg>
+                  <use xlink:href="images/sprite.svg#point"></use>
+                </svg>
+                <span>Санкт-Петербург, Ул. Ленина, 1</span>
+              </li>
+            </ul>
+          </address>
+
+          <ul class="mobile__social social">
+            <li class="social__item">
+              <a class="social__link" href="#" target="_blank" rel="nofollow">
+                <svg>
+                  <use xlink:href="images/sprite.svg#facebook"></use>
+                </svg>
+                <span class="sr-only">Facebook</span>
+              </a>
+            </li>
+            <li class="social__item">
+              <a class="social__link" href="#" target="_blank" rel="nofollow">
+                <svg>
+                  <use xlink:href="images/sprite.svg#youtube"></use>
+                </svg>
+                <span class="sr-only">YouTube</span>
+              </a>
+            </li>
+            <li class="social__item">
+              <a class="social__link" href="#" target="_blank" rel="nofollow">
+                <svg>
+                  <use xlink:href="images/sprite.svg#telegram"></use>
+                </svg>
+                <span class="sr-only">Telegram</span>
+              </a>
+            </li>
+            <li class="social__item">
+              <a class="social__link" href="#" target="_blank" rel="nofollow">
+                <svg>
+                  <use xlink:href="images/sprite.svg#instagram"></use>
+                </svg>
+                <span class="sr-only">Instagram</span>
+              </a>
+            </li>
+          </ul>
+
+          <ul class="mobile__menu">
+            <li class="mobile__menu-item">
+              <a class="mobile__menu-link" href="#">Доставка</a>
+            </li>
+            <li class="mobile__menu-item">
+              <a class="mobile__menu-link" href="#">О Нас</a>
+            </li>
+            <li class="mobile__menu-item">
+              <a class="mobile__menu-link" href="#">Новости</a>
+            </li>
+            <li class="mobile__menu-item">
+              <a class="mobile__menu-link" href="#">Контакты</a>
+            </li>
+            <li class="mobile__menu-item">
+              <a class="mobile__menu-link" href="#">Акции</a>
+            </li>
+            <li class="mobile__menu-item">
+              <a class="mobile__menu-link" href="#">Вакансии</a>
+            </li>
+            <li class="mobile__menu-item">
+              <a class="mobile__menu-link" href="#">Отзывы</a>
+            </li>
+            <li class="mobile__menu-item">
+              <a class="mobile__menu-link" href="#">Публичная оферта</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </div>
 
     <div class="overlay"></div>
     <form class="cart">
@@ -158,7 +284,7 @@
         <button class="cart__clean" type="reset">
           очистить корзину
         </button>
-        <button class="cart__close" type="button">
+        <button class="cart__close-btn close-btn" id="close-cart" type="button">
           <svg>
             <use xlink:href="images/sprite.svg#close"></use>
           </svg>
@@ -240,60 +366,67 @@
         </button>
       </footer>
     </form>
+  </header>
+
+  <main class="main">
+    <h1 class="sr-only">Фрешок - онлайн-маркет</h1>
 
     <section class="hero">
       <h2 class="sr-only">Актуальные акции и предложения</h2>
 
       <ul class="hero__slider">
-        <li class="hero__item"
-          style="background-image: url('images/banner/001.jpg');">
-          <div class="hero__inner">
-            <div class="hero__content">
-              <h3 class="hero__title">
-                Свежачок вам в хату
-                <span class="hero__accent">Скидка -50%</span>
-              </h3>
-              <div class="hero__text">
-                <p>
-                  Только с 7 по 13 июля скидка на сезонные фрукты и овощи до
-                  50%. Торопитесь!
-                </p>
+        <li class="hero__item">
+          <div class="hero__bg" style="background-image: url('images/banner/001.jpg');">
+            <div class="hero__inner">
+              <div class="hero__content">
+                <h3 class="hero__title">
+                  Свежачок вам в хату
+                  <span class="hero__accent">Скидка -50%</span>
+                </h3>
+                <div class="hero__text">
+                  <p>
+                    Только с 7 по 13 июля скидка на сезонные фрукты и овощи до
+                    50%. Торопитесь!
+                  </p>
+                </div>
               </div>
+              <a class="button " href="#">Купить сейчас</a>
             </div>
-            <a class="button " href="#">Купить сейчас</a>
           </div>
         </li>
 
-        <li class="hero__item"
-          style="background-image: url('images/banner/002.jpg');">
-          <div class="hero__inner">
-            <div class="hero__content">
-              <h3 class="hero__title">
-                Накрути себе томатов
-                <span class="hero__accent">Акция: 3 кг по цене 1</span>
-              </h3>
-              <div class="hero__text">
-                <p>
-                  Только с 12 по 15 июля скидка на домашние помидорчики
-                </p>
+        <li class="hero__item">
+          <div class="hero__bg" style="background-image: url('images/banner/002.jpg');">
+            <div class="hero__inner">
+              <div class="hero__content">
+                <h3 class="hero__title">
+                  Накрути себе томатов
+                  <span class="hero__accent">Акция: 3 кг по цене 1</span>
+                </h3>
+                <div class="hero__text">
+                  <p>
+                    Только с 12 по 15 июля скидка на домашние помидорчики
+                  </p>
+                </div>
               </div>
+              <a class="button " href="#">Купить сейчас</a>
             </div>
-            <a class="button " href="#">Купить сейчас</a>
           </div>
         </li>
 
-        <li class="hero__item"
-          style="background-image: url('images/banner/003.jpg');">
-          <div class="hero__inner">
-            <div class="hero__content">
-              <h3 class="hero__title">
-                Пусть остальные позеленеют от зависти
-                <span class="hero__accent">Распродажа зелени</span>
-              </h3>
-              <div class="hero__text">
+        <li class="hero__item">
+          <div class="hero__bg" style="background-image: url('images/banner/003.jpg');">
+            <div class="hero__inner">
+              <div class="hero__content">
+                <h3 class="hero__title">
+                  Пусть остальные позеленеют от зависти
+                  <span class="hero__accent">Распродажа зелени</span>
+                </h3>
+                <div class="hero__text">
+                </div>
               </div>
+              <a class="button " href="#">Купить сейчас</a>
             </div>
-            <a class="button " href="#">Купить сейчас</a>
           </div>
         </li>
       </ul>
@@ -1366,7 +1499,7 @@
               </ul>
             </address>
 
-            <ul class="social">
+            <ul class=" social">
               <li class="social__item">
                 <a class="social__link" href="#" target="_blank" rel="nofollow">
                   <svg>

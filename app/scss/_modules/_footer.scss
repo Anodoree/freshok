@@ -1,4 +1,6 @@
 .footer {
+  position: relative;
+  z-index: 1;
   color: $white;
   background-color: $dark-800;
 
@@ -7,7 +9,7 @@
     border-bottom: 1px solid rgba($white, 0.1);
   }
 
-  &__container{
+  &__container {
     @include media-w($md) {
       padding: 0;
     }
@@ -80,6 +82,13 @@
       margin: 0 auto;
       padding-right: 15px;
       padding-left: 15px;
+    }
+
+    a {
+      @include media-w($lg) {
+        padding-top: 13px;
+        padding-bottom: 13px;
+      }
     }
   }
 

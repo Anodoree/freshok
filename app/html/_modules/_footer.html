@@ -2,7 +2,8 @@
   <div class="footer__top">
     <div class="footer__container container">
       @@include('_components/_links/_logo.html', {
-        "class": "footer__logo"
+        "class": "footer__logo",
+        "img": "logo.png"
       })
 
       <div class="footer__top-inner">
@@ -19,7 +20,7 @@
 
         <nav class="footer__nav">
           @@include('_components/_menu.html', {
-            "mod": "footer__menu"
+            "class": "footer__menu"
           })
         </nav>
 
@@ -30,7 +31,9 @@
             "teltext": "+7 907 288 365"
           })
 
-          @@include('_components/_social.html')
+          @@include('_components/_social.html', {
+            "class": ""
+          })
         </div>
       </div>
     </div>

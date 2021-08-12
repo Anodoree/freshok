@@ -4,10 +4,10 @@
       <div class="header__top-inner">
         <div class="header__contacts">
           @@include('_components/_links/_delivery.html', {
-            "text": "Адрес и время доставки"
+          "text": "Адрес и время доставки"
           })
           @@include('_components/_links/_hotline.html', {
-            "text": "Горячая линия 24/7"
+          "text": "Горячая линия 24/7"
           })
         </div>
 
@@ -22,22 +22,27 @@
             <a class="header__link" href="#">Новости</a>
           </li>
         </ul>
+
+        <button class="header__burger">
+          <span class="header__burger-line"></span>
+          <span class="sr-only">Мобильное меню</span>
+        </button>
       </div>
     </div>
   </nav>
 
   <div class="container">
     <nav class="header__inner">
-      @@include('_components/_links/_logo.html', {
-        "class": "header__logo"
+      @@include('_components/_links/_logo-responsive.html', {
+      "class": "header__logo"
       })
 
       @@include('_components/_catalog-dropdown.html', {
-        "class": "header__catalog-dropdown"
+      "class": "header__catalog-dropdown"
       })
 
       @@include('_components/_forms/_search-form.html', {
-        "class": "header__search-form"
+      "class": "header__search-form"
       })
 
       <ul class="header__icon">
@@ -59,4 +64,8 @@
       </ul>
     </nav>
   </div>
+  @@include('_mobile.html')
+
+  <div class="overlay"></div>
+  @@include('_cart.html')
 </header>

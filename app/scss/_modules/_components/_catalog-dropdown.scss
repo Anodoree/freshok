@@ -22,9 +22,8 @@
     @include media-w($sm) {
       width: 160px;
 
-      span {width: 60px;
-        display: block;
-        @include text-overflow($cl);
+      span {
+        display: none;
       }
     }
 

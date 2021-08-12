@@ -9,6 +9,7 @@
 @import '_modules/_components/_links/hotline';
 @import '_modules/_components/_links/logo';
 
+@import '_modules/_components/_buttons/close-btn';
 @import '_modules/_components/_buttons/icon-btn';
 @import '_modules/_components/_buttons/button';
 
@@ -30,11 +31,13 @@
 
 @import '_modules/_components/menu';
 @import '_modules/_components/catalog-dropdown';
+@import '_modules/_components/address-mobile';
 @import '_modules/_components/address';
 @import '_modules/_components/social';
 
 @import '_modules/header';
 
+@import '_modules/mobile';
 @import '_modules/cart';
 
 @import '_modules/hero';

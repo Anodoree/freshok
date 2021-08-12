@@ -6,7 +6,7 @@
 
   a {
     padding-left: 4px;
-    white-space: nowrap;
+    display: inline-block;
     border-radius: 3px;
     outline: 0;
     transition: box-shadow 0.3s, opacity 0.3s, outline-color 0.3s;

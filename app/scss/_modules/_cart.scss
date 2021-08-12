@@ -33,31 +33,14 @@
     border: none;
   }
 
-  &__close {
-    position: absolute;
-    top: 19px;
-    right: 13px;
-    padding: 13px;
-    display: flex;
-    background-color: transparent;
-    border: none;
-    transition: background-color 0.3s;
-
-    svg {
-      width: 24px;
-      height: 24px;
-      fill: $black;
-    }
-
-    &:hover {
-      background-color: rgba($silver-600, 0.3);
-    }
-  }
-
   &__list {
     flex-grow: 1;
     padding: 9px 13px 9px 11px;
     overflow-y: auto;
+  }
+
+  &__footer {
+    border-top: 1px solid rgba($silver-600, 0.3);
   }
 
   &__footer-inner {
