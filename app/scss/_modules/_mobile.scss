@@ -149,11 +149,12 @@
 
   &__menu {
     padding: 18px 30px;
+  }
 
-    a {
-      padding-top: 6px;
-      padding-bottom: 6px;
-      display: block;
-    }
+  &__menu-link {
+    padding-top: 6px;
+    padding-bottom: 6px;
+    display: block;
+    @extend %animation-inline;
   }
 }

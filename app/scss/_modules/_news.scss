@@ -5,6 +5,10 @@
     margin-bottom: 60px;
   }
 
+  @include media-w($md) {
+    margin-bottom: 54px;
+  }
+
   @include media-w($xs) {
     margin-bottom: 48px;
   }

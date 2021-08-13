@@ -277,7 +277,7 @@
     <form class="cart">
       <div class="cart__container">
         <div class="cart__header">
-          <h2 class="title-cart">Корзина</h2>
+          <h2 class="cart__title">Корзина</h2>
           <button class="cart__clean" type="reset">
             очистить корзину
           </button>
@@ -313,10 +313,11 @@
               </span>
             </div>
 
-            <button class="cart-card__close" type="button">
+            <button class="cart-card__close-btn close-btn" id="close-cart-card" type="button">
               <svg>
                 <use xlink:href="images/sprite.svg#close"></use>
               </svg>
+              <span class="sr-only">Убрать позицию из карзины</span>
             </button>
           </article>
           <article class="cart-card">
@@ -342,17 +343,18 @@
               </span>
             </div>
 
-            <button class="cart-card__close" type="button">
+            <button class="cart-card__close-btn close-btn" id="close-cart-card" type="button">
               <svg>
                 <use xlink:href="images/sprite.svg#close"></use>
               </svg>
+              <span class="sr-only">Убрать позицию из карзины</span>
             </button>
           </article>
         </div>
   
         <div class="cart__footer">
           <div class="cart__footer-inner">
-            <h3 class="title-cart">Товаров на сумму</h3>
+            <h3 class="cart__text">Товаров на сумму</h3>
             <span class="cart__total">
               2038<span class="cart__currency">₽</span>
             </span>
@@ -435,7 +437,7 @@
               </ul>
             </address>
 
-            <ul class=" social">
+            <ul class="footer__social social">
               <li class="social__item">
                 <a class="social__link" href="#" target="_blank" rel="nofollow">
                   <svg>

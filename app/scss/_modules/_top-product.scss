@@ -8,6 +8,11 @@
     margin-bottom: 60px;
   }
 
+  @include media-w($md) {
+    padding-top: 54px;
+    margin-bottom: 54px;
+  }
+
   @include media-w($xs) {
     padding-top: 48px;
     margin-bottom: 48px;
@@ -45,18 +50,19 @@
     @include media-w($md) {
       grid-template-columns: repeat(2, 1fr);
       margin-right: auto;
+      margin-bottom: 38px;
       margin-left: auto;
     }
 
     @include media-w($sm) {
       grid-template: auto / repeat(2, 1fr);
       grid-gap: 15px;
+      margin-bottom: 26px;
     }
 
     @include media-w($xs) {
       grid-template: auto / repeat(2, 1fr);
       grid-gap: 5px;
-      margin-bottom: 26px;
     }
 
     @include media-w($xxs) {

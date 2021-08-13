@@ -8,6 +8,11 @@
     padding-bottom: 60px;
   }
 
+  @include media-w($md) {
+    padding-top: 54px;
+    padding-bottom: 54px;
+  }
+
   @include media-w($xs) {
     padding-top: 48px;
     padding-bottom: 48px;
@@ -48,6 +53,10 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+
+    @include media-w($md) {
+      margin-bottom: 22px;
+    }
 
     @include media-w($xs) {
       margin-bottom: 17px;

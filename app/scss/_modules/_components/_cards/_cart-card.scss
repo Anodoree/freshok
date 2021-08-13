@@ -10,6 +10,10 @@
   border: 1px solid $silver-600;
   border-radius: 3px;
 
+  @include media-w($xs) {
+    justify-content: flex-start;
+  }
+
   &:not(:last-child) {
     margin-bottom: 12px;
   }
@@ -24,6 +28,10 @@
     justify-content: center;
     align-items: center;
 
+    @include media-w($xs) {
+      margin-right: 15px;
+    }
+
     img {
       object-position: center;
       object-fit: contain;
@@ -32,11 +40,15 @@
 
   &__info {
     align-self: stretch;
-    flex-grow: 1;
-    max-width: 155px;
+    flex: 0 1 155px;
     display: flex;
     flex-direction: column;
     justify-content: center;
+
+    @include media-w($xs) {
+      flex-grow: 1;
+      margin-right: 35px;
+    }
   }
 
   &__title {
@@ -63,6 +75,13 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+
+    @include media-w($xs) {
+      flex-grow: 1;
+      margin-right: 12px;
+      padding-top: 12px;
+      padding-left: 12px;
+    }
   }
 
   .jq-number {
@@ -112,7 +131,7 @@
     }
   }
 
-  &__close {
+  &__close-btn {
     position: absolute;
     top: 6px;
     right: 6px;

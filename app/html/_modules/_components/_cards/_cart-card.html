@@ -21,9 +21,9 @@
     </span>
   </div>
 
-  <button class="cart-card__close" type="button">
-    <svg>
-      <use xlink:href="images/sprite.svg#close"></use>
-    </svg>
-  </button>
+  @@include('../_buttons/_close-btn.html', {
+    "class": "cart-card__close-btn",
+    "id": "close-cart-card",
+    "sr-only-text": "Убрать позицию из карзины"
+  })
 </article>
