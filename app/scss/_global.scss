@@ -30,22 +30,6 @@ body {
   }
 }
 
-.overlay {
-  position: fixed;
-  top: 0;
-  right: 0;
-  bottom: 100%;
-  left: 0;
-  z-index: 7;
-  transition: bottom 0s 0.5s, background-color 0.5s;
-
-  &--active {
-    transition: background-color 1s;
-    bottom: 0;
-    background-color: rgba($black, 0.2);
-  }
-}
-
 .container {
   max-width: 1320px;
   margin: 0 auto;
@@ -74,9 +58,19 @@ body {
   text-transform: uppercase;
   color: $dark-900;
 
-  @include media-w($lg) {
-    margin-bottom: 26px;
-    font-size: 30px;
+  @include media-w($md) {
+    margin-bottom: 23px;
+    font-size: 28px;
+  }
+
+  @include media-w($sm) {
+    margin-bottom: 18px;
+    font-size: 26px;
+  }
+
+  @include media-w($xs) {
+    margin-bottom: 15px;
+    font-size: 24px;
   }
 }
 

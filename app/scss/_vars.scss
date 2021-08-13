@@ -56,12 +56,4 @@ $cl: clip;
   left: 0;
   z-index: 7;
   transition: bottom 0s 0.5s, background-color 0.5s;
-
-  @include media-w($sm) {
-    &--active {
-      transition: background-color 1s;
-      bottom: 0;
-      background-color: rgba($black, 0.2);
-    }
-  }
 }

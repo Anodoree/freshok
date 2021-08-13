@@ -5,10 +5,28 @@
     margin-bottom: 60px;
   }
 
+  @include media-w($xs) {
+    margin-bottom: 48px;
+  }
+
   &__top {
+    margin-bottom: 30px;
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
+
+    @include media-w($md) {
+      margin-bottom: 27px;
+    }
+
+    @include media-w($xs) {
+      flex-direction: column;
+      margin-bottom: 24px;
+    }
+  }
+
+  .title {
+    margin-bottom: 0;
   }
 
   &__link {
@@ -21,6 +39,10 @@
     border-radius: 4px 4px 0 0;
     outline: 0;
     transition: box-shadow 0.3s, color 0.3s;
+
+    @include media-w($xs) {
+      padding-top: 9px;
+    }
 
     &:focus {
       box-shadow: 0 0 0 2px $green-900;
@@ -66,6 +88,10 @@
       @include media-w($md) {
         margin-right: auto;
         margin-bottom: 30px;
+      }
+
+      @include media-w($xs) {
+        margin-bottom: 15px;
       }
     }
   }

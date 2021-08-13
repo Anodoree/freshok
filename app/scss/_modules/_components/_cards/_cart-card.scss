@@ -74,6 +74,7 @@
     justify-content: space-between;
     align-items: center;
     background-color: rgba($green-900, 0.1);
+    cursor: pointer;
 
     &__field {
       order: 2;
@@ -87,6 +88,7 @@
       color: $dark-500;
       background-color: transparent;
       border: none;
+      outline: 0;
     }
 
     &__spin {

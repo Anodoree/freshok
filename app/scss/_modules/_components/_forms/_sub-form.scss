@@ -11,6 +11,10 @@
     border-bottom-left-radius: 6px;
     @extend %animation-field;
 
+    @include media-w($xxs) {
+      padding: 13px 5px;
+    }
+
     &::placeholder {
       color: $dark-700;
     }
@@ -29,5 +33,9 @@
     border-top-right-radius: 6px;
     border-bottom-right-radius: 6px;
     @extend %animation-btn;
+
+    @include media-w($xxs) {
+      padding: 6px;
+    }
   }
 }

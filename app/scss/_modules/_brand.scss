@@ -9,6 +9,11 @@
     padding-bottom: 60px;
   }
 
+  @include media-w($xs) {
+    padding-top: 48px;
+    padding-bottom: 45px;
+  }
+
   &__item {
     padding-right: 10px;
     padding-left: 10px;

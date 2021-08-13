@@ -19,6 +19,12 @@
       padding: 12px 12px 13px 45px;
     }
 
+    @include media-w($md) {
+      &:focus {
+        box-shadow: inset 0 0 0 4px $green-200;
+      }
+    }
+
     @include media-w($xxs) {
       padding-right: 5px;
       padding-left: 40px;
@@ -47,6 +53,16 @@
 
     @include media-w($lg) {
       padding: 12px 30px 13px;
+    }
+
+    @include media-w($md) {
+      &:focus {
+        box-shadow: inset 0 0 0 4px $green-200;
+      }
+    }
+
+    @include media-w($xxs) {
+      padding: 12px 20px;
     }
   }
 }

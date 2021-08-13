@@ -23,6 +23,10 @@
     background-color: $white;
     border: 1px solid $green-900;
 
+    @include media-w($xs) {
+      font-size: 18px;
+    }
+
     &:hover {
       color: $green-900;
       background-color: $green-100;
@@ -30,6 +34,13 @@
 
     &:active {
       color: rgba($green-900, 0.5);
+    }
+  }
+
+  &--promo {
+    @include media-w($xs) {
+      padding: 12px 24px;
+      letter-spacing: 1.5px;
     }
   }
 }

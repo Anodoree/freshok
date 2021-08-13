@@ -8,6 +8,11 @@
     margin-bottom: 60px;
   }
 
+  @include media-w($xs) {
+    padding-top: 48px;
+    margin-bottom: 48px;
+  }
+
   &__inner {
     display: flex;
     flex-direction: column;
@@ -19,6 +24,14 @@
 
     @include media-w($lg) {
       margin-bottom: 30px;
+    }
+
+    @include media-w($sm) {
+      margin-bottom: 26px;
+    }
+
+    @include media-w($xs) {
+      margin-bottom: 22px;
     }
   }
 
@@ -39,10 +52,15 @@
       grid-template: auto / repeat(2, 1fr);
       grid-gap: 15px;
     }
-    
+
     @include media-w($xs) {
       grid-template: auto / repeat(2, 1fr);
       grid-gap: 5px;
+      margin-bottom: 26px;
+    }
+
+    @include media-w($xxs) {
+      grid-template: auto / repeat(1, 1fr);
     }
   }
 

@@ -8,6 +8,11 @@
     padding-bottom: 60px;
   }
 
+  @include media-w($xs) {
+    padding-top: 48px;
+    padding-bottom: 48px;
+  }
+
   &__inner {
     display: flex;
     flex-direction: column;
@@ -22,8 +27,16 @@
       margin-bottom: 20px;
     }
 
+    @include media-w($xs) {
+      margin-bottom: 17px;
+    }
+
     li:not(:last-child) {
       margin-right: 23px;
+
+      @include media-w($xs) {
+        margin-right: 0;
+      }
     }
   }
 
@@ -36,7 +49,8 @@
     flex-wrap: wrap;
     justify-content: center;
 
-    @include media-w($lg) {
+    @include media-w($xs) {
+      margin-bottom: 17px;
     }
   }
 
@@ -44,5 +58,14 @@
     padding: 15px;
     display: flex;
     justify-content: center;
+
+    @include media-w($xs) {
+      padding: 7.5px;
+    }
+
+    @include media-w($xxs) {
+      padding-right: 0;
+      padding-left: 0;
+    }
   }
 }

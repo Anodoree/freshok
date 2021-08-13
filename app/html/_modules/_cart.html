@@ -1,43 +1,45 @@
 <form class="cart">
-  <header class="cart__header">
-    <h2 class="title-cart">Корзина</h2>
-    <button class="cart__clean" type="reset">
-      очистить корзину
-    </button>
-    @@include('_components/_buttons/_close-btn.html', {
-      "class": "cart__close-btn",
-      "id": "close-cart",
-      "sr-only-text": "Закрыть корзину"
-    })
-  </header>
-
-  <div class="cart__list">
-    @@include('_components/_cards/_cart-card.html', {
-      "image": "pineapple.jpg",
-      "alt": "Ананасы",
-      "title": "Ананас, 1 кг",
-      "price": "999",
-      "cost": "1998"
-    })
-    @@include('_components/_cards/_cart-card.html', {
-      "image": "dragon-fruit.jpg",
-      "alt": "Питахайя красная с белой мякотью",
-      "title": "Питахайя красная с белой мякотью, 1шт",
-      "price": "1019",
-      "cost": "2038"
-    })
-  </div>
-
-  <footer class="cart__footer">
-    <div class="cart__footer-inner">
-      <h3 class="title-cart">Товаров на сумму</h3>
-      <span class="cart__total">
-        2038<span class="cart__currency">₽</span>
-      </span>
+  <div class="cart__container">
+    <div class="cart__header">
+      <h2 class="title-cart">Корзина</h2>
+      <button class="cart__clean" type="reset">
+        очистить корзину
+      </button>
+      @@include('_components/_buttons/_close-btn.html', {
+        "class": "cart__close-btn",
+        "id": "close-cart",
+        "sr-only-text": "Закрыть корзину"
+      })
     </div>
-
-    <button class="cart__submit" type="submit">
-      Оформить заказ
-    </button>
-  </footer>
+  
+    <div class="cart__list">
+      @@include('_components/_cards/_cart-card.html', {
+        "image": "pineapple.jpg",
+        "alt": "Ананасы",
+        "title": "Ананас, 1 кг",
+        "price": "999",
+        "cost": "1998"
+      })
+      @@include('_components/_cards/_cart-card.html', {
+        "image": "dragon-fruit.jpg",
+        "alt": "Питахайя красная с белой мякотью",
+        "title": "Питахайя красная с белой мякотью, 1шт",
+        "price": "1019",
+        "cost": "2038"
+      })
+    </div>
+  
+    <div class="cart__footer">
+      <div class="cart__footer-inner">
+        <h3 class="title-cart">Товаров на сумму</h3>
+        <span class="cart__total">
+          2038<span class="cart__currency">₽</span>
+        </span>
+      </div>
+  
+      <button class="cart__submit" type="submit">
+        Оформить заказ
+      </button>
+    </div>
+  </div>
 </form>

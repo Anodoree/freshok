@@ -19,6 +19,10 @@
     background-repeat: no-repeat;
     border-top-left-radius: 6px;
     border-top-right-radius: 6px;
+
+    @include media-w($xs) {
+      height: 200px;
+    }
   }
 
   &__meta {
@@ -56,6 +60,11 @@
     background-color: $white;
     border-bottom-left-radius: 6px;
     border-bottom-right-radius: 6px;
+
+    @include media-w($xs) {
+      height: auto;
+      padding: 15px 15px 17px;
+    }
   }
 
   &__title {
@@ -63,5 +72,9 @@
     font-size: 18px;
     transition: color 0.3s;
     @include line-clamp(3);
+
+    @include media-w($xs) {
+      font-size: 14px;
+    }
   }
 }

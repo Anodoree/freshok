@@ -44,6 +44,11 @@
       height: 29px;
       fill: $silver-600;
       transition: fill 0.3s;
+
+      @include media-w($xs) {
+        width: 24px;
+        height: 22px;
+      }
     }
 
     &:focus {
@@ -61,7 +66,6 @@
 
   &__link {
     position: relative;
-    min-height: 225px;
     padding: 7px 12px;
     display: flex;
     justify-content: center;
@@ -73,6 +77,14 @@
       object-fit: contain;
 
       @include media-w($lg) {
+        max-height: 200px;
+      }
+
+      @include media-w($xs) {
+        max-height: 125px;
+      }
+
+      @include media-w($xxs) {
         max-height: 200px;
       }
     }
@@ -130,6 +142,11 @@
     font-weight: 600;
     font-size: 14px;
     @include line-clamp(3);
+
+    @include media-w($xs) {
+      padding-left: 10px;
+      padding-right: 10px;
+    }
   }
 
   &__bottom {
@@ -138,6 +155,10 @@
     justify-content: space-between;
     align-items: flex-end;
     line-height: 1.2;
+
+    @include media-w($xs) {
+      padding: 10px 11px 11px;
+    }
   }
 
   &__cost {

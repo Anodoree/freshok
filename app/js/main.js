@@ -31,14 +31,14 @@ $(function() {
 
   $('#cart-btn').on('click', function() {
     $('body').addClass('overflow-hidden');
-    $('.overlay').addClass('overlay--active');
     $('.cart').addClass('cart--active');
+    $('.cart__container').addClass('cart__container--active');
   });
 
   $('#close-cart').on('click', function() {
     $('body').removeClass('overflow-hidden');
-    $('.overlay').removeClass('overlay--active');
     $('.cart').removeClass('cart--active');
+    $('.cart__container').removeClass('cart__container--active');
   });
 
   $('.cart-card__number-box').styler();

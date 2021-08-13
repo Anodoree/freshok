@@ -1,21 +1,31 @@
 .cart {
-  position: fixed;
-  top: 0;
-  right: 0;
-  z-index: 8;
-  width: 476px;
-  max-width: 100%;
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
-  letter-spacing: 0.03em;
-  background-color: $silver-100;
-  transform: translateX(100%);
-  transition: transform 0.5s;
+  @include overlay();
 
   &--active {
-    transform: translateX(0);
+    transition: background-color 1s;
+    bottom: 0;
+    background-color: rgba($black, 0.2);
+  }
+
+  &__container {
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 8;
+    overflow-y: auto;
+    width: 476px;
+    max-width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    letter-spacing: 0.03em;
+    background-color: $silver-100;
+    transform: translateX(100%);
+    transition: transform 0.5s;
+
+    &--active {
+      transform: translateX(0);
+    }
   }
 
   &__header {
@@ -36,7 +46,6 @@
   &__list {
     flex-grow: 1;
     padding: 9px 13px 9px 11px;
-    overflow-y: auto;
   }
 
   &__footer {
