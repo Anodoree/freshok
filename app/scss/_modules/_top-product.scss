@@ -1,0 +1,77 @@
+.top-product {
+  padding-top: 72px;
+  letter-spacing: 0.03em;
+  margin-bottom: 72px;
+
+  @include media-w($lg) {
+    padding-top: 60px;
+    margin-bottom: 60px;
+  }
+
+  @include media-w($md) {
+    padding-top: 54px;
+    margin-bottom: 54px;
+  }
+
+  @include media-w($xs) {
+    padding-top: 48px;
+    margin-bottom: 48px;
+  }
+
+  &__inner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  &__mix-filter {
+    margin-bottom: 48px;
+
+    @include media-w($lg) {
+      margin-bottom: 30px;
+    }
+
+    @include media-w($sm) {
+      margin-bottom: 26px;
+    }
+
+    @include media-w($xs) {
+      margin-bottom: 22px;
+    }
+  }
+
+  &__grid {
+    align-self: stretch;
+    margin-bottom: 48px;
+    display: grid;
+    grid-template: auto / repeat(4, 1fr);
+    grid-gap: 28px 30px;
+
+    @include media-w($md) {
+      grid-template-columns: repeat(2, 1fr);
+      margin-right: auto;
+      margin-bottom: 38px;
+      margin-left: auto;
+    }
+
+    @include media-w($sm) {
+      grid-template: auto / repeat(2, 1fr);
+      grid-gap: 15px;
+      margin-bottom: 26px;
+    }
+
+    @include media-w($xs) {
+      grid-template: auto / repeat(2, 1fr);
+      grid-gap: 5px;
+    }
+
+    @include media-w($xxs) {
+      grid-template: auto / repeat(1, 1fr);
+    }
+  }
+
+  &__item {
+    display: flex;
+    justify-content: center;
+  }
+}

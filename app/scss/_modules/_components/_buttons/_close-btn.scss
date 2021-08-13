@@ -1,0 +1,21 @@
+.close-btn {
+  position: absolute;
+  top: 19px;
+  right: 13px;
+  padding: 13px;
+  display: flex;
+  background-color: transparent;
+  border: none;
+  border-radius: 3px;
+  @extend %animation-card;
+
+  svg {
+    width: 24px;
+    height: 24px;
+    fill: $black;
+  }
+
+  &:hover {
+    background-color: rgba($silver-600, 0.3);
+  }
+}

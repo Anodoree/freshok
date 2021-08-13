@@ -1,0 +1,80 @@
+.promo {
+  padding-top: 73px;
+  padding-bottom: 70px;
+  background-color: $silver-200;
+
+  @include media-w($lg) {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+
+  @include media-w($md) {
+    padding-top: 54px;
+    padding-bottom: 54px;
+  }
+
+  @include media-w($xs) {
+    padding-top: 48px;
+    padding-bottom: 48px;
+  }
+
+  &__inner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  &__mix-filter {
+    margin-bottom: 35px;
+    letter-spacing: 0.1em;
+
+    @include media-w($lg) {
+      margin-bottom: 20px;
+    }
+
+    @include media-w($xs) {
+      margin-bottom: 17px;
+    }
+
+    li:not(:last-child) {
+      margin-right: 23px;
+
+      @include media-w($xs) {
+        margin-right: 0;
+      }
+    }
+  }
+
+  &__flex {
+    align-self: stretch;
+    margin-right: -15px;
+    margin-bottom: 32px;
+    margin-left: -15px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    @include media-w($md) {
+      margin-bottom: 22px;
+    }
+
+    @include media-w($xs) {
+      margin-bottom: 17px;
+    }
+  }
+
+  &__item {
+    padding: 15px;
+    display: flex;
+    justify-content: center;
+
+    @include media-w($xs) {
+      padding: 7.5px;
+    }
+
+    @include media-w($xxs) {
+      padding-right: 0;
+      padding-left: 0;
+    }
+  }
+}

@@ -1,0 +1,65 @@
+<article class="product-card">
+  <div class="product-card__top">
+    <div class="product-card__badges">
+      @@if (new_boolean === true) {
+        @@include('../_objects/_badge.html', {
+          "class": "",
+          "mod": "",
+          "text": "Новинка",
+          "suffix": ""
+        })
+      }@@if (hit_boolean === true) {
+        @@include('../_objects/_badge.html', {
+          "class": "",
+          "mod": "badge--orange",
+          "text": "Хит",
+          "suffix": ""
+        })
+      }@@if (sale_boolean === true) {
+        @@include('../_objects/_badge.html', {
+          "class": "",
+          "mod": "badge--red",
+          "text": @@text,
+          "suffix": "%"
+        })
+      }
+    </div>
+
+    <button class="product-card__favorite" type="button">
+      <svg>
+        <use xlink:href="images/sprite.svg#favorite"></use>
+      </svg>
+      <span class="sr-only">Добавить в "избранное"</span>
+    </button>
+  </div>
+
+  <a class="product-card__link" href="@@href">
+    <img src="images/products/@@image" alt="@@alt"
+      width="300" height="225">
+  </a>
+
+  <h3 class="product-card__title">
+    @@title
+  </h3>
+
+  <div class="product-card__bottom">
+    <div class="product-card__cost">
+    @@if (old_price_boolean === true) {
+      @@include('../_objects/_old-price.html', {
+        "class": "",
+        "old_price": @@old_price
+      })
+    }
+      <span class="product-card__price">
+        @@price <span class="product-card__currency">₽</span>
+      </span>
+    </div>
+
+    <button class="product-card__cart" type="button">
+      <svg>
+        <use xlink:href="images/sprite.svg#cart"></use>
+      </svg>
+      <span class="sr-only">Добавить в "корзину"</span>
+    </button>
+  </div>
+</article>

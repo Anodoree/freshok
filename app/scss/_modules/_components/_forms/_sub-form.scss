@@ -1,0 +1,41 @@
+.sub-form {
+  display: flex;
+
+  &__input {
+    position: relative;
+    z-index: 2;
+    flex-grow: 1;
+    padding: 10px 12px;
+    border: none;
+    border-top-left-radius: 6px;
+    border-bottom-left-radius: 6px;
+    @extend %animation-field;
+
+    @include media-w($xxs) {
+      padding: 13px 5px;
+    }
+
+    &::placeholder {
+      color: $dark-700;
+    }
+  }
+
+  &__button {
+    position: relative;
+    z-index: 1;
+    padding: 12px;
+    font-weight: 700;
+    font-size: 12px;
+    text-transform: uppercase;
+    color: $white;
+    background-color: $green-900;
+    border: none;
+    border-top-right-radius: 6px;
+    border-bottom-right-radius: 6px;
+    @extend %animation-btn;
+
+    @include media-w($xxs) {
+      padding: 6px;
+    }
+  }
+}
