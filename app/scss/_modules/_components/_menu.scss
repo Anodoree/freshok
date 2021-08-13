@@ -1,0 +1,12 @@
+.menu {
+    display: grid;
+
+  &__item {
+    max-width: 200px;
+  }
+
+  &__link {
+    display: inline-block;
+    @extend %animation-inline;
+  }
+}

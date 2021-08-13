@@ -1,0 +1,11 @@
+.logo {
+  max-width: 200px;
+  display: inline-flex;
+  border-radius: 5px;
+  @extend %animation-btn;
+
+  &__img {
+    object-fit: contain;
+    object-position: left;
+  }
+}

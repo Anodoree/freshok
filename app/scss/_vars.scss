@@ -2,79 +2,36 @@ $green-900: #63a60f;
 $green-800: #4d810c;
 $green-200: #e0edcf;
 $green-100: #eff6e7;
+
 $dark-900: #121212;
 $dark-800: #31352b;
 $dark-700: #4f4f4f;
 $dark-500: #505050;
+
 $red-900: #cf3e3b;
 $orange-900: #ff7a00;
 $yellow-900: #ffb800;
+
 $silver-600: #c1c1c1;
 $silver-400: #ebebeb;
 $silver-200: #f5f5f5;
 $silver-100: #f6f6f6;
+
 $white: #ffffff;
 $black: #000000;
 
-%animation-inline {
-  border-radius: 3px;
-  outline: 0;
-  transition: box-shadow 0.3s, opacity 0.3s, outline-color 0.3s;
+$lg: 1200px;
+$md: 992px;
+$sm: 768px;
+$xs: 576px;
+$xxs: 374px;
 
-  &:focus {
-    box-shadow: 0 0 0 2px $green-200;
-  }
+$el: ellipsis;
+$cl: clip;
 
-  &:hover {
-    opacity: 0.7;
-  }
-
-  &:active {
-    opacity: 0.4;
-  }
-}
-
-%animation-btn {
-  outline: 0;
-  transition: color 0.3s, background-color 0.3s, box-shadow 0.3s;
-
-  &:focus {
-    box-shadow: 0 0 0 4px $green-200;
-  }
-
-  &:hover {
-    background-color: $green-800;
-  }
-
-  &:active {
-    color: rgba($white, 0.5);
-    box-shadow: inset 0 4px 4px rgba($black, 0.5);
-  }
-}
-
-%animation-field {
-  outline: 0;
-  transition: box-shadow 0.3s;
-
-  &:focus {
-    box-shadow: 0 0 0 4px $green-200;
-  }
-}
-
-%animation-card {
-  outline: 0;
-  transition: color 0.3s, box-shadow 0.3s, border-color 0.3s;
-
-  &:focus {
-    box-shadow: 0 0 0 2px $green-900;
-  }
-
-  &:hover {
-    border-color: $green-900;
-  }
-
-  &:active {
-    box-shadow: 0 0 0 3px $silver-600;
+@mixin media-w($point) {
+  @media (max-width: $point) {
+    @content;
   }
 }
 
@@ -83,4 +40,20 @@ $black: #000000;
   display: -webkit-box;
   -webkit-box-orient: vertical;
   overflow: hidden;
+}
+
+@mixin text-overflow($value) {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: $value;
+}
+
+@mixin overlay() {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 100%;
+  left: 0;
+  z-index: 7;
+  transition: bottom 0s 0.5s, background-color 0.5s;
 }

@@ -1,0 +1,52 @@
+<footer class="footer">
+  <div class="footer__top">
+    <div class="footer__container container">
+      @@include('_components/_links/_logo/_logo.html', {
+        "class": "footer__logo",
+        "img": "logo.svg"
+      })
+
+      <div class="footer__top-inner">
+        <div class="footer__subscription">
+          <div class="footer__text">
+            <p>
+              Следите за нашими акциями
+            </p>
+          </div>
+          @@include('_components/_forms/_sub-form.html', {
+            "class": "footer__sub-form"
+          })
+        </div>
+
+        <nav class="footer__nav">
+          @@include('_components/_menu.html', {
+            "class": "footer__menu"
+          })
+        </nav>
+
+        <div class="footer__contact">
+          @@include('_components/_address.html', {
+            "class": "footer__address",
+            "tel": "+7907288365",
+            "teltext": "+7 907 288 365"
+          })
+
+          @@include('_components/_social.html', {
+            "class": "footer__social"
+          })
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer__bottom">
+    <div class="container">
+      <div class="footer__bottom-inner">
+        <div class="footer__copy">
+          <p>© 2021 Фрешок</p>
+        </div>
+        @@include('_components/_objects/_bank-card.html')
+      </div>
+    </div>
+  </div>
+</footer>

@@ -1,0 +1,18 @@
+.available {
+  margin-bottom: 4px;
+  display: inline-block;
+  font-weight: 600;
+  font-size: 10px;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: $silver-600;
+  @include text-overflow($el);
+
+  &--green {
+    color: $green-900;
+  }
+
+  &--red {
+    color: $red-900;
+  }
+}

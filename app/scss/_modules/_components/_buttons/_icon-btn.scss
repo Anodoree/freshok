@@ -1,0 +1,54 @@
+.icon-btn {
+  position: relative;
+  width: 50px;
+  height: 50px;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-position: center;
+  background-color: transparent;
+  background-repeat: no-repeat;
+  border: none;
+  border-radius: 3px;
+  @extend %animation-btn;
+
+  @include media-w($lg) {
+    width: 44px;
+    height: 44px;
+  }
+
+  &:hover {
+    background-color: rgba($white, 0.1);
+  }
+
+  svg {
+    fill: $white;
+    width: 32px;
+    height: 32px;
+
+    @include media-w($lg) {
+      width: 24px;
+      height: 24px;
+    }
+  }
+
+  &__number {
+    position: absolute;
+    top: 3px;
+    left: 3px;
+    max-width: 30px;
+    padding: 2px 3px;
+    font-weight: 600;
+    font-size: 10px;
+    color: $red-900;
+    background-color: $white;
+    border-radius: 9px;
+    @include text-overflow($el);
+
+    @include media-w($lg) {
+      top: 2px;
+      left: 1px;
+    }
+  }
+}

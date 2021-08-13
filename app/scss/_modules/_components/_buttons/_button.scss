@@ -1,0 +1,46 @@
+.button {
+  padding: 11px 25px;
+  display: inline-block;
+  font-weight: 400;
+  font-size: 18px;
+  letter-spacing: 0.03em;
+  color: $white;
+  background-color: $green-900;
+  border-radius: 6px;
+  @extend %animation-btn;
+
+  @include media-w($lg) {
+    font-size: 16px;
+  }
+
+  @include media-w($xs) {
+    padding: 10px 18px;
+  }
+
+  &--inverted {
+    padding: 9px 23px;
+    color: $green-900;
+    background-color: $white;
+    border: 1px solid $green-900;
+
+    @include media-w($xs) {
+      font-size: 18px;
+    }
+
+    &:hover {
+      color: $green-900;
+      background-color: $green-100;
+    }
+
+    &:active {
+      color: rgba($green-900, 0.5);
+    }
+  }
+
+  &--promo {
+    @include media-w($xs) {
+      padding: 12px 24px;
+      letter-spacing: 1.5px;
+    }
+  }
+}

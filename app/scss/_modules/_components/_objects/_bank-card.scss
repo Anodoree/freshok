@@ -1,0 +1,11 @@
+.bank-card {
+  display: flex;
+
+  &__item:not(:last-child) {
+    margin-right: 24px;
+  }
+
+  img {
+    object-fit: contain;
+  }
+}
