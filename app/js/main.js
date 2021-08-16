@@ -1,20 +1,52 @@
 $(function() {
 
+  function blockOpen(a, b) {
+    $('.' + a).addClass(a + '--active');
+    $('.' + b).addClass(b + '--active');
+  };
+
+  function blockClose(a, b) {
+    $('.' + a).removeClass(a + '--active');
+    $('.' + b).removeClass(b + '--active');
+  };
+
   $('.header__burger').on('click', function() {
     $('body').addClass('overflow-mobile');
-    $('.mobile').addClass('mobile--active');
-    $('.mobile__container').addClass('mobile__container--active');
+    blockOpen('mobile', 'mobile__container');
   });
 
   $('#close-mobile').on('click', function() {
     $('body').removeClass('overflow-mobile');
-    $('.mobile').removeClass('mobile--active');
-    $('.mobile__container').removeClass('mobile__container--active');
+    blockClose('mobile', 'mobile__container');
+  });
+
+  $('#cart-btn').on('click', function() {
+    $('body').addClass('overflow-hidden');
+    blockOpen('cart', 'cart__container');
+  });
+
+  $('#close-cart').on('click', function() {
+    $('body').removeClass('overflow-hidden');
+    blockClose('cart', 'cart__container');
+  });
+
+  $(document).on('keydown', function(event) {
+    if (event.code == "Escape") {
+      $('body').removeClass('overflow-hidden');
+      blockClose('mobile', 'mobile__container');
+      blockClose('cart', 'cart__container');
+    }
   });
 
   $('.catalog-dropdown__btn').on('click', function() {
     $('.catalog-dropdown__list').toggleClass('catalog-dropdown__list--active');
     $('.catalog-dropdown__btn').toggleClass('catalog-dropdown__btn--active');
+  });
+
+  $(document).on('mouseover', function(e) {
+    if ($(e.target).closest('.catalog-dropdown__btn').length || $(e.target).closest('.catalog-dropdown__list').length) return; {
+      blockClose('catalog-dropdown__btn', 'catalog-dropdown__list');
+    }
   });
 
   $('#search-btn').on('click', function() {
@@ -27,18 +59,6 @@ $(function() {
     } else {
       $('.search-form__input').attr('placeholder', 'Найти в магазине ...');
     }
-  });
-
-  $('#cart-btn').on('click', function() {
-    $('body').addClass('overflow-hidden');
-    $('.cart').addClass('cart--active');
-    $('.cart__container').addClass('cart__container--active');
-  });
-
-  $('#close-cart').on('click', function() {
-    $('body').removeClass('overflow-hidden');
-    $('.cart').removeClass('cart--active');
-    $('.cart__container').removeClass('cart__container--active');
   });
 
   $('.cart-card__number-box').styler();
