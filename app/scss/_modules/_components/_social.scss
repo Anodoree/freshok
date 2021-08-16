@@ -2,11 +2,8 @@
   display: flex;
   flex-wrap: wrap;
 
-  &__item:not(:last-child) {
-    margin-right: 12px;
-  }
-
   &__link {
+    padding: 6px;
     display: flex;
     background-position: center;
     background-size: contain;

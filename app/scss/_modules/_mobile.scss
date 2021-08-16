@@ -132,16 +132,6 @@
     padding: 1px 24px 16px;
     border-bottom: 1px solid rgba($silver-600, 0.3);
 
-    li {
-      &:not(:last-child) {
-        margin-right: 0;
-      }
-    }
-
-    a {
-      padding: 6px;
-    }
-
     svg {
       fill: $dark-800;
     }

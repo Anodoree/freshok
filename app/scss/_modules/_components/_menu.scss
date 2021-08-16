@@ -1,11 +1,8 @@
 .menu {
-    display: grid;
-
-  &__item {
-    max-width: 200px;
-  }
+  display: grid;
 
   &__link {
+    padding: 13px;
     display: inline-block;
     @extend %animation-inline;
   }
