@@ -3,14 +3,14 @@
     <div class="container">
       <div class="header__top-inner">
         <div class="header__contacts">
-          @@include('_components/_links/_hotlink.html', {
+          @@include('_links/_hotlink.html', {
           "text": "Адрес и время доставки",
           "mod": "",
           "svg-id": "delivery",
           "href": "#"
           })
 
-          @@include('_components/_links/_hotlink.html', {
+          @@include('_links/_hotlink.html', {
           "text": "Горячая линия 24/7",
           "mod": "hotlink--hotline",
           "svg-id": "hotline",
@@ -40,33 +40,33 @@
 
   <div class="container">
     <nav class="header__inner">
-      @@include('_components/_links/_logo/_logo-responsive.html', {
+      @@include('_links/_logo/_logo-responsive.html', {
       "class": "header__logo"
       })
 
-      @@include('_components/_catalog-dropdown.html', {
+      @@include('_objects/_catalog-dropdown.html', {
       "class": "header__catalog-dropdown"
       })
 
-      @@include('_components/_forms/_search-form.html', {
+      @@include('_forms/_search-form.html', {
       "class": "header__search-form"
       })
 
       <ul class="header__icon">
         <li class="header__icon-item header__icon-item--search">
-          @@include('_components/_buttons/_icon-btn/_search-btn.html')
+          @@include('_buttons/_icon-btn/_search-btn.html')
         </li>
 
         <li class="header__icon-item header__icon-item--user">
-          @@include('_components/_buttons/_icon-btn/_user-btn.html')
+          @@include('_buttons/_icon-btn/_user-btn.html')
         </li>
 
         <li class="header__icon-item header__icon-item--favorite">
-          @@include('_components/_buttons/_icon-btn/_favorite-btn.html')
+          @@include('_buttons/_icon-btn/_favorite-btn.html')
         </li>
 
         <li class="header__icon-item">
-          @@include('_components/_buttons/_icon-btn/_cart-btn.html')
+          @@include('_buttons/_icon-btn/_cart-btn.html')
         </li>
       </ul>
     </nav>

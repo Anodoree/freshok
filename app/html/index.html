@@ -1,39 +1,39 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-  @@include('_modules/_head.html', {
+  @@include('_modules/_components/_head.html', {
     "page": "Главная страница"
   })
 </head>
 
 <body>
 
-  @@include('_modules/_header.html')
+  @@include('_modules/_components/_header.html')
 
-  @@include('_modules/_mobile.html')
+  @@include('_modules/_components/_mobile.html')
   
-  @@include('_modules/_cart.html')
+  @@include('_modules/_components/_cart.html')
 
   <main class="main">
     <h1 class="sr-only">Фрешок - онлайн-маркет</h1>
 
-    @@include('_modules/_hero.html')
+    @@include('_modules/_index/_hero.html')
 
-    @@include('_modules/_advantage.html')
+    @@include('_modules/_components/_advantage.html')
 
-    @@include('_modules/_top-product.html')
+    @@include('_modules/_index/_top-product.html')
 
-    @@include('_modules/_banner.html')
+    @@include('_modules/_index/_banner.html')
 
-    @@include('_modules/_promo.html')
+    @@include('_modules/_index/_promo.html')
 
-    @@include('_modules/_brand.html')
+    @@include('_modules/_index/_brand.html')
 
-    @@include('_modules/_news.html')
+    @@include('_modules/_index/_news.html')
     
   </main>
 
-  @@include('_modules/_footer.html')
+  @@include('_modules/_components/_footer.html')
 
   <script src="js/main.min.js"></script>
 
