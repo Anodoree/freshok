@@ -1,11 +1,17 @@
 .mobile {
-  @include overlay();
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 100%;
+  left: 0;
+  z-index: 7;
+  transition: bottom 0s 0.5s, background-color 0.5s;
 
   @include media-w($sm) {
     &--active {
-      transition: background-color 1s;
       bottom: 0;
       background-color: rgba($black, 0.2);
+      transition: background-color 1s;
     }
   }
 
@@ -34,7 +40,7 @@
   }
 
   &__header {
-    padding: 26px 15px;
+    padding: 26px 13px 26px 15px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -48,7 +54,7 @@
 
   &__close-btn {
     position: static;
-    padding: 11px;
+    padding: 13px;
 
     svg {
       width: 18px;
@@ -114,36 +120,27 @@
     }
   }
 
+  &__contact {
+    padding: 10px 30px 18px;
+    border-bottom: 1px solid rgba($silver-600, 0.3);
+  }
+
   &__address-mobile {
-    padding: 10px 30px;
-
-    li:not(:last-child) {
-      margin-bottom: 0;
-    }
-
-    a {
-      padding-top: 13px;
-      padding-bottom: 13px;
-      display: inline-block;
-    }
+    margin-bottom: 10px;
   }
 
   &__social {
-    padding: 1px 24px 16px;
-    border-bottom: 1px solid rgba($silver-600, 0.3);
-
     svg {
       fill: $dark-800;
     }
   }
 
   &__menu {
-    padding: 18px 30px;
+    padding: 14px;
   }
 
   &__menu-link {
-    padding-top: 6px;
-    padding-bottom: 6px;
+    padding: 10px 16px;
     display: block;
     @extend %animation-inline;
   }

@@ -3,11 +3,18 @@
     <div class="container">
       <div class="header__top-inner">
         <div class="header__contacts">
-          @@include('_components/_links/_delivery.html', {
-          "text": "Адрес и время доставки"
+          @@include('_components/_links/_hotlink.html', {
+          "text": "Адрес и время доставки",
+          "mod": "",
+          "svg-id": "delivery",
+          "href": "#"
           })
-          @@include('_components/_links/_hotline.html', {
-          "text": "Горячая линия 24/7"
+
+          @@include('_components/_links/_hotlink.html', {
+          "text": "Горячая линия 24/7",
+          "mod": "hotlink--hotline",
+          "svg-id": "hotline",
+          "href": "tel:+7907288365"
           })
         </div>
 
@@ -25,7 +32,7 @@
 
         <button class="header__burger">
           <span class="header__burger-line"></span>
-          <span class="sr-only">Мобильное меню</span>
+          <span class="sr-only">Открыть мобильное меню</span>
         </button>
       </div>
     </div>

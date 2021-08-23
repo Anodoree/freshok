@@ -1,15 +1,16 @@
 .news-card {
-  position: relative;
-  max-width: 410px;
-  display: flex;
-  flex-direction: column;
-  color: $dark-900;
-  border-radius: 6px;
-  box-shadow: 0 3px 3px rgba($black, 0.3);
-  @extend %animation-card;
+  &__link {
+    position: relative;
+    display: block;
+    max-width: 410px;
+    color: $dark-900;
+    border-radius: 6px;
+    box-shadow: 0 3px 3px rgba($black, 0.3);
+    @extend %animation-card;
 
-  &:hover &__title {
-    color: $green-900;
+    &:hover .news-card__title {
+      color: $green-900;
+    }
   }
 
   &__top {

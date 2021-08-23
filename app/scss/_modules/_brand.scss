@@ -28,11 +28,11 @@
     &:hover {
       opacity: 1;
     }
+  }
 
-    img {
-      margin: 0 auto;
-      object-fit: contain;
-    }
+  &__img {
+    margin: 0 auto;
+    object-fit: contain;
   }
 
   .slick-track {

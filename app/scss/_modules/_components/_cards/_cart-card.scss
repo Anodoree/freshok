@@ -14,10 +14,6 @@
     justify-content: flex-start;
   }
 
-  &:not(:last-child) {
-    margin-bottom: 12px;
-  }
-
   &__img-box {
     align-self: center;
     flex-shrink: 0;
@@ -31,23 +27,23 @@
     @include media-w($xs) {
       margin-right: 15px;
     }
+  }
 
-    img {
-      object-position: center;
-      object-fit: contain;
-    }
+  &__img {
+    object-position: center;
+    object-fit: contain;
   }
 
   &__info {
     align-self: stretch;
-    flex: 0 1 155px;
+    flex: 0 1 150px;
     display: flex;
     flex-direction: column;
     justify-content: center;
 
     @include media-w($xs) {
       flex-grow: 1;
-      margin-right: 35px;
+      margin-right: 45px;
     }
   }
 
@@ -111,15 +107,27 @@
     }
 
     &__spin {
+      position: relative;
       width: 24px;
       height: 24px;
       background-color: $green-900;
       background-position: center;
       background-repeat: no-repeat;
+      @extend %animation-btn;
+
+      &::after {
+        content: "";
+        position: absolute;
+        top: -10px;
+        right: -10px;
+        bottom: -10px;
+        left: -10px;
+      }
     }
 
     .minus {
       order: 1;
+
       background-image: url('../images/sprite.svg#minus');
       background-size: 16px 16px;
     }
@@ -133,9 +141,9 @@
 
   &__close-btn {
     position: absolute;
-    top: 6px;
-    right: 6px;
-    padding: 6px;
+    top: 0;
+    right: 0;
+    padding: 16px;
     display: flex;
     background-color: transparent;
     border: none;

@@ -1,8 +1,24 @@
 .header {
-  position: relative;
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
   z-index: 2;
   letter-spacing: 0.03em;
   background-color: $green-900;
+
+  &--fixed {
+    position: fixed;
+    transform: translateY(-200%);
+  }
+
+  &--hidden {
+    transition: transform 0.3s;
+  }
+
+  &--visible {
+    transform: translateY(0);
+  }
 
   &::before {
     content: "";
@@ -70,14 +86,14 @@
     height: 44px;
     padding: 0;
     display: none;
-    justify-content: center;
-    align-items: center;
     background-color: transparent;
     border: none;
     @extend %animation-inline;
 
     @include media-w($sm) {
       display: flex;
+      justify-content: center;
+      align-items: center;
     }
   }
 
@@ -131,9 +147,6 @@
     margin-right: 24px;
 
     @include media-w($lg) {
-      max-width: 170px;
-      max-height: 50px;
-
       img {
         max-width: 170px;
         max-height: 50px;
@@ -141,16 +154,17 @@
     }
 
     @include media-w($sm) {
-      width: 44px;
-      height: 44px;
       margin-right: 20px;
-      justify-content: center;
-      align-items: center;
+      padding: 2px;
 
       img {
         max-width: 40px;
         max-height: 40px;
       }
+    }
+
+    @include media-w($xxs) {
+      margin-right: 10px;
     }
   }
 
@@ -160,11 +174,7 @@
     margin-right: 30px;
 
     @include media-w($lg) {
-      margin-right: 15px;
-    }
-
-    @include media-w($xxs) {
-      display: none;
+      margin-right: 10px;
     }
   }
 

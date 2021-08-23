@@ -13,12 +13,12 @@
     border-radius: 6px;
   }
 
-  &__image-box {
+  &__img-box {
     position: relative;
     flex-shrink: 0;
   }
 
-  img {
+  &__img {
     position: relative;
     object-fit: contain;
   }

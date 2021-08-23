@@ -7,7 +7,6 @@
       })
       @@include('_components/_buttons/_close-btn.html', {
       "class": "mobile__close-btn",
-      "id": "close-mobile",
       "sr-only-text": "Закрыть мобильное меню"
       })
     </div>
@@ -37,15 +36,17 @@
       Каталог товаров
     </a>
 
-    @@include('_components/_address-mobile.html', {
-    "class": "mobile__address-mobile",
-    "tel": "+7907288365",
-    "teltext": "+7 907 288 365"
-    })
+    <div class="mobile__contact">
+      @@include('_components/_address-mobile.html', {
+      "class": "mobile__address-mobile",
+      "tel": "+7907288365",
+      "teltext": "+7 907 288 365"
+      })
 
-    @@include('_components/_social.html', {
-    "class": "mobile__social"
-    })
+      @@include('_components/_social.html', {
+      "class": "mobile__social"
+      })
+    </div>
 
     <ul class="mobile__menu">
       <li class="mobile__menu-item">

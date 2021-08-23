@@ -24,24 +24,21 @@
     align-items: center;
   }
 
+  &__title {
+    margin-bottom: 20px;
+    text-align: center;
+  
+    @include media-w($xs) {
+      margin-bottom: 12px;
+    }
+  }
+
   &__mix-filter {
-    margin-bottom: 35px;
+    margin-bottom: 23px;
     letter-spacing: 0.1em;
 
     @include media-w($lg) {
-      margin-bottom: 20px;
-    }
-
-    @include media-w($xs) {
-      margin-bottom: 17px;
-    }
-
-    li:not(:last-child) {
-      margin-right: 23px;
-
-      @include media-w($xs) {
-        margin-right: 0;
-      }
+      margin-bottom: 10px;
     }
   }
 
@@ -69,12 +66,17 @@
     justify-content: center;
 
     @include media-w($xs) {
-      padding: 7.5px;
+      padding: 7px;
     }
 
     @include media-w($xxs) {
       padding-right: 0;
       padding-left: 0;
     }
+  }
+
+  &__bottom {
+    display: flex;
+    justify-content: center;
   }
 }
