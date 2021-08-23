@@ -43,7 +43,11 @@
     margin: 0 auto 48px;
     display: grid;
     grid-template: auto / repeat(4, 1fr);
-    grid-gap: 28px 30px;
+    grid-gap: 30px;
+
+    @include media-w($lg) {
+      grid-gap: 15px;
+    }
 
     @include media-w($md) {
       grid-template-columns: repeat(2, minmax(150px, 300px));
@@ -52,7 +56,6 @@
     }
 
     @include media-w($sm) {
-      grid-gap: 15px;
       margin-bottom: 26px;
     }
 

@@ -130,8 +130,16 @@ $(function() {
   });
 
 
-  // cart-card
-  $('.cart-card__number-box').styler();
+  // product-card input show
+  $('.product-card__cart').on('click', function() {
+    $(this).closest('.product-card__bottom')
+      .find('.product-card__quantity-input')
+      .toggleClass('product-card__quantity-input--active');
+  });
+
+
+  // quantity-input
+  $('.quantity-input').styler();
 
 
   // slider

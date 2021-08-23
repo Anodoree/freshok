@@ -13,8 +13,11 @@
   </div>
 
   <div class="cart-card__sum">
-    <input class="cart-card__number-box" type="number" name="number"
-      min="1" max="99" value="2">
+    @@include('../_forms/_quantity-input.html', {
+      "class": "cart-card__quantity-input",
+      "name": "number",
+      "value": "2"
+    })
 
     <span class="cart-card__price">
       @@cost<span class="cart-card__currency">₽</span>

@@ -78,6 +78,7 @@
     flex-direction: column;
     align-items: flex-start;
     max-width: 86%;
+    padding-top: 10px;
 
     @include media-w($lg) {
       max-width: 88%;
@@ -90,6 +91,10 @@
       flex-direction: column;
       justify-content: flex-end;
       align-items: flex-start;
+    }
+
+    @include media-w($xxs) {
+      max-width: 73%;
     }
   }
 
@@ -107,7 +112,6 @@
   }
 
   &__title {
-    margin-bottom: 10px;
     font-weight: 600;
     font-size: 30px;
     font-family: "Signika", "OpenSans", "Trebuchet MS", sans-serif;
@@ -123,27 +127,25 @@
     }
   }
 
-  &__link-box {
-    display: inline-block;
-    padding-bottom: 3px;
-    border-bottom: 2px solid $dark-500;
-    transition: border-color 0.3s;
-
-    @include media-w($xs) {
-      margin-top: auto;
-    }
-  }
-
   &__link {
+    position: relative;
     display: inline-block;
+    padding: 13px 1px;
     font-weight: 700;
     font-size: 14px;
-    border-top-left-radius: 3px;
-    border-top-right-radius: 3px;
+    border-radius: 3px;
     outline: 0;
-    transition: box-shadow 0.3s, color 0.3s, opacity 0.3s,
-      border-color 0.3s;
-    @include line-clamp(2);
+    transition: box-shadow 0.3s, color 0.3s, opacity 0.3s, border-color 0.3s;
+
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: 10px;
+      left: 0;
+      width: 98%;
+      height: 2px;
+      background-color: $dark-500;
+    }
 
     &:focus {
       box-shadow: 0 0 0 3px rgba($green-900, 0.6)
@@ -159,11 +161,24 @@
     }
   }
 
+  &__item:first-child &__link::after {
+    background-color: $white;
+  }
+
+  &__item:first-child &__link:hover::after {
+    background-color: $silver-400;
+  }
+
   &__item:first-child &__link-box:hover {
     border-color: $silver-400;
   }
 
   &__item:first-child &__link:hover {
     color: $silver-400;
+  }
+
+  &__link-inner {
+    padding-right: 2px;
+    @include line-clamp(2);
   }
 }

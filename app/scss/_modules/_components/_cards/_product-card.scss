@@ -148,40 +148,105 @@
     font-size: 14px;
     @include line-clamp(3);
 
-    @include media-w($xs) {
+    @include media-w($lg) {
       padding-left: 10px;
       padding-right: 10px;
+    }
+
+    @include media-w($md) {
+      min-height: auto;
     }
   }
 
   &__bottom {
-    padding: 10px 16px 18px 21px;
+    padding: 2px 10px 10px 21px;
     display: flex;
     justify-content: space-between;
-    align-items: flex-end;
+    align-items: center;
     line-height: 1.2;
 
-    @include media-w($xs) {
-      padding: 10px 11px 11px;
+    @include media-w($lg) {
+      padding: 4px 5px 5px 10px;
+    }
+
+    @include media-w($md) {
+      flex-wrap: wrap;
+      padding: 0 5px 0 10px;
+    }
+
+    .jq-number {
+      margin-right: 8px;
+
+      @include media-w($lg) {
+        margin-right: 0;
+      }
+
+      @include media-w($md) {
+        order: -1;
+        margin: 0 auto;
+      }
     }
   }
 
   &__cost {
+    flex-grow: 2;
+    align-self: flex-end;
     display: flex;
     flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 6px;
     color: $dark-500;
+
+    @include media-w($md) {
+      flex-basis: 67%;
+    }
+  }
+
+  &__quantity-input {
+    opacity: 0;
+    transform: scale(0);
+    transition: opacity 0.3s, transform 0s 0.3s;
+
+    &--active {
+      opacity: 1;
+      transform: scale(1);
+      transition: opacity 0.3s;
+    }
+
+    .minus {
+      border-radius: 3px 0 0 3px;
+    }
+
+    .plus {
+      border-radius: 0 3px 3px 0;
+    }
   }
 
   &__cart {
-    width: 32px;
-    height: 32px;
+    position: relative;
+    flex-shrink: 0;
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: $green-900;
+    width: 44px;
+    height: 44px;
+    background-color: transparent;
     border: none;
     border-radius: 3px;
-    @extend %animation-btn;
+    outline: 0;
+
+    &::before {
+      content: "";
+      position: absolute;
+      z-index: -1;
+      top: 6px;
+      right: 6px;
+      bottom: 6px;
+      left: 6px;
+      border-radius: 3px;
+      background-color: $green-900;
+      @extend %animation-btn;
+    }
 
     svg {
       width: 16px;
