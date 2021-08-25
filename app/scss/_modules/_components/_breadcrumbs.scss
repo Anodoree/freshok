@@ -1,0 +1,58 @@
+.breadcrumbs {
+  font-family: "Roboto", "Arial", sans-serif;
+  background-color: $silver-100;
+
+  &__list {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+
+  &__item {
+    position: relative;
+
+    &:not(:last-child) {
+      margin-right: 6px;
+    }
+
+    &:not(:first-child) {
+      padding-left: 12px;
+
+      &::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: calc(50% - 5px);
+        width: 6px;
+        height: 10px;
+        background-image: url("../images/icons/chevron.svg");
+        background-position: left center;
+        background-size: contain;
+        background-repeat: no-repeat;
+      }
+    }
+  }
+
+  &__link {
+    padding-top: 13px;
+    padding-bottom: 13px;
+    display: block;
+    letter-spacing: 0.03em;
+    color: $dark-500;
+    border-radius: 6px;
+  }
+
+  a {
+    @extend %animation-btn;
+
+    &:hover {
+      background-color: $silver-400;
+    }
+
+    &:active {
+      color: inherit;
+    }
+  }
+}

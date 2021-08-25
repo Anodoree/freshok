@@ -1,0 +1,17 @@
+<div class="@@class filter-box">
+  <button class="filter-box__button filter-box__button--active" type="button">
+    <span>@@title</span>
+    <svg>
+      <use xlink:href="images/sprite.svg#chevron"></use>
+    </svg>
+  </button>
+  @@if (name == "category") {
+  @@include('_filter-list/_filter-category.html')
+  }@@if (name == "promo") {
+  @@include('_filter-list/_filter-promo.html')
+  }@@if (name == "brand") {
+  @@include('_filter-list/_filter-brand.html')
+  }@@if (name == "price") {
+  @@include('_filter-list/_filter-price.html')
+  }
+</div>

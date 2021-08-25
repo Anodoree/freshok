@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  @@include('_modules/_components/_head.html', {
+    "page": "Каталог товаров"
+  })
+</head>
+
+<body>
+
+  @@include('_modules/_components/_header.html')
+
+  @@include('_modules/_components/_mobile.html')
+  
+  @@include('_modules/_components/_cart.html')
+
+  <main class="main">
+
+    @@include('_modules/_components/_breadcrumbs.html')
+
+    @@include('_modules/_catalog/_catalog.html')
+
+    @@include('_modules/_components/_advantage.html')
+
+  </main>
+
+  @@include('_modules/_components/_footer.html')
+
+  <script src="js/main.min.js"></script>
+
+</body>
+</html>

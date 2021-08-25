@@ -10,10 +10,13 @@
 @import '_modules/_components/_buttons/button';
 
 @import '_modules/_components/_cards/product-card';
+@import '_modules/_components/_cards/product-max';
 @import '_modules/_components/_cards/product-mini';
 @import '_modules/_components/_cards/cart-card';
 @import '_modules/_components/_cards/news-card';
 
+@import '_modules/_components/_filters/filter-box';
+@import '_modules/_components/_filters/filter-list';
 @import '_modules/_components/_filters/mix-filter';
 
 @import '_modules/_components/_forms/search-form';
@@ -35,6 +38,7 @@
 @import '_modules/_components/_objects/social';
 
 @import '_modules/_components/advantage';
+@import '_modules/_components/breadcrumbs';
 @import '_modules/_components/cart';
 @import '_modules/_components/footer';
 @import '_modules/_components/header';
@@ -46,3 +50,5 @@
 @import '_modules/_index/news';
 @import '_modules/_index/promo';
 @import '_modules/_index/top-product';
+
+@import '_modules/_catalog/catalog';
