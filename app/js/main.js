@@ -99,6 +99,7 @@ $(function() {
       blockClose('catalog-dropdown__btn', 'catalog-dropdown__list');
       blockClose('mobile', 'mobile__container');
       blockClose('cart', 'cart__container');
+      blockClose('side-filter', 'side-filter__container');
     }
   });
 
@@ -138,14 +139,105 @@ $(function() {
   });
 
 
-  // quantity-input
+  // product-max input show
+  $('.product-max__cart').on('click', function() {
+    $(this).closest('.product-max__bottom')
+      .find('.product-max__quantity-input')
+      .toggleClass('product-max__quantity-input--active');
+  });
+
+
+  // catalog view
+  $('.catalog__view').on('click', function() {
+    $('.catalog__view').removeClass('catalog__view--active');
+    $(this).addClass('catalog__view--active');
+  });
+
+  function addCatalogList() {
+    $('.catalog__grid').addClass('catalog__grid--wide');
+    $('.product-max').addClass('product-max--wide');
+    $('.product-max__top').addClass('product-max__top--wide');
+    $('.product-max__favorite').addClass('product-max__favorite--wide');
+    $('.product-max__badges').addClass('product-max__badges--wide');
+    $('.product-max__content').addClass('product-max__content--wide');
+    $('.product-max__link').addClass('product-max__link--wide');
+    $('.product-max__img').addClass('product-max__img--wide');
+    $('.product-max__info').addClass('product-max__info--wide');
+    $('.product-max__title').addClass('product-max__title--wide');
+    $('.product-max__bottom').addClass('product-max__bottom--wide');
+  };
+
+  function addCatalogGrid() {
+    $('.catalog__grid').removeClass('catalog__grid--wide');
+    $('.product-max').removeClass('product-max--wide');
+    $('.product-max__top').removeClass('product-max__top--wide');
+    $('.product-max__favorite').removeClass('product-max__favorite--wide');
+    $('.product-max__badges').removeClass('product-max__badges--wide');
+    $('.product-max__content').removeClass('product-max__content--wide');
+    $('.product-max__link').removeClass('product-max__link--wide');
+    $('.product-max__img').removeClass('product-max__img--wide');
+    $('.product-max__info').removeClass('product-max__info--wide');
+    $('.product-max__title').removeClass('product-max__title--wide');
+    $('.product-max__bottom').removeClass('product-max__bottom--wide');
+  };
+
+  $('#show-wide-cards').on('click', function() {
+    addCatalogList();
+  });
+
+  $('#show-narrow-cards').on('click', function() {
+    addCatalogGrid();
+  });
+
+  window.addEventListener('resize', function() {
+    if (innerWidth <= 576) {
+      addCatalogGrid();
+      $('.catalog__view').removeClass('catalog__view--active');
+      $('#show-narrow-cards').addClass('catalog__view--active');
+    }
+  });
+
+
+  // input styler
   $('.quantity-input').styler();
+
+  $('.catalog__select').styler({
+    onSelectOpened: function() {
+      $('.jq-selectbox__dropdown').css('top', '100%');
+      $(this).find('.jq-selectbox__trigger-arrow').addClass('jq-selectbox__trigger-arrow--active');
+      $(this).find('.jq-selectbox__select').addClass('jq-selectbox__select--active');
+    },
+    onSelectClosed: function() {
+      $(this).find('.jq-selectbox__trigger-arrow').removeClass('jq-selectbox__trigger-arrow--active');
+      $(this).find('.jq-selectbox__select').removeClass('jq-selectbox__select--active');
+    }
+  });
 
 
   // catalog filers
   $('.filter-box__button').on('click', function() {
     $(this).siblings('.filter-list').toggleClass('filter-list--active');
     $(this).toggleClass('filter-box__button--active');
+  });
+
+
+  // side filter
+  $('.filter-btn').on('click', function() {
+    $('body').addClass('overflow-hidden');
+    blockOpen('side-filter', 'side-filter__container');
+  });
+
+  $('.side-filter__close-btn').on('click', function() {
+    $('body').removeClass('overflow-hidden');
+    blockClose('side-filter', 'side-filter__container');
+  });
+
+  $(document).on('mouseup', function(e) {
+    if (!$('.side-filter__container').is(e.target) &&
+      $('.side-filter__container').has(e.target).length === 0) {
+      $('body').removeClass('overflow-hidden');
+      blockClose('side-filter', 'side-filter__container');
+    }
   });
 
 

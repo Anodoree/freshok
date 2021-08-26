@@ -1,4 +1,4 @@
-.product-card {
+.product-max {
   flex-grow: 1;
   max-width: 300px;
   min-width: 150px;
@@ -12,11 +12,22 @@
     border-color: $green-900;
   }
 
+  &--wide {
+    position: relative;
+    flex-direction: row;
+    max-width: none;
+  }
+
   &__top {
     max-height: 52px;
     padding: 7px 4px 0 12px;
     display: flex;
     justify-content: space-between;
+
+    &--wide {
+      max-height: none;
+      padding: 0;
+    }
   }
 
   &__badges {
@@ -28,6 +39,13 @@
     flex-direction: column;
     flex-wrap: wrap;
     align-items: flex-start;
+
+    &--wide {
+      position: absolute;
+      z-index: 1;
+      top: 0;
+      left: 6px;
+    }
   }
 
   &__favorite {
@@ -66,6 +84,15 @@
 
     &:active svg {
       fill: $green-900;
+    }
+
+    &--wide {
+      position: absolute;
+      right: 9px;
+
+      @include media-w($md) {
+        top: 40px;
+      }
     }
   }
 
@@ -120,6 +147,12 @@
     &:active::after {
       transform: scale(1.2);
     }
+
+    &--wide {
+      flex: 0 1 200px;
+      padding-top: 4px;
+      padding-bottom: 4px;
+    }
   }
 
   &__img {
@@ -131,11 +164,48 @@
     }
 
     @include media-w($xs) {
-      max-height: 125px;
+      max-height: 150px;
     }
 
     @include media-w($xxs) {
       max-height: 200px;
+    }
+
+    &--wide {
+      max-height: 150px;
+    }
+  }
+
+  &__content {
+    &--wide {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      flex: 10 1 263px;
+    }
+  }
+
+  &__info {
+    position: relative;
+    top: -31px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: -31px;
+    padding: 6px 17px;
+    background-color: rgba($white, 0.5);
+
+    @include media-w($lg) {
+      padding-right: 10px;
+      padding-left: 10px;
+    }
+
+    &--wide {
+      top: 0;
+      margin-bottom: 0;
+      padding-top: 10px;
+      padding-bottom: 10px;
     }
   }
 
@@ -146,6 +216,7 @@
     padding-right: 18px;
     font-weight: 600;
     font-size: 14px;
+    letter-spacing: 0.03em;
     @include line-clamp(3);
 
     @include media-w($lg) {
@@ -155,6 +226,10 @@
 
     @include media-w($md) {
       min-height: auto;
+    }
+
+    &--wide {
+      padding-right: 65px;
     }
   }
 
@@ -184,6 +259,16 @@
       @include media-w($md) {
         order: -1;
         margin: 0 auto;
+      }
+    }
+
+    &--wide {
+      padding: 11px 11px 4px 17px;
+
+      @include media-w($xs) {
+        .jq-number {
+          margin-left: 0;
+        }
       }
     }
   }

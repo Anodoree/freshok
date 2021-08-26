@@ -5,9 +5,10 @@
 @import 'global';
 @import 'animation';
 
-@import '_modules/_components/_buttons/close-btn';
-@import '_modules/_components/_buttons/icon-btn';
 @import '_modules/_components/_buttons/button';
+@import '_modules/_components/_buttons/close-btn';
+@import '_modules/_components/_buttons/filter-btn';
+@import '_modules/_components/_buttons/icon-btn';
 
 @import '_modules/_components/_cards/product-card';
 @import '_modules/_components/_cards/product-max';
@@ -18,6 +19,7 @@
 @import '_modules/_components/_filters/filter-box';
 @import '_modules/_components/_filters/filter-list';
 @import '_modules/_components/_filters/mix-filter';
+@import '_modules/_components/_filters/side-filter';
 
 @import '_modules/_components/_forms/search-form';
 @import '_modules/_components/_forms/sub-form';
@@ -34,6 +36,7 @@
 @import '_modules/_components/_objects/catalog-dropdown';
 @import '_modules/_components/_objects/menu';
 @import '_modules/_components/_objects/old-price';
+@import '_modules/_components/_objects/pagination';
 @import '_modules/_components/_objects/rating';
 @import '_modules/_components/_objects/social';
 

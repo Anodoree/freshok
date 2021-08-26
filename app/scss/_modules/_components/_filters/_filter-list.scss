@@ -31,6 +31,7 @@
     background-color: $silver-100;
     border: 1px solid $silver-600;
     border-radius: 3px;
+    transition: box-shadow 0.3s, border-color 0.3s;
   }
 
   &__input {
@@ -39,6 +40,10 @@
     &:focus + .filter-list__label,
     &:focus + .filter-list__checkbox {
       box-shadow: 0 0 0 2px $green-200;
+    }
+
+    &:hover + .filter-list__checkbox {
+      border-color: $dark-500;
     }
 
     &:checked + .filter-list__label {
@@ -80,7 +85,10 @@
   }
 
   .irs-line {
+    position: absolute;
     top: 21px;
+    right: 13px;
+    left: 13px;
     height: 2px;
     background-color: $silver-500;
     border-radius: 0;

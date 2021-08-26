@@ -4,21 +4,7 @@
   border: 1px solid $silver-600;
   border-radius: 6px;
   overflow: hidden;
-
-  ::-webkit-scrollbar {
-    width: 4px;
-    height: 4px;
-    border: none;
-  }
-
-  ::-webkit-scrollbar-track {
-    background-color: transparent;
-  }
-
-  ::-webkit-scrollbar-thumb {
-    background-color: $silver-600;
-    border-radius: 2px;
-  }
+  @extend %custom-scroll;
 
   &__button {
     position: relative;
@@ -36,6 +22,8 @@
     background-color: $white;
     border: none;
     border-radius: 6px;
+    outline: 0;
+    transition: border-color 0.3s, box-shadow 0.3s;
 
     svg {
       width: 28px;
@@ -62,6 +50,18 @@
         height: 1px;
         background-color: $silver-600;
       }
+    }
+
+    &:focus  {
+      box-shadow: inset 0 0 0 3px $dark-500;
+    }
+
+    &:hover  {
+      box-shadow: inset 0 0 0 3px $green-200;
+    }
+
+    &:active  {
+      box-shadow: inset 0 4px 4px rgb(0 0 0 / 50%);
     }
   }
 }
