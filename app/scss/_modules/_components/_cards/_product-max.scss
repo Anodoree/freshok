@@ -224,16 +224,13 @@
       padding-right: 10px;
     }
 
-    @include media-w($md) {
-      min-height: auto;
-    }
-
     &--wide {
       padding-right: 65px;
     }
   }
 
   &__bottom {
+    margin-top: auto;
     padding: 2px 10px 10px 21px;
     display: flex;
     justify-content: space-between;
