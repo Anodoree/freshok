@@ -1,0 +1,26 @@
+.address-mobile {
+  &__item {
+    display: flex;
+    align-items: center;
+  }
+
+  svg {
+    flex-shrink: 0;
+    margin-right: 15px;
+    width: 24px;
+    height: 33px;
+    fill: $dark-800;
+  }
+
+  &__link {
+    padding-top: 13px;
+    padding-bottom: 13px;
+    display: inline-block;
+    @extend %animation-inline;
+  }
+
+  &__text {
+    display: block;
+    line-height: 1.3;
+  }
+}

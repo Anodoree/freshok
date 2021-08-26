@@ -1,0 +1,78 @@
+<div class="mobile">
+  <nav class="mobile__container">
+    <div class="mobile__header">
+      @@include('_links/_logo/_logo.html', {
+      "class": "mobile__logo",
+      "img": "logo-green.svg"
+      })
+      @@include('_buttons/_close-btn.html', {
+      "class": "mobile__close-btn",
+      "sr-only-text": "Закрыть мобильное меню"
+      })
+    </div>
+
+    <div class="mobile__user">
+      <svg>
+        <use xlink:href="images/sprite.svg#user"></use>
+      </svg>
+      <ul class="mobile__list">
+        <li class="mobile__item">
+          <a class="mobile__link" href="#">
+            Вход
+          </a>
+        </li>
+        <li class="mobile__item">
+          <a class="mobile__link" href="#">
+            Регистрация
+          </a>
+        </li>
+      </ul>
+    </div>
+
+    <a class="mobile__catalog" href="catalog.html">
+      <svg>
+        <use xlink:href="images/sprite.svg#nav-dark"></use>
+      </svg>
+      Каталог товаров
+    </a>
+
+    <div class="mobile__contact">
+      @@include('_objects/_address-mobile.html', {
+      "class": "mobile__address-mobile",
+      "tel": "+7907288365",
+      "teltext": "+7 907 288 365"
+      })
+
+      @@include('_objects/_social.html', {
+      "class": "mobile__social"
+      })
+    </div>
+
+    <ul class="mobile__menu">
+      <li class="mobile__menu-item">
+        <a class="mobile__menu-link" href="#">Доставка</a>
+      </li>
+      <li class="mobile__menu-item">
+        <a class="mobile__menu-link" href="#">О Нас</a>
+      </li>
+      <li class="mobile__menu-item">
+        <a class="mobile__menu-link" href="#">Новости</a>
+      </li>
+      <li class="mobile__menu-item">
+        <a class="mobile__menu-link" href="#">Контакты</a>
+      </li>
+      <li class="mobile__menu-item">
+        <a class="mobile__menu-link" href="#">Акции</a>
+      </li>
+      <li class="mobile__menu-item">
+        <a class="mobile__menu-link" href="#">Вакансии</a>
+      </li>
+      <li class="mobile__menu-item">
+        <a class="mobile__menu-link" href="#">Отзывы</a>
+      </li>
+      <li class="mobile__menu-item">
+        <a class="mobile__menu-link" href="#">Публичная оферта</a>
+      </li>
+    </ul>
+  </nav>
+</div>

@@ -1,0 +1,155 @@
+<section class="promo" data-ref="promo-mixitup">
+  <div class="container">
+    <h2 class="promo__title title">Акции</h2>
+
+    <ul class="promo__mix-filter mix-filter">
+      <li class="mix-filter__item">
+        <button class="mix-filter__btn" type="button"
+          data-filter="all">
+          Все товары
+        </button>
+      </li>
+      <li class="mix-filter__item">
+        <button class="mix-filter__btn" type="button"
+          data-filter=".new">
+          Новинки
+        </button>
+      </li>
+      <li class="mix-filter__item">
+        <button class="mix-filter__btn" type="button"
+          data-filter=".hit">
+          Хиты
+        </button>
+      </li>
+    </ul>
+
+    <ul class="promo__flex">
+      <li class="promo__item mix new">
+        @@include('../_components/_cards/_product-mini.html', {
+          "href": "#",
+          "image": "pineapple.jpg",
+          "alt": "Ананасы",
+          "new_boolean": true,
+          "hit_boolean": false,
+          "title": "Ананас, 1 кг",
+          "available": "true",
+          "price": "999",
+          "old_price_boolean": true, "old_price": "1999",
+          "rate": "4.5"
+        })
+      </li>
+
+      <li class="promo__item mix new">
+        @@include('../_components/_cards/_product-mini.html', {
+          "href": "#",
+          "image": "coffee.jpg",
+          "alt": "Кофе с коноплей органический Caffé Salomoni 250г",
+          "new_boolean": true,
+          "hit_boolean": false,
+          "title": "Кофе с коноплей органический Caffé Salomoni 250г",
+          "available": "min",
+          "price": "777",
+          "old_price_boolean": true, "old_price": "877",
+          "rate": "4.9"
+        })
+      </li>
+
+      <li class="promo__item mix new">
+        @@include('../_components/_cards/_product-mini.html', {
+          "href": "#",
+          "image": "strawberry.jpg",
+          "alt": "Клубника",
+          "new_boolean": true,
+          "hit_boolean": false,
+          "title": "Клубника, 1 кг",
+          "available": "false",
+          "price": "440",
+          "old_price_boolean": true, "old_price": "600",
+          "rate": "5.0"
+        })
+      </li>
+
+      <li class="promo__item mix new">
+        @@include('../_components/_cards/_product-mini.html', {
+          "href": "#",
+          "image": "mango.jpg",
+          "alt": "Манго",
+          "new_boolean": true,
+          "hit_boolean": false,
+          "title": "Манго, 1 шт",
+          "available": "true",
+          "price": "660",
+          "old_price_boolean": true, "old_price": "960",
+          "rate": "5.0"
+        })
+      </li>
+
+      <li class="promo__item mix new">
+        @@include('../_components/_cards/_product-mini.html', {
+          "href": "#",
+          "image": "salmon.jpg",
+          "alt": "Лосось",
+          "new_boolean": true,
+          "hit_boolean": false,
+          "title": "Лосось, 1 кг",
+          "available": "true",
+          "price": "999",
+          "old_price_boolean": true, "old_price": "1999",
+          "rate": "4.5"
+        })
+      </li>
+
+      <li class="promo__item mix hit">
+        @@include('../_components/_cards/_product-mini.html', {
+          "href": "#",
+          "image": "veg_juice.jpg",
+          "alt": "Сок Granini овощной 100%, 0.5л",
+          "new_boolean": false,
+          "hit_boolean": true,
+          "title": "Сок Granini овощной 100%, 0.5л",
+          "available": "min",
+          "price": "180",
+          "old_price_boolean": true, "old_price": "230",
+          "rate": "4.9"
+        })
+      </li>
+
+      <li class="promo__item mix hit">
+        @@include('../_components/_cards/_product-mini.html', {
+          "href": "#",
+          "image": "fruit-basket.jpg",
+          "alt": "Фруктовая корзина",
+          "new_boolean": false,
+          "hit_boolean": true,
+          "title": "Фруктовая корзина, 1 шт",
+          "available": "true",
+          "price": "3990",
+          "old_price_boolean": true, "old_price": "5990",
+          "rate": "4.8"
+        })
+      </li>
+
+      <li class="promo__item mix hit">
+        @@include('../_components/_cards/_product-mini.html', {
+          "href": "#",
+          "image": "pork.jpg",
+          "alt": "Свинина мякоть",
+          "new_boolean": false,
+          "hit_boolean": true,
+          "title": "Свинина мякоть, 1 кг",
+          "available": "true",
+          "price": "499",
+          "old_price_boolean": true, "old_price": "599",
+          "rate": "4.6"
+        })
+      </li>
+    </ul>
+
+    <div class="promo__bottom">
+      @@include('../_components/_buttons/_button.html', {
+        "text": "Показать еще",
+        "mod": "button--promo"
+      })
+    </div>
+  </div>
+</section>

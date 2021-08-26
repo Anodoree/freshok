@@ -34,7 +34,7 @@
   </div>
 
   <a class="product-card__link" href="@@href">
-    <img src="images/products/@@image" alt="@@alt"
+    <img class="product-card__img" src="images/products/@@image" alt="@@alt"
       width="300" height="225">
   </a>
 
@@ -54,6 +54,12 @@
         @@price <span class="product-card__currency">₽</span>
       </span>
     </div>
+
+    @@include('../_forms/_quantity-input.html', {
+      "class": "product-card__quantity-input",
+      "name": "number",
+      "value": "1"
+    })
 
     <button class="product-card__cart" type="button">
       <svg>

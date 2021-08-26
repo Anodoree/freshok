@@ -1,0 +1,28 @@
+<form class="@@class side-filter">
+  <div class="side-filter__container">
+    @@include('../_buttons/_close-btn.html', {
+      "class": "side-filter__close-btn",
+      "sr-only-text": "Закрыть выбор фильтров"
+    })
+    @@include('../_filters/_filter-box.html', {
+      "class": "side-filter__filter-box",
+      "title": "Категории",
+      "name": "category"
+    })
+    @@include('../_filters/_filter-box.html', {
+      "class": "side-filter__filter-box",
+      "title": "Предложения",
+      "name": "promo"
+    })
+    @@include('../_filters/_filter-box.html', {
+      "class": "side-filter__filter-box",
+      "title": "Бренд",
+      "name": "brand"
+    })
+    @@include('../_filters/_filter-box.html', {
+      "class": "side-filter__filter-box",
+      "title": "Цена",
+      "name": "price"
+    })
+  </div>
+</form>

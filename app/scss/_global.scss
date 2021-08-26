@@ -16,8 +16,17 @@ body {
 
 .main {
   position: relative;
-  flex-grow: 1;
   z-index: 1;
+  flex-grow: 1;
+  padding-top: 160px;
+
+  @include media-w($lg) {
+    padding-top: 136px;
+  }
+
+  @include media-w($sm) {
+    padding-top: 112px;
+  }
 }
 
 .overflow-hidden {
@@ -50,7 +59,6 @@ body {
 }
 
 .title {
-  margin-bottom: 30px;
   font-weight: 700;
   font-size: 32px;
   font-family: "Signika", "OpenSans", "Trebuchet MS", sans-serif;
@@ -59,17 +67,10 @@ body {
   color: $dark-900;
 
   @include media-w($md) {
-    margin-bottom: 23px;
     font-size: 28px;
   }
 
-  @include media-w($sm) {
-    margin-bottom: 18px;
-    font-size: 26px;
-  }
-
   @include media-w($xs) {
-    margin-bottom: 15px;
     font-size: 24px;
   }
 }

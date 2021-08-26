@@ -1,0 +1,154 @@
+<section class="top-product" data-ref="top-product-mixitup">
+  <div class="container">
+    <h2 class="top-product__title title">Топовые товары</h2>
+
+    <ul class="top-product__mix-filter mix-filter">
+      <li class="mix-filter__item">
+        <button class="mix-filter__btn" type="button" data-filter="all">
+          Все товары
+        </button>
+      </li>
+      <li class="mix-filter__item">
+        <button class="mix-filter__btn" type="button" data-filter=".fruit">
+          Фрукты
+        </button>
+      </li>
+      <li class="mix-filter__item">
+        <button class="mix-filter__btn" type="button" data-filter=".vegetable">
+          Овощи
+        </button>
+      </li>
+      <li class="mix-filter__item">
+        <button class="mix-filter__btn" type="button" data-filter=".drink">
+          Напитки
+        </button>
+      </li>
+      <li class="mix-filter__item">
+        <button class="mix-filter__btn" type="button" data-filter=".grocery">
+          Бакалея
+        </button>
+      </li>
+    </ul>
+
+    <ul class="top-product__grid">
+      <li class="top-product__item mix fruit">
+        @@include('../_components/_cards/_product-card.html', {
+          "new_boolean": true,
+          "hit_boolean": false,
+          "sale_boolean": true, "text": "-50",
+          "image": "pineapple.jpg",
+          "href": "#",
+          "alt": "Ананасы",
+          "title": "Ананас, 1кг",
+          "old_price_boolean": true, "old_price": "1999",
+          "price": "999"
+        })
+      </li>
+
+      <li class="top-product__item mix fruit">
+        @@include('../_components/_cards/_product-card.html', {
+          "new_boolean": false,
+          "hit_boolean": false,
+          "sale_boolean": false, "text": "",
+          "image": "lemon.jpg",
+          "href": "#",
+          "alt": "Лимоны",
+          "title": "Лимон, 1кг",
+          "old_price_boolean": false, "old_price": "",
+          "price": "199"
+        })
+      </li>
+
+      <li class="top-product__item mix fruit">
+        @@include('../_components/_cards/_product-card.html', {
+          "new_boolean": false,
+          "hit_boolean": true,
+          "sale_boolean": false, "text": "",
+          "image": "dragon-fruit.jpg",
+          "href": "#",
+          "alt": "Питахайя красная с белой мякотью",
+          "title": "Питахайя красная с белой мякотью, 1шт",
+          "old_price_boolean": false, "old_price": "",
+          "price": "1019"
+        })
+      </li>
+
+      <li class="top-product__item mix vegetable">
+        @@include('../_components/_cards/_product-card.html', {
+          "new_boolean": true,
+          "hit_boolean": false,
+          "sale_boolean": false, "text": "",
+          "image": "paprik.jpg",
+          "href": "#",
+          "alt": "Перец оранжевый",
+          "title": "Перец оранжевый, 1кг",
+          "old_price_boolean": false, "old_price": "",
+          "price": "349"
+        })
+      </li>
+
+      <li class="top-product__item mix vegetable">
+        @@include('../_components/_cards/_product-card.html', {
+          "new_boolean": false,
+          "hit_boolean": true,
+          "sale_boolean": false, "text": "",
+          "image": "carrot.jpg",
+          "href": "#",
+          "alt": "Морковь молодая",
+          "title": "Морковь молодая с бабушкиной грядки, 1кг",
+          "old_price_boolean": false, "old_price": "",
+          "price": "49"
+        })
+      </li>
+
+      <li class="top-product__item mix drink">
+        @@include('../_components/_cards/_product-card.html', {
+          "new_boolean": false,
+          "hit_boolean": false,
+          "sale_boolean": true, "text": "-50",
+          "image": "juice.jpg",
+          "href": "#",
+          "alt": "Sanpellegrino Aranciata Orange Красный апельсин безалкогольный",
+          "title": "Напиток сокосодержащий Sanpellegrino Aranciata Orange Красный апельсин безалкогольный...",
+          "old_price_boolean": true, "old_price": "299",
+          "price": "199"
+        })
+      </li>
+
+      <li class="top-product__item mix grocery">
+        @@include('../_components/_cards/_product-card.html', {
+          "new_boolean": true,
+          "hit_boolean": false,
+          "sale_boolean": false, "text": "",
+          "image": "coffee.jpg",
+          "href": "#",
+          "alt": "Кофе с коноплей органический Caffé Salomoni 250г",
+          "title": "Кофе с коноплей органический Caffé Salomoni 250г",
+          "old_price_boolean": false, "old_price": "",
+          "price": "877"
+        })
+      </li>
+
+      <li class="top-product__item mix grocery">
+        @@include('../_components/_cards/_product-card.html', {
+          "new_boolean": false,
+          "hit_boolean": false,
+          "sale_boolean": false, "text": "",
+          "image": "body.jpg",
+          "href": "#",
+          "alt": "Кетчуп томатный детский органический Bio-Zentrale 500мл",
+          "title": "Кетчуп томатный детский органический Bio-Zentrale 500мл",
+          "old_price_boolean": false, "old_price": "",
+          "price": "600"
+        })
+      </li>
+    </ul>
+
+    <div class="top-product__bottom">
+      @@include('../_components/_buttons/_button.html', {
+        "text": "Показать еще",
+        "mod": "button--transparent"
+      })
+    </div>
+  </div>
+</section>
