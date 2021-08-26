@@ -5,47 +5,53 @@
 @import 'global';
 @import 'animation';
 
-@import '_modules/_components/_links/delivery';
-@import '_modules/_components/_links/hotline';
-@import '_modules/_components/_links/logo';
-
-@import '_modules/_components/_buttons/close-btn';
-@import '_modules/_components/_buttons/icon-btn';
 @import '_modules/_components/_buttons/button';
-
-@import '_modules/_components/_forms/search-form';
-@import '_modules/_components/_forms/sub-form';
-
-@import '_modules/_components/_objects/badge';
-@import '_modules/_components/_objects/bank-card';
-@import '_modules/_components/_objects/avaliable';
-@import '_modules/_components/_objects/rating';
-@import '_modules/_components/_objects/old-price';
-
-@import '_modules/_components/_filters/mix-filter';
+@import '_modules/_components/_buttons/close-btn';
+@import '_modules/_components/_buttons/filter-btn';
+@import '_modules/_components/_buttons/icon-btn';
 
 @import '_modules/_components/_cards/product-card';
+@import '_modules/_components/_cards/product-max';
 @import '_modules/_components/_cards/product-mini';
 @import '_modules/_components/_cards/cart-card';
 @import '_modules/_components/_cards/news-card';
 
-@import '_modules/_components/menu';
-@import '_modules/_components/catalog-dropdown';
-@import '_modules/_components/address-mobile';
-@import '_modules/_components/address';
-@import '_modules/_components/social';
+@import '_modules/_components/_filters/filter-box';
+@import '_modules/_components/_filters/filter-list';
+@import '_modules/_components/_filters/mix-filter';
+@import '_modules/_components/_filters/side-filter';
 
-@import '_modules/header';
+@import '_modules/_components/_forms/search-form';
+@import '_modules/_components/_forms/sub-form';
+@import '_modules/_components/_forms/quantity-input';
 
-@import '_modules/mobile';
-@import '_modules/cart';
+@import '_modules/_components/_links/hotlink';
+@import '_modules/_components/_links/logo';
 
-@import '_modules/hero';
-@import '_modules/advantage';
-@import '_modules/top-product';
-@import '_modules/banner';
-@import '_modules/promo';
-@import '_modules/brand';
-@import '_modules/news';
+@import '_modules/_components/_objects/address';
+@import '_modules/_components/_objects/address-mobile';
+@import '_modules/_components/_objects/avaliable';
+@import '_modules/_components/_objects/badge';
+@import '_modules/_components/_objects/bank-card';
+@import '_modules/_components/_objects/catalog-dropdown';
+@import '_modules/_components/_objects/menu';
+@import '_modules/_components/_objects/old-price';
+@import '_modules/_components/_objects/pagination';
+@import '_modules/_components/_objects/rating';
+@import '_modules/_components/_objects/social';
 
-@import '_modules/footer';
+@import '_modules/_components/advantage';
+@import '_modules/_components/breadcrumbs';
+@import '_modules/_components/cart';
+@import '_modules/_components/footer';
+@import '_modules/_components/header';
+@import '_modules/_components/mobile';
+
+@import '_modules/_index/banner';
+@import '_modules/_index/brand';
+@import '_modules/_index/hero';
+@import '_modules/_index/news';
+@import '_modules/_index/promo';
+@import '_modules/_index/top-product';
+
+@import '_modules/_catalog/catalog';

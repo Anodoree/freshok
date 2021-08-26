@@ -17,7 +17,7 @@
     padding: 10px 18px;
   }
 
-  &--inverted {
+  &--transparent {
     padding: 9px 23px;
     color: $green-900;
     background-color: $white;
@@ -40,7 +40,13 @@
   &--promo {
     @include media-w($xs) {
       padding: 12px 24px;
-      letter-spacing: 1.5px;
+      letter-spacing: 1px;
+    }
+  }
+
+  &--mb {
+    @include media-w($md) {
+      margin-bottom: 24px;
     }
   }
 }

@@ -1,0 +1,67 @@
+.filter-box {
+  letter-spacing: 0.03em;
+  background-color: $white;
+  border: 1px solid $silver-600;
+  border-radius: 6px;
+  overflow: hidden;
+  @extend %custom-scroll;
+
+  &__button {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 18px;
+    font-size: 24px;
+    line-height: 1.2;
+    font-family: "Signika", "OpenSans", "Trebuchet MS", sans-serif;
+    text-align: left;
+    color: $dark-900;
+    background-color: $white;
+    border: none;
+    border-radius: 6px;
+    outline: 0;
+    transition: border-color 0.3s, box-shadow 0.3s;
+
+    svg {
+      width: 28px;
+      height: 28px;
+      padding: 5px;
+      transform: rotate(90deg);
+      transition: transform 0.2s;
+    }
+
+    &--active {
+      border-bottom-right-radius: 0;
+      border-bottom-left-radius: 0;
+
+      svg {
+        transform: rotate(-90deg);
+      }
+
+      &::after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 1px;
+        background-color: $silver-600;
+      }
+    }
+
+    &:focus  {
+      box-shadow: inset 0 0 0 3px $dark-500;
+    }
+
+    &:hover  {
+      box-shadow: inset 0 0 0 3px $green-200;
+    }
+
+    &:active  {
+      box-shadow: inset 0 4px 4px rgb(0 0 0 / 50%);
+    }
+  }
+}

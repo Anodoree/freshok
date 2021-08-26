@@ -1,0 +1,261 @@
+<section class="catalog" data-ref="catalog-mixitup">
+  <div class="container">
+    <h2 class="catalog__title title">Каталог товаров</h2>
+
+    <div class="catalog__inner">
+      @@include('../_components/_filters/_side-filter.html', {
+        "class": "catalog__side-filter"
+      })
+
+      <div class="catalog__content">
+        <form class="catalog__sort">
+          <ul class="catalog__sort-list">
+            <li class="catalog__sort-item">
+              @@include('../_components/_buttons/_filter-btn.html')
+            </li>
+            <li class="catalog__sort-item">
+              <select class="catalog__select" name="order-sort" id="order-sort">
+                <option class="catalog__option" value="sort-by-name">По названию</option>
+                <option class="catalog__option" value="sort-by-popularity">По популярности</option>
+                <option class="catalog__option" value="sort-inexpensive-first">Сначала дешевые</option>
+                <option class="catalog__option" value="sort-expensive-first">Сначала дорогие</option>
+                <option class="catalog__option" value="sort-by-alfabet">По алфавиту</option>
+              </select>
+            </li>
+
+            <li class="catalog__sort-item">
+              <select class="catalog__select" name="number-sort" id="number-sort">
+                <option class="catalog__option" value="sort-12">по 12</option>
+                <option class="catalog__option" value="sort-18">по 18</option>
+                <option class="catalog__option" value="sort-24">по 24</option>
+                <option class="catalog__option" value="sort-30">по 30</option>
+                <option class="catalog__option" value="sort-36">по 36</option>
+              </select>
+            </li>
+
+            <li class="catalog__sort-item catalog__sort-item--hide">
+              <button class="catalog__view" id="show-wide-cards" type="button">
+                <svg>
+                  <use xlink:href="images/sprite.svg#view-list"></use>
+                </svg>
+                <span class="sr-only">Сортировать списком</span>
+              </button>
+            </li>
+
+            <li class="catalog__sort-item catalog__sort-item--hide">
+              <button class="catalog__view catalog__view--active"  id="show-narrow-cards" type="button">
+                <svg>
+                  <use xlink:href="images/sprite.svg#view-grid"></use>
+                </svg>
+                <span class="sr-only">Сортировать сеткой</span>
+              </button>
+            </li>
+          </ul>
+        </form>
+
+        <ul class="catalog__grid">
+          <li class="catalog__item mix fruit">
+            @@include('../_components/_cards/_product-max.html', {
+              "new_boolean": true,
+              "hit_boolean": false,
+              "sale_boolean": true, "text": "-50",
+              "image": "pineapple.jpg",
+              "href": "#",
+              "alt": "Ананасы",
+              "available": "true",
+              "rate": "4.5",
+              "title": "Ананас, 1кг",
+              "old_price_boolean": true, "old_price": "1999",
+              "price": "999"
+            })
+          </li>
+  
+          <li class="catalog__item mix fruit">
+            @@include('../_components/_cards/_product-max.html', {
+              "new_boolean": false,
+              "hit_boolean": false,
+              "sale_boolean": false, "text": "",
+              "image": "lemon.jpg",
+              "href": "#",
+              "alt": "Лимоны",
+              "available": "true",
+              "rate": "4.5",
+              "title": "Лимон, 1кг",
+              "old_price_boolean": false, "old_price": "",
+              "price": "199"
+            })
+          </li>
+  
+          <li class="catalog__item mix fruit">
+            @@include('../_components/_cards/_product-max.html', {
+              "new_boolean": false,
+              "hit_boolean": true,
+              "sale_boolean": false, "text": "",
+              "image": "dragon-fruit.jpg",
+              "href": "#",
+              "alt": "Питахайя красная с белой мякотью",
+              "available": "true",
+              "rate": "4.5",
+              "title": "Питахайя красная с белой мякотью, 1шт",
+              "old_price_boolean": false, "old_price": "",
+              "price": "1019"
+            })
+          </li>
+  
+          <li class="catalog__item mix vegetable">
+            @@include('../_components/_cards/_product-max.html', {
+              "new_boolean": false,
+              "hit_boolean": true,
+              "sale_boolean": false, "text": "",
+              "image": "carrot.jpg",
+              "href": "#",
+              "alt": "Морковь молодая",
+              "available": "false",
+              "rate": "4.5",
+              "title": "Морковь молодая с бабушкиной грядки, 1кг",
+              "old_price_boolean": false, "old_price": "",
+              "price": "49"
+            })
+          </li>
+  
+          <li class="catalog__item mix drink">
+            @@include('../_components/_cards/_product-max.html', {
+              "new_boolean": false,
+              "hit_boolean": false,
+              "sale_boolean": true, "text": "-50",
+              "image": "juice.jpg",
+              "href": "#",
+              "alt": "Sanpellegrino Aranciata Orange Красный апельсин безалкогольный",
+              "available": "true",
+              "rate": "4.5",
+              "title": "Напиток сокосодержащий Sanpellegrino Aranciata Orange Красный апельсин безалкогольный...",
+              "old_price_boolean": true, "old_price": "299",
+              "price": "199"
+            })
+          </li>
+  
+          <li class="catalog__item mix grocery">
+            @@include('../_components/_cards/_product-max.html', {
+              "new_boolean": true,
+              "hit_boolean": false,
+              "sale_boolean": false, "text": "",
+              "image": "coffee.jpg",
+              "href": "#",
+              "alt": "Кофе с коноплей органический Caffé Salomoni 250г",
+              "available": "min",
+              "rate": "4.5",
+              "title": "Кофе с коноплей органический Caffé Salomoni 250г",
+              "old_price_boolean": false, "old_price": "",
+              "price": "877"
+            })
+          </li>
+  
+          <li class="catalog__item mix vegetable">
+            @@include('../_components/_cards/_product-max.html', {
+              "new_boolean": true,
+              "hit_boolean": false,
+              "sale_boolean": false, "text": "",
+              "image": "paprik.jpg",
+              "href": "#",
+              "alt": "Перец оранжевый",
+              "available": "min",
+              "rate": "4.5",
+              "title": "Перец оранжевый, 1кг",
+              "old_price_boolean": false, "old_price": "",
+              "price": "349"
+            })
+          </li>
+  
+          <li class="catalog__item mix grocery">
+            @@include('../_components/_cards/_product-max.html', {
+              "new_boolean": false,
+              "hit_boolean": false,
+              "sale_boolean": false, "text": "",
+              "image": "body.jpg",
+              "href": "#",
+              "alt": "Кетчуп томатный детский органический Bio-Zentrale 500мл",
+              "available": "true",
+              "rate": "4.5",
+              "title": "Кетчуп томатный детский органический Bio-Zentrale 500мл",
+              "old_price_boolean": false, "old_price": "",
+              "price": "600"
+            })
+          </li>
+          
+          <li class="catalog__item mix fruit">
+            @@include('../_components/_cards/_product-max.html', {
+              "new_boolean": true,
+              "hit_boolean": false,
+              "sale_boolean": true, "text": "-50",
+              "image": "pineapple.jpg",
+              "href": "#",
+              "alt": "Ананасы",
+              "available": "true",
+              "rate": "4.5",
+              "title": "Ананас, 1кг",
+              "old_price_boolean": true, "old_price": "1999",
+              "price": "999"
+            })
+          </li>
+  
+          <li class="catalog__item mix vegetable">
+            @@include('../_components/_cards/_product-max.html', {
+              "new_boolean": false,
+              "hit_boolean": true,
+              "sale_boolean": false, "text": "",
+              "image": "carrot.jpg",
+              "href": "#",
+              "alt": "Морковь молодая",
+              "available": "min",
+              "rate": "4.5",
+              "title": "Морковь молодая с бабушкиной грядки, 1кг",
+              "old_price_boolean": false, "old_price": "",
+              "price": "49"
+            })
+          </li>
+  
+          <li class="catalog__item mix drink">
+            @@include('../_components/_cards/_product-max.html', {
+              "new_boolean": false,
+              "hit_boolean": false,
+              "sale_boolean": true, "text": "-50",
+              "image": "juice.jpg",
+              "href": "#",
+              "alt": "Sanpellegrino Aranciata Orange Красный апельсин безалкогольный",
+              "available": "min",
+              "rate": "4.5",
+              "title": "Напиток сокосодержащий Sanpellegrino Aranciata Orange Красный апельсин безалкогольный...",
+              "old_price_boolean": true, "old_price": "299",
+              "price": "199"
+            })
+          </li>
+  
+          <li class="catalog__item mix grocery">
+            @@include('../_components/_cards/_product-max.html', {
+              "new_boolean": true,
+              "hit_boolean": false,
+              "sale_boolean": false, "text": "",
+              "image": "coffee.jpg",
+              "href": "#",
+              "alt": "Кофе с коноплей органический Caffé Salomoni 250г",
+              "available": "min",
+              "rate": "4.5",
+              "title": "Кофе с коноплей органический Caffé Salomoni 250г",
+              "old_price_boolean": false, "old_price": "",
+              "price": "877"
+            })
+          </li>
+        </ul>
+
+        <div class="catalog__bottom">
+          @@include('../_components/_buttons/_button.html', {
+            "text": "Показать еще",
+            "mod": "button--mb"
+          })
+
+          @@include('../_components/_objects/_pagination.html')
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

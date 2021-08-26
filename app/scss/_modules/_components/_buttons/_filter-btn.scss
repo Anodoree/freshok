@@ -1,0 +1,23 @@
+.filter-btn {
+  display: none;
+  padding: 6px;
+  background-color: $silver-100;
+  border: 0;
+  border-radius: 3px;
+  @extend %animation-btn;
+
+  @include media-w($sm) {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  svg {
+    width: 35px;
+    height: 35px;
+  }
+
+  &:hover {
+    background-color: $green-200;
+  }
+}

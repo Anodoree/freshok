@@ -1,0 +1,252 @@
+.header {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 3;
+  letter-spacing: 0.03em;
+  background-color: $green-900;
+
+  &--fixed {
+    position: fixed;
+    transform: translateY(-200%);
+  }
+
+  &--hidden {
+    transition: transform 0.3s;
+  }
+
+  &--visible {
+    transform: translateY(0);
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 1;
+    background-color: $green-900;
+  }
+
+  &__top {
+    position: relative;
+    z-index: 3;
+    font-weight: 700;
+    font-size: 13px;
+    text-transform: uppercase;
+    color: $white;
+    background-color: $dark-800;
+  }
+
+  &__top-inner {
+    padding-top: 3px;
+    padding-bottom: 3px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__contacts {
+    display: flex;
+  }
+
+  &__contacts a:not(:last-child) {
+    margin-right: 48px;
+
+    @include media-w($md) {
+      margin-right: 12px;
+    }
+  }
+
+  &__menu {
+    display: flex;
+
+    @include media-w($sm) {
+      display: none;
+    }
+  }
+
+  &__item:not(:last-child) {
+    margin-right: 24px;
+  }
+
+  &__link {
+    padding-top: 13px;
+    padding-bottom: 13px;
+    display: block;
+    @extend %animation-inline;
+  }
+
+  &__burger {
+    order: -1;
+    width: 44px;
+    height: 44px;
+    padding: 0;
+    display: none;
+    background-color: transparent;
+    border: none;
+    @extend %animation-inline;
+
+    @include media-w($sm) {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+
+  &__burger-line {
+    position: relative;
+    width: 30px;
+    height: 2px;
+    display: block;
+    background-color: $white;
+
+    &::before,
+    &::after {
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      display: block;
+      background-color: $white;
+    }
+
+    &::before {
+      top: -10px;
+    }
+
+    &::after {
+      top: 10px;
+    }
+  }
+
+  &__inner {
+    padding-top: 25px;
+    padding-bottom: 25px;
+    display: flex;
+    align-items: center;
+
+    @include media-w($lg) {
+      padding-top: 18px;
+      padding-bottom: 18px;
+    }
+
+    @include media-w($sm) {
+      padding-top: 9px;
+      padding-bottom: 9px;
+    }
+  }
+
+  &__logo {
+    position: relative;
+    z-index: 2;
+    flex-shrink: 0;
+    margin-right: 24px;
+
+    @include media-w($lg) {
+      img {
+        max-width: 170px;
+        max-height: 50px;
+      }
+    }
+
+    @include media-w($sm) {
+      margin-right: 20px;
+      padding: 2px;
+
+      img {
+        max-width: 40px;
+        max-height: 40px;
+      }
+    }
+
+    @include media-w($xxs) {
+      margin-right: 10px;
+    }
+  }
+
+  &__catalog-dropdown {
+    position: relative;
+    z-index: 2;
+    margin-right: 30px;
+
+    @include media-w($lg) {
+      margin-right: 10px;
+    }
+  }
+
+  &__search-form {
+    position: relative;
+    z-index: 2;
+    flex-basis: 577px;
+    margin-right: 32px;
+
+    @include media-w($lg) {
+      margin-right: 15px;
+    }
+
+    @include media-w($md) {
+      position: absolute;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      z-index: 0;
+      margin-right: 0;
+      border: 1px solid $dark-800;
+      transform: translateY(0);
+      transition: transform 0.3s;
+
+      input,
+      button {
+        border-radius: 0;
+      }
+
+      &--active {
+        transform: translateY(100%);
+      }
+    }
+  }
+
+  &__icon {
+    position: relative;
+    z-index: 2;
+    display: flex;
+
+    @include media-w($md) {
+      margin-left: auto;
+    }
+  }
+
+  &__icon-item {
+    &--search {
+      display: none;
+
+      @include media-w($md) {
+        display: block;
+      }
+    }
+
+    &--user {
+      @include media-w($sm) {
+        display: none;
+      }
+    }
+
+    &--favorite {
+      @include media-w($sm) {
+        display: none;
+      }
+    }
+
+    &:not(:last-child) {
+      margin-right: 12px;
+
+      @include media-w($lg) {
+        margin-right: 6px;
+      }
+    }
+  }
+}

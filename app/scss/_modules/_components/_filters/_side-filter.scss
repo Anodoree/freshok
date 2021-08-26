@@ -1,0 +1,53 @@
+.side-filter {
+  @extend %custom-scroll;
+
+  &__filter-box:not(:last-child) {
+    margin-bottom: 30px;
+  }
+
+  @include media-w($sm) {
+    position: fixed;
+    top: 112px;
+    right: 0;
+    bottom: 100%;
+    left: 0;
+    z-index: 11;
+    transition: bottom 0s 0.5s, top 0s 0.5s, background-color 0.5s;
+
+    &--active {
+      bottom: 0;
+      background-color: rgba($black, 0.2);
+      transition: background-color 1s;
+    }
+
+    &__container {
+      position: fixed;
+      top: 112px;
+      left: 0;
+      bottom: 0;
+      z-index: 12;
+      overflow-y: auto;
+      width: 317px;
+      max-width: 100%;
+      margin-right: 3px;
+      padding-top: 8px;
+      padding-right: 15px;
+      letter-spacing: 0.03em;
+      background-color: $white;
+      transform: translateX(-120%);
+      transition: transform 0.5s;
+  
+      &--active {
+        transform: translateX(0);
+      }
+    }
+
+    &__close-btn {
+      position: relative;
+      top: 0;
+      right: 0;
+      margin-left: auto;
+      margin-bottom: 10px;
+    }
+  }
+}

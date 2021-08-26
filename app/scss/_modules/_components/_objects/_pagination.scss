@@ -1,0 +1,51 @@
+.pagination {
+  display: flex;
+  align-items: center;
+  color: $dark-500;
+
+  &__item {
+    &:not(:last-child) {
+      margin-right: 6px;
+    }
+
+    @include media-w($sm) {
+      &--hide {
+        display: none;
+      }
+    }
+  }
+
+  &__link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 48px;
+    height: 48px;
+    background-color: $silver-100;
+    border: 1px solid transparent;
+    border-radius: 3px;
+
+    svg {
+      width: 100%;
+      height: 100%;
+      padding: 15px;
+      fill: $dark-500;
+    }
+
+    &--prev {
+      svg {
+        transform: rotate(180deg);
+      }
+    }
+
+    &--disabled {
+      svg {
+        fill: $silver-600;
+      }
+    }
+
+    &--active {
+      border-color: $dark-500;
+    }
+  }
+}
