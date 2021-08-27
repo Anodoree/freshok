@@ -49,10 +49,6 @@
       background-color: $green-900;
     }
 
-    @include media-w($xs) {
-      padding-top: 9px;
-    }
-
     &:focus {
       box-shadow: 0 0 0 2px $green-900;
     }

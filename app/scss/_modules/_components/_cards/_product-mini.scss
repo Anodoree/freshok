@@ -1,16 +1,15 @@
 .product-mini {
-  width: 300px;
-  display: block;
-  border: 1px solid rgba($black, 0.2);
   border-radius: 6px;
-  @extend %animation-card;
-
-  &__article {
-    padding: 11px;
+  
+  &__container {
     display: flex;
+    width: 300px;
+    padding: 11px;
     letter-spacing: 0.03em;
     background-color: $white;
+    border: 1px solid rgba($black, 0.2);
     border-radius: 6px;
+    @extend %animation-card;
   }
 
   &__img-box {
