@@ -153,6 +153,9 @@
 
     &__dropdown {
       min-width: 100%;
+    }
+    
+    ul {
       background-color: $white;
       border: 1px solid $silver-600;
       border-radius: 0 0 6px 6px;
