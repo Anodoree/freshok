@@ -1,0 +1,31 @@
+.recent {
+  max-width: 1350px;
+  margin: 0 auto 72px;
+  padding: 0 15px;
+
+  &__title {
+    margin-bottom: 43px;
+    padding: 12px 15px;
+    letter-spacing: -0.4px;
+  }
+
+  &__item {
+    article {
+      margin: 0 auto;
+    }
+  }
+
+  &__slider-arrow {
+    position: absolute;
+    top: -108px;
+    z-index: 2;
+
+    &--prev {
+      right: 105px;
+    }
+
+    &--next {
+      right: 15px;
+    }
+  }
+}

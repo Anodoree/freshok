@@ -74,3 +74,11 @@ body {
     font-size: 24px;
   }
 }
+
+.subject {
+  display: block;
+  font-size: 18px;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: $dark-900;
+}

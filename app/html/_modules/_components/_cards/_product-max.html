@@ -25,12 +25,13 @@
       }
     </div>
 
-    <button class="product-max__favorite" type="button">
-      <svg>
-        <use xlink:href="images/sprite.svg#favorite"></use>
-      </svg>
-      <span class="sr-only">Добавить в "избранное"</span>
-    </button>
+    @@include('../_buttons/_icon-btn.html', {
+      "class": "",
+      "mod": "icon-btn--transparent product-max__icon-btn--transparent",
+      "image": "favorite",
+      "sr-only": "Добавить в избранное",
+      "extra": ""
+    })
   </div>
 
   <a class="product-max__link" href="@@href">
@@ -41,16 +42,19 @@
   <div class="product-max__info">
 @@if (available == "true") {
   @@include('../_objects/_avaliable.html', {
+    "class": "product-max__available",
     "mod": "available--green",
     "text": "В наличии"
   })
 }@@if (available == "false") {
   @@include('../_objects/_avaliable.html', {
+    "class": "product-max__available",
     "mod": "",
     "text": "Нет в наличии"
   })
 }@@if (available == "min") {
   @@include('../_objects/_avaliable.html', {
+    "class": "product-max__available",
     "mod": "available--red",
     "text": "Заканчивается"
   })
@@ -84,12 +88,13 @@
       "value": "1"
     })
 
-    <button class="product-max__cart" type="button">
-      <svg>
-        <use xlink:href="images/sprite.svg#cart"></use>
-      </svg>
-      <span class="sr-only">Добавить в "корзину"</span>
-    </button>
+    @@include('../_buttons/_icon-btn.html', {
+      "class": "product-max__icon-btn",
+      "mod": "",
+      "image": "cart",
+      "sr-only": "Добавить в корзину",
+      "extra": ""
+    })
   </div>
 </div>
 </article>

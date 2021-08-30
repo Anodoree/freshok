@@ -1,0 +1,41 @@
+<form class="review-form">
+  <div class="review-form__rating">
+    <span class="review-form__text">Ваша оценка *</span>
+    <span class="review-form__star" data-rateyo-rating="0">
+      <span class="sr-only">Выберите количесво звёзд от 1 до 5</span>
+    </span>
+  </div>
+
+  <div class="review-form__grid">
+    <div class="review-form__review">
+      <label class="review-form__label" for="review-form-textarea">
+        <span class="review-form__text">Ваш отзыв *</span>
+      </label>
+      <textarea class="review-form__textarea" id="review-form-textarea" name="review-form-textarea" placeholder="Введите текст отзыва" required></textarea>
+    </div>
+
+    <div class="review-form__name">
+      <label class="review-form__label" for="review-form-name">
+        <span class="review-form__text">Имя</span>
+      </label>
+      <input class="review-form__field" id="review-form-name" type="text" name="review-form-name" placeholder="Введите ваше имя">
+    </div>
+
+    <div class="review-form__email">
+      <label class="review-form__label" for="review-form-email">
+        <span class="review-form__text">Email *</span>
+      </label>
+      <input class="review-form__field" id="review-form-email" type="email" name="review-form-email" placeholder="youremail@mail.com" required>
+    </div>
+  </div>
+
+  <div class="review-form__save">
+    <input class="review-form__checkbox-input" id="review-form-save" type="checkbox" name="review-form-save">
+    <span class="review-form__checkbox"></span>
+    <label class="review-form__label" for="review-form-save">
+      Сохранить моё имя, email и адрес сайта в этом браузере для последующих моих комментариев.
+    </label>
+  </div>
+
+  <button class="button" type="submit">Оставить отзыв</button>
+</form>
