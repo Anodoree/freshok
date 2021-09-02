@@ -1,6 +1,6 @@
-@import 'reset';
 @import 'fonts';
 @import 'vars';
+@import 'reset';
 @import 'libs';
 @import 'global';
 @import 'animation';
@@ -35,7 +35,9 @@
 @import '_modules/_components/_objects/avaliable';
 @import '_modules/_components/_objects/badge';
 @import '_modules/_components/_objects/bank-card';
+@import '_modules/_components/_objects/banner';
 @import '_modules/_components/_objects/catalog-dropdown';
+@import '_modules/_components/_objects/hero-banner';
 @import '_modules/_components/_objects/menu';
 @import '_modules/_components/_objects/old-price';
 @import '_modules/_components/_objects/pagination';
@@ -49,7 +51,7 @@
 @import '_modules/_components/header';
 @import '_modules/_components/mobile';
 
-@import '_modules/_index/banner';
+@import '_modules/_index/banners';
 @import '_modules/_index/brand';
 @import '_modules/_index/hero';
 @import '_modules/_index/news';

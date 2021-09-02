@@ -39,13 +39,14 @@
       <div class="product__row">
         @@include('../_components/_forms/_quantity-input.html', {
           "class": "product__quantity-input",
-          "name": "number",
+          "name": "number-$product-name",
           "value": "1"
         })
 
         @@include('../_components/_buttons/_icon-btn.html', {
           "class": "product__icon-btn",
           "mod": "",
+          "type": "submit",
           "image": "cart",
           "sr-only": "Добавить в корзину",
           "extra": "<span class='icon-btn__text'>Добавить в корзину</span>"
@@ -54,6 +55,7 @@
         @@include('../_components/_buttons/_icon-btn.html', {
           "class": "product__icon-btn",
           "mod": "icon-btn--transparent product__icon-btn--transparent",
+          "type": "button",
           "image": "favorite",
           "sr-only": "Добавить в избранное",
           "extra": ""

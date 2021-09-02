@@ -302,7 +302,8 @@
           <li class="cart__item">
             <article class="cart-card">
               <div class="cart-card__img-box">
-                <img class="cart-card__img" src="images/products/pineapple.jpg" alt="Ананасы">
+                <img class="cart-card__img" src="images/products/pineapple.jpg"
+                  alt="Ананасы">
               </div>
 
               <div class="cart-card__info">
@@ -315,7 +316,9 @@
               </div>
 
               <div class="cart-card__sum">
-                <input class="cart-card__quantity-input quantity-input" type="number" name="number"
+                <input class="cart-card__quantity-input quantity-input"
+                  type="number" name="number-$product-name"
+                  aria-label="Укажите количество выбранного товара"
                   min="1" max="99" value="2">
 
                 <span class="cart-card__price">
@@ -334,7 +337,8 @@
           <li class="cart__item">
             <article class="cart-card">
               <div class="cart-card__img-box">
-                <img class="cart-card__img" src="images/products/dragon-fruit.jpg" alt="Питахайя красная с белой мякотью">
+                <img class="cart-card__img" src="images/products/dragon-fruit.jpg"
+                  alt="Питахайя красная с белой мякотью">
               </div>
 
               <div class="cart-card__info">
@@ -347,7 +351,9 @@
               </div>
 
               <div class="cart-card__sum">
-                <input class="cart-card__quantity-input quantity-input" type="number" name="number"
+                <input class="cart-card__quantity-input quantity-input"
+                  type="number" name="number-$product-name"
+                  aria-label="Укажите количество выбранного товара"
                   min="1" max="99" value="2">
 
                 <span class="cart-card__price">
@@ -436,10 +442,12 @@
           </div>
 
           <div class="product__row">
-            <input class="product__quantity-input quantity-input" type="number" name="number"
+            <input class="product__quantity-input quantity-input"
+              type="number" name="number-$product-name"
+              aria-label="Укажите количество выбранного товара"
               min="1" max="99" value="1">
 
-            <button class="product__icon-btn icon-btn " type="button">
+            <button class="product__icon-btn icon-btn " type="submit">
               <svg>
                 <use xlink:href="images/sprite.svg#cart"></use>
               </svg>
@@ -590,29 +598,37 @@
                     <label class="review-form__label" for="review-form-textarea">
                       <span class="review-form__text">Ваш отзыв *</span>
                     </label>
-                    <textarea class="review-form__textarea" id="review-form-textarea" name="review-form-textarea" placeholder="Введите текст отзыва" required></textarea>
+                    <textarea class="review-form__textarea" id="review-form-textarea"
+                      name="review-form-textarea" aria-label="Введите текст отзыва"
+                      placeholder="Введите текст отзыва" required></textarea>
                   </div>
 
                   <div class="review-form__name">
                     <label class="review-form__label" for="review-form-name">
                       <span class="review-form__text">Имя</span>
                     </label>
-                    <input class="review-form__field" id="review-form-name" type="text" name="review-form-name" placeholder="Введите ваше имя">
+                    <input class="review-form__field" id="review-form-name" type="text"
+                      name="review-form-name" aria-label="Введите ваше имя"
+                      placeholder="Введите ваше имя">
                   </div>
 
                   <div class="review-form__email">
                     <label class="review-form__label" for="review-form-email">
                       <span class="review-form__text">Email *</span>
                     </label>
-                    <input class="review-form__field" id="review-form-email" type="email" name="review-form-email" placeholder="youremail@mail.com" required>
+                    <input class="review-form__field" id="review-form-email" type="email"
+                      name="review-form-email" aria-label="Введите ваш адрес электронной почты"
+                      placeholder="youremail@mail.com" required>
                   </div>
                 </div>
 
                 <div class="review-form__save">
-                  <input class="review-form__checkbox-input" id="review-form-save" type="checkbox" name="review-form-save">
+                  <input class="review-form__checkbox-input" id="review-form-save" type="checkbox"
+                    name="review-form-save">
                   <span class="review-form__checkbox"></span>
                   <label class="review-form__label" for="review-form-save">
-                    Сохранить моё имя, email и адрес сайта в этом браузере для последующих моих комментариев.
+                    Сохранить моё имя, email и адрес сайта в этом браузере для последующих
+                    моих комментариев.
                   </label>
                 </div>
 
@@ -649,48 +665,52 @@
             </div>
 
             <a class="product-max__link" href="#">
-              <img class="product-max__img" src="images/products/carrot.jpg" alt="Морковь молодая"
+              <img class="product-max__img" src="images/products/carrot.jpg"
+                alt="Морковь молодая"
                 width="300" height="225">
             </a>
-          <div class="product-max__content">
-            <div class="product-max__info">
-          
-            <span class="product-max__available available ">Нет в наличии</span>
-          
-            <div class="product-max__rating rating">
-              <span class="rating__number">
-                4.5
-              </span>
-              <svg>
-                <use xlink:href="images/sprite.svg#star"></use>
-              </svg>
-            </div>
-            </div>
-
-            <h3 class="product-max__title">
-              Морковь молодая с бабушкиной грядки, 1кг
-            </h3>
-
-            <div class="product-max__bottom">
-              <div class="product-max__cost">
-              
-                <span class="product-max__price">
-                  49 <span class="product-max__currency">₽</span>
+  
+            <div class="product-max__content">
+              <div class="product-max__info">
+            
+              <span class="product-max__available available ">Нет в наличии</span>
+            
+              <div class="product-max__rating rating">
+                <span class="rating__number">
+                  4.5
                 </span>
+                <svg>
+                  <use xlink:href="images/sprite.svg#star"></use>
+                </svg>
+              </div>
               </div>
 
-              <input class="product-max__quantity-input quantity-input" type="number" name="number"
-                min="1" max="99" value="1">
+              <h3 class="product-max__title">
+                Морковь молодая с бабушкиной грядки, 1кг
+              </h3>
 
-              <button class="product-max__icon-btn icon-btn " type="button">
-                <svg>
-                  <use xlink:href="images/sprite.svg#cart"></use>
-                </svg>
-                <span class="sr-only">Добавить в корзину</span>
+              <form class="product-max__bottom">
+                <div class="product-max__cost">
                 
-              </button>
+                  <span class="product-max__price">
+                    49 <span class="product-max__currency">₽</span>
+                  </span>
+                </div>
+
+                <input class="product-max__quantity-input quantity-input"
+                  type="number" name="number-$product-name"
+                  aria-label="Укажите количество выбранного товара"
+                  min="1" max="99" value="1">
+
+                <button class="product-max__icon-btn icon-btn " type="submit">
+                  <svg>
+                    <use xlink:href="images/sprite.svg#cart"></use>
+                  </svg>
+                  <span class="sr-only">Добавить в корзину</span>
+                  
+                </button>
+              </form>
             </div>
-          </div>
           </article>
         </li>
 
@@ -715,52 +735,56 @@
             </div>
 
             <a class="product-max__link" href="#">
-              <img class="product-max__img" src="images/products/juice.jpg" alt="Sanpellegrino Aranciata Orange Красный апельсин безалкогольный"
+              <img class="product-max__img" src="images/products/juice.jpg"
+                alt="Sanpellegrino Aranciata Orange Красный апельсин безалкогольный"
                 width="300" height="225">
             </a>
-          <div class="product-max__content">
-            <div class="product-max__info">
-          
-            <span class="product-max__available available available--green">В наличии</span>
-          
-            <div class="product-max__rating rating">
-              <span class="rating__number">
-                4.5
-              </span>
-              <svg>
-                <use xlink:href="images/sprite.svg#star"></use>
-              </svg>
-            </div>
-            </div>
-
-            <h3 class="product-max__title">
-              Напиток сокосодержащий Sanpellegrino Aranciata Orange Красный апельсин безалкогольный...
-            </h3>
-
-            <div class="product-max__bottom">
-              <div class="product-max__cost">
-              
-                <span class=" old-price">
-                  299 <span class="old-price__currency">₽</span>
+  
+            <div class="product-max__content">
+              <div class="product-max__info">
+            
+              <span class="product-max__available available available--green">В наличии</span>
+            
+              <div class="product-max__rating rating">
+                <span class="rating__number">
+                  4.5
                 </span>
-              
-                <span class="product-max__price">
-                  199 <span class="product-max__currency">₽</span>
-                </span>
+                <svg>
+                  <use xlink:href="images/sprite.svg#star"></use>
+                </svg>
+              </div>
               </div>
 
-              <input class="product-max__quantity-input quantity-input" type="number" name="number"
-                min="1" max="99" value="1">
+              <h3 class="product-max__title">
+                Напиток сокосодержащий Sanpellegrino Aranciata Orange Красный апельсин безалкогольный...
+              </h3>
 
-              <button class="product-max__icon-btn icon-btn " type="button">
-                <svg>
-                  <use xlink:href="images/sprite.svg#cart"></use>
-                </svg>
-                <span class="sr-only">Добавить в корзину</span>
+              <form class="product-max__bottom">
+                <div class="product-max__cost">
                 
-              </button>
+                  <span class=" old-price">
+                    299 <span class="old-price__currency">₽</span>
+                  </span>
+                
+                  <span class="product-max__price">
+                    199 <span class="product-max__currency">₽</span>
+                  </span>
+                </div>
+
+                <input class="product-max__quantity-input quantity-input"
+                  type="number" name="number-$product-name"
+                  aria-label="Укажите количество выбранного товара"
+                  min="1" max="99" value="1">
+
+                <button class="product-max__icon-btn icon-btn " type="submit">
+                  <svg>
+                    <use xlink:href="images/sprite.svg#cart"></use>
+                  </svg>
+                  <span class="sr-only">Добавить в корзину</span>
+                  
+                </button>
+              </form>
             </div>
-          </div>
           </article>
         </li>
 
@@ -785,48 +809,52 @@
             </div>
 
             <a class="product-max__link" href="#">
-              <img class="product-max__img" src="images/products/coffee.jpg" alt="Кофе с коноплей органический Caffé Salomoni 250г"
+              <img class="product-max__img" src="images/products/coffee.jpg"
+                alt="Кофе с коноплей органический Caffé Salomoni 250г"
                 width="300" height="225">
             </a>
-          <div class="product-max__content">
-            <div class="product-max__info">
-          
-            <span class="product-max__available available available--red">Заканчивается</span>
-          
-            <div class="product-max__rating rating">
-              <span class="rating__number">
-                4.5
-              </span>
-              <svg>
-                <use xlink:href="images/sprite.svg#star"></use>
-              </svg>
-            </div>
-            </div>
-
-            <h3 class="product-max__title">
-              Кофе с коноплей органический Caffé Salomoni 250г
-            </h3>
-
-            <div class="product-max__bottom">
-              <div class="product-max__cost">
-              
-                <span class="product-max__price">
-                  877 <span class="product-max__currency">₽</span>
+  
+            <div class="product-max__content">
+              <div class="product-max__info">
+            
+              <span class="product-max__available available available--red">Заканчивается</span>
+            
+              <div class="product-max__rating rating">
+                <span class="rating__number">
+                  4.5
                 </span>
+                <svg>
+                  <use xlink:href="images/sprite.svg#star"></use>
+                </svg>
+              </div>
               </div>
 
-              <input class="product-max__quantity-input quantity-input" type="number" name="number"
-                min="1" max="99" value="1">
+              <h3 class="product-max__title">
+                Кофе с коноплей органический Caffé Salomoni 250г
+              </h3>
 
-              <button class="product-max__icon-btn icon-btn " type="button">
-                <svg>
-                  <use xlink:href="images/sprite.svg#cart"></use>
-                </svg>
-                <span class="sr-only">Добавить в корзину</span>
+              <form class="product-max__bottom">
+                <div class="product-max__cost">
                 
-              </button>
+                  <span class="product-max__price">
+                    877 <span class="product-max__currency">₽</span>
+                  </span>
+                </div>
+
+                <input class="product-max__quantity-input quantity-input"
+                  type="number" name="number-$product-name"
+                  aria-label="Укажите количество выбранного товара"
+                  min="1" max="99" value="1">
+
+                <button class="product-max__icon-btn icon-btn " type="submit">
+                  <svg>
+                    <use xlink:href="images/sprite.svg#cart"></use>
+                  </svg>
+                  <span class="sr-only">Добавить в корзину</span>
+                  
+                </button>
+              </form>
             </div>
-          </div>
           </article>
         </li>
 
@@ -851,48 +879,52 @@
             </div>
 
             <a class="product-max__link" href="#">
-              <img class="product-max__img" src="images/products/coffee.jpg" alt="Кофе с коноплей органический Caffé Salomoni 250г"
+              <img class="product-max__img" src="images/products/coffee.jpg"
+                alt="Кофе с коноплей органический Caffé Salomoni 250г"
                 width="300" height="225">
             </a>
-          <div class="product-max__content">
-            <div class="product-max__info">
-          
-            <span class="product-max__available available available--red">Заканчивается</span>
-          
-            <div class="product-max__rating rating">
-              <span class="rating__number">
-                4.5
-              </span>
-              <svg>
-                <use xlink:href="images/sprite.svg#star"></use>
-              </svg>
-            </div>
-            </div>
-
-            <h3 class="product-max__title">
-              Кофе с коноплей органический Caffé Salomoni 250г
-            </h3>
-
-            <div class="product-max__bottom">
-              <div class="product-max__cost">
-              
-                <span class="product-max__price">
-                  877 <span class="product-max__currency">₽</span>
+  
+            <div class="product-max__content">
+              <div class="product-max__info">
+            
+              <span class="product-max__available available available--red">Заканчивается</span>
+            
+              <div class="product-max__rating rating">
+                <span class="rating__number">
+                  4.5
                 </span>
+                <svg>
+                  <use xlink:href="images/sprite.svg#star"></use>
+                </svg>
+              </div>
               </div>
 
-              <input class="product-max__quantity-input quantity-input" type="number" name="number"
-                min="1" max="99" value="1">
+              <h3 class="product-max__title">
+                Кофе с коноплей органический Caffé Salomoni 250г
+              </h3>
 
-              <button class="product-max__icon-btn icon-btn " type="button">
-                <svg>
-                  <use xlink:href="images/sprite.svg#cart"></use>
-                </svg>
-                <span class="sr-only">Добавить в корзину</span>
+              <form class="product-max__bottom">
+                <div class="product-max__cost">
                 
-              </button>
+                  <span class="product-max__price">
+                    877 <span class="product-max__currency">₽</span>
+                  </span>
+                </div>
+
+                <input class="product-max__quantity-input quantity-input"
+                  type="number" name="number-$product-name"
+                  aria-label="Укажите количество выбранного товара"
+                  min="1" max="99" value="1">
+
+                <button class="product-max__icon-btn icon-btn " type="submit">
+                  <svg>
+                    <use xlink:href="images/sprite.svg#cart"></use>
+                  </svg>
+                  <span class="sr-only">Добавить в корзину</span>
+                  
+                </button>
+              </form>
             </div>
-          </div>
           </article>
         </li>
 
@@ -921,52 +953,56 @@
             </div>
 
             <a class="product-max__link" href="#">
-              <img class="product-max__img" src="images/products/pineapple.jpg" alt="Ананасы"
+              <img class="product-max__img" src="images/products/pineapple.jpg"
+                alt="Ананасы"
                 width="300" height="225">
             </a>
-          <div class="product-max__content">
-            <div class="product-max__info">
-          
-            <span class="product-max__available available available--green">В наличии</span>
-          
-            <div class="product-max__rating rating">
-              <span class="rating__number">
-                4.5
-              </span>
-              <svg>
-                <use xlink:href="images/sprite.svg#star"></use>
-              </svg>
-            </div>
-            </div>
-
-            <h3 class="product-max__title">
-              Ананас, 1кг
-            </h3>
-
-            <div class="product-max__bottom">
-              <div class="product-max__cost">
-              
-                <span class=" old-price">
-                  1999 <span class="old-price__currency">₽</span>
+  
+            <div class="product-max__content">
+              <div class="product-max__info">
+            
+              <span class="product-max__available available available--green">В наличии</span>
+            
+              <div class="product-max__rating rating">
+                <span class="rating__number">
+                  4.5
                 </span>
-              
-                <span class="product-max__price">
-                  999 <span class="product-max__currency">₽</span>
-                </span>
+                <svg>
+                  <use xlink:href="images/sprite.svg#star"></use>
+                </svg>
+              </div>
               </div>
 
-              <input class="product-max__quantity-input quantity-input" type="number" name="number"
-                min="1" max="99" value="1">
+              <h3 class="product-max__title">
+                Ананас, 1кг
+              </h3>
 
-              <button class="product-max__icon-btn icon-btn " type="button">
-                <svg>
-                  <use xlink:href="images/sprite.svg#cart"></use>
-                </svg>
-                <span class="sr-only">Добавить в корзину</span>
+              <form class="product-max__bottom">
+                <div class="product-max__cost">
                 
-              </button>
+                  <span class=" old-price">
+                    1999 <span class="old-price__currency">₽</span>
+                  </span>
+                
+                  <span class="product-max__price">
+                    999 <span class="product-max__currency">₽</span>
+                  </span>
+                </div>
+
+                <input class="product-max__quantity-input quantity-input"
+                  type="number" name="number-$product-name"
+                  aria-label="Укажите количество выбранного товара"
+                  min="1" max="99" value="1">
+
+                <button class="product-max__icon-btn icon-btn " type="submit">
+                  <svg>
+                    <use xlink:href="images/sprite.svg#cart"></use>
+                  </svg>
+                  <span class="sr-only">Добавить в корзину</span>
+                  
+                </button>
+              </form>
             </div>
-          </div>
           </article>
         </li>
 
@@ -987,48 +1023,52 @@
             </div>
 
             <a class="product-max__link" href="#">
-              <img class="product-max__img" src="images/products/lemon.jpg" alt="Лимоны"
+              <img class="product-max__img" src="images/products/lemon.jpg"
+                alt="Лимоны"
                 width="300" height="225">
             </a>
-          <div class="product-max__content">
-            <div class="product-max__info">
-          
-            <span class="product-max__available available available--green">В наличии</span>
-          
-            <div class="product-max__rating rating">
-              <span class="rating__number">
-                4.5
-              </span>
-              <svg>
-                <use xlink:href="images/sprite.svg#star"></use>
-              </svg>
-            </div>
-            </div>
-
-            <h3 class="product-max__title">
-              Лимон, 1кг
-            </h3>
-
-            <div class="product-max__bottom">
-              <div class="product-max__cost">
-              
-                <span class="product-max__price">
-                  199 <span class="product-max__currency">₽</span>
+  
+            <div class="product-max__content">
+              <div class="product-max__info">
+            
+              <span class="product-max__available available available--green">В наличии</span>
+            
+              <div class="product-max__rating rating">
+                <span class="rating__number">
+                  4.5
                 </span>
+                <svg>
+                  <use xlink:href="images/sprite.svg#star"></use>
+                </svg>
+              </div>
               </div>
 
-              <input class="product-max__quantity-input quantity-input" type="number" name="number"
-                min="1" max="99" value="1">
+              <h3 class="product-max__title">
+                Лимон, 1кг
+              </h3>
 
-              <button class="product-max__icon-btn icon-btn " type="button">
-                <svg>
-                  <use xlink:href="images/sprite.svg#cart"></use>
-                </svg>
-                <span class="sr-only">Добавить в корзину</span>
+              <form class="product-max__bottom">
+                <div class="product-max__cost">
                 
-              </button>
+                  <span class="product-max__price">
+                    199 <span class="product-max__currency">₽</span>
+                  </span>
+                </div>
+
+                <input class="product-max__quantity-input quantity-input"
+                  type="number" name="number-$product-name"
+                  aria-label="Укажите количество выбранного товара"
+                  min="1" max="99" value="1">
+
+                <button class="product-max__icon-btn icon-btn " type="submit">
+                  <svg>
+                    <use xlink:href="images/sprite.svg#cart"></use>
+                  </svg>
+                  <span class="sr-only">Добавить в корзину</span>
+                  
+                </button>
+              </form>
             </div>
-          </div>
           </article>
         </li>
       </ul>
@@ -1093,7 +1133,7 @@
             <address class="footer__address address">
               <ul class="address__list">
                 <li>
-                  Горячая линия <a href="tel:+7907288365">+7 907 288 365</a>
+                  <a href="tel:+7907288365">Горячая линия +7 907 288 365</a>
                 </li>
                 <li>
                   Санкт-Петербург, Ул. Ленина, 1

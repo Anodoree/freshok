@@ -1,0 +1,119 @@
+.banner {
+  height: 100%;
+  padding: 11%;
+  color: $dark-500;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  border-radius: 4px;
+
+  @include media-w($lg) {
+    padding: 30px 15px;
+  }
+
+  &__inner {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    height: 100%;
+
+    @include media-w($xs) {
+      flex-grow: 1;
+      display: flex;
+    }
+  }
+
+  &__text {
+    order: -1;
+    margin-bottom: 13px;
+    font-weight: 700;
+    font-size: 12px;
+    letter-spacing: 0.1em;
+    @include line-clamp(2);
+
+    @include media-w($xs) {
+      margin-top: auto;
+    }
+  }
+
+  &__title {
+    max-width: 88%;
+    font-weight: 600;
+    font-size: 30px;
+    font-family: "Signika", "OpenSans", "Trebuchet MS", sans-serif;
+    letter-spacing: 0.02em;
+    @include line-clamp(2);
+
+    @include media-w($lg) {
+      max-width: 80%;
+      font-size: 24px;
+    }
+
+    @include media-w($xs) {
+      max-width: 100%;
+      margin-bottom: auto;
+    }
+  }
+
+  &__link {
+    position: relative;
+    display: inline-block;
+    padding: 13px 1px;
+    font-weight: 700;
+    font-size: 14px;
+    border-radius: 3px;
+    outline: 0;
+    transition: box-shadow 0.3s, color 0.3s, opacity 0.3s, border-color 0.3s;
+
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: 10px;
+      left: 0;
+      width: 98%;
+      height: 2px;
+      background-color: $dark-500;
+    }
+
+    &:focus {
+      box-shadow: 0 0 0 3px rgba($green-900, 0.6)
+    }
+
+    &:hover {
+      color: $black;
+      border-color: $black;
+    }
+
+    &:active {
+      opacity: 0.7;
+    }
+  }
+
+  &__link-inner {
+    padding-right: 2px;
+    @include line-clamp(2);
+  }
+
+  &--wide {
+    padding: 32px;
+    color: $white;
+    text-shadow: 2px 2px 0px rgba($black, 0.3);
+
+    @include media-w($lg) {
+      padding: 30px 15px;
+    }
+
+    .banner__link::after {
+      background-color: $white;
+    }
+
+    .banner__link:hover {
+      color: $silver-400;
+    }
+
+    .banner__link:hover::after {
+      background-color: $silver-400;
+    }
+  }
+}

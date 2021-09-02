@@ -176,6 +176,10 @@
     @include media-w($lg) {
       margin-right: 10px;
     }
+
+    @include media-w($xxs) {
+      width: 100%;
+    }
   }
 
   &__search-form {
