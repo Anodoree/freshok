@@ -110,33 +110,17 @@
     }
   }
 
-  &__arrow {
+  &__slider-arrow {
     position: absolute;
     top: calc(50% - 30px);
-    width: 60px;
-    height: 60px;
     z-index: 2;
-    padding: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: rgba($white, 0.8);
-    border: 0;
-    border-radius: 6px;
-    @extend %animation-btn;
 
     @include media-w($lg) {
       top: calc(50% - 22px);
-      width: 44px;
-      height: 44px;
     }
 
     @include media-w($sm) {
       display: none;
-    }
-
-    &:hover {
-      background-color: $green-900;
     }
 
     &--prev {

@@ -48,54 +48,6 @@
     }
   }
 
-  &__favorite {
-    align-self: center;
-    padding: 8px;
-    display: flex;
-    background-color: transparent;
-    border: 0;
-    border-radius: 3px;
-    outline: 0;
-    transition: box-shadow 0.3s;
-
-    @include media-w($xs) {
-      padding: 11px;
-    }
-
-    svg {
-      width: 32px;
-      height: 29px;
-      fill: $silver-600;
-      transition: fill 0.3s;
-
-      @include media-w($xs) {
-        width: 24px;
-        height: 22px;
-      }
-    }
-
-    &:focus {
-      box-shadow: inset 0 0 0 4px rgba($yellow-900, 0.3);
-    }
-
-    &:hover svg {
-      fill: $yellow-900;
-    }
-
-    &:active svg {
-      fill: $green-900;
-    }
-
-    &--wide {
-      position: absolute;
-      right: 9px;
-
-      @include media-w($md) {
-        top: 40px;
-      }
-    }
-  }
-
   &__link {
     position: relative;
     padding: 7px 12px;
@@ -177,9 +129,11 @@
   }
 
   &__content {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+
     &--wide {
-      display: flex;
-      flex-direction: column;
       justify-content: space-between;
       flex: 10 1 263px;
     }
@@ -224,17 +178,22 @@
       padding-right: 10px;
     }
 
+    @include media-w ($md) {
+      min-height: auto;
+    }
+
     &--wide {
       padding-right: 65px;
     }
   }
 
   &__bottom {
-    margin-top: auto;
-    padding: 2px 10px 10px 21px;
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: flex-end;
+    flex-grow: 1;
+    margin-top: auto;
+    padding: 2px 10px 10px 21px;
     line-height: 1.2;
 
     @include media-w($lg) {
@@ -304,7 +263,7 @@
     }
   }
 
-  &__cart {
+  &__icon-btn {
     position: relative;
     flex-shrink: 0;
     display: flex;
@@ -313,9 +272,7 @@
     width: 44px;
     height: 44px;
     background-color: transparent;
-    border: none;
-    border-radius: 3px;
-    outline: 0;
+
 
     &::before {
       content: "";
@@ -333,12 +290,29 @@
     svg {
       width: 16px;
       height: 16px;
-      fill: $white;
       transition: fill 0.3s;
     }
 
-    &:active svg {
-      fill: rgba($white, 0.5);
+    &:focus {
+      box-shadow: none;
+    }
+
+    &:hover {
+      background-color: transparent;
+    }
+
+    &:active {
+      box-shadow: none;
+
+      svg {
+        fill: rgba($white, 0.5);
+      }
+    }
+    
+    &--wide {
+      position: absolute;
+      top: 40px;
+      right: 9px;
     }
   }
 }

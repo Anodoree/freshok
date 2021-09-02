@@ -9,6 +9,7 @@
 @import '_modules/_components/_buttons/close-btn';
 @import '_modules/_components/_buttons/filter-btn';
 @import '_modules/_components/_buttons/icon-btn';
+@import '_modules/_components/_buttons/slick-arrow';
 
 @import '_modules/_components/_cards/product-card';
 @import '_modules/_components/_cards/product-max';
@@ -21,9 +22,10 @@
 @import '_modules/_components/_filters/mix-filter';
 @import '_modules/_components/_filters/side-filter';
 
+@import '_modules/_components/_forms/quantity-input';
+@import '_modules/_components/_forms/review-forrm';
 @import '_modules/_components/_forms/search-form';
 @import '_modules/_components/_forms/sub-form';
-@import '_modules/_components/_forms/quantity-input';
 
 @import '_modules/_components/_links/hotlink';
 @import '_modules/_components/_links/logo';
@@ -55,3 +57,5 @@
 @import '_modules/_index/top-product';
 
 @import '_modules/_catalog/catalog';
+@import '_modules/_product/product';
+@import '_modules/_product/recent';

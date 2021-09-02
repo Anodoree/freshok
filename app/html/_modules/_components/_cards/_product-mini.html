@@ -26,16 +26,19 @@
       </h3>
     @@if (available == "true") {
       @@include('../_objects/_avaliable.html', {
+        "class": "product-mini__available",
         "mod": "available--green",
         "text": "В наличии"
       })
     }@@if (available == "false") {
       @@include('../_objects/_avaliable.html', {
+        "class": "product-mini__available",
         "mod": "",
         "text": "Нет в наличии"
       })
     }@@if (available == "min") {
       @@include('../_objects/_avaliable.html', {
+        "class": "product-mini__available",
         "mod": "available--red",
         "text": "Заканчивается"
       })

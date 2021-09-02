@@ -25,12 +25,13 @@
       }
     </div>
 
-    <button class="product-card__favorite" type="button">
-      <svg>
-        <use xlink:href="images/sprite.svg#favorite"></use>
-      </svg>
-      <span class="sr-only">Добавить в "избранное"</span>
-    </button>
+    @@include('../_buttons/_icon-btn.html', {
+      "class": "",
+      "mod": "icon-btn--transparent",
+      "image": "favorite",
+      "sr-only": "Добавить в избранное",
+      "extra": ""
+    })
   </div>
 
   <a class="product-card__link" href="@@href">
@@ -61,11 +62,12 @@
       "value": "1"
     })
 
-    <button class="product-card__cart" type="button">
-      <svg>
-        <use xlink:href="images/sprite.svg#cart"></use>
-      </svg>
-      <span class="sr-only">Добавить в "корзину"</span>
-    </button>
+    @@include('../_buttons/_icon-btn.html', {
+      "class": "product-card__icon-btn",
+      "mod": "",
+      "image": "cart",
+      "sr-only": "Добавить в корзину",
+      "extra": ""
+    })
   </div>
 </article>

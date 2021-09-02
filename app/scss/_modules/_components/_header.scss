@@ -249,4 +249,10 @@
       }
     }
   }
+
+  &__icon-btn {
+    &:hover {
+      background-color: rgba($white, 0.1);
+    }
+  }
 }
