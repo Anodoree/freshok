@@ -65,10 +65,6 @@
     display: flex;
     justify-content: center;
 
-    @include media-w($xs) {
-      padding: 7px;
-    }
-
     @include media-w($xxs) {
       padding-right: 0;
       padding-left: 0;

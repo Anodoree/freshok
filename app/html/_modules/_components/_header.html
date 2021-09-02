@@ -54,19 +54,47 @@
 
       <ul class="header__icon">
         <li class="header__icon-item header__icon-item--search">
-          @@include('_buttons/_icon-btn/_search-btn.html')
+          @@include('_buttons/_icon-btn.html', {
+            "class": "header__icon-btn",
+            "mod": "icon-btn--search",
+            "type": "button",
+            "image": "search",
+            "sr-only": "Вызвать поле поиска по сайту",
+            "extra": ""
+          })
         </li>
 
         <li class="header__icon-item header__icon-item--user">
-          @@include('_buttons/_icon-btn/_user-btn.html')
+          @@include('_buttons/_icon-btn.html', {
+            "class": "header__icon-btn",
+            "mod": "",
+            "type": "button",
+            "image": "user",
+            "sr-only": "Меню пользователя",
+            "extra": ""
+          })
         </li>
 
         <li class="header__icon-item header__icon-item--favorite">
-          @@include('_buttons/_icon-btn/_favorite-btn.html')
+          @@include('_buttons/_icon-btn.html', {
+            "class": "header__icon-btn",
+            "mod": "",
+            "type": "button",
+            "image": "favorite",
+            "sr-only": "Избранное",
+            "extra": "<span class='icon-btn__number'>12</span>"
+          })
         </li>
 
         <li class="header__icon-item">
-          @@include('_buttons/_icon-btn/_cart-btn.html')
+          @@include('_buttons/_icon-btn.html', {
+            "class": "header__icon-btn",
+            "mod": "icon-btn--cart",
+            "type": "button",
+            "image": "cart",
+            "sr-only": "Корзина",
+            "extra": "<span class='icon-btn__number'>12</span>"
+          })
         </li>
       </ul>
     </nav>

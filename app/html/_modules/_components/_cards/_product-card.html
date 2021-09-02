@@ -25,24 +25,27 @@
       }
     </div>
 
-    <button class="product-card__favorite" type="button">
-      <svg>
-        <use xlink:href="images/sprite.svg#favorite"></use>
-      </svg>
-      <span class="sr-only">Добавить в "избранное"</span>
-    </button>
+    @@include('../_buttons/_icon-btn.html', {
+      "class": "",
+      "mod": "icon-btn--transparent",
+      "type": "button",
+      "image": "favorite",
+      "sr-only": "Добавить в избранное",
+      "extra": ""
+    })
   </div>
 
   <a class="product-card__link" href="@@href">
-    <img class="product-card__img" src="images/products/@@image" alt="@@alt"
-      width="300" height="225">
+    <img class="product-card__img" src="images/products/@@image"
+    alt="@@alt"
+    width="300" height="225">
   </a>
 
   <h3 class="product-card__title">
     @@title
   </h3>
 
-  <div class="product-card__bottom">
+  <form class="product-card__bottom">
     <div class="product-card__cost">
     @@if (old_price_boolean === true) {
       @@include('../_objects/_old-price.html', {
@@ -57,15 +60,17 @@
 
     @@include('../_forms/_quantity-input.html', {
       "class": "product-card__quantity-input",
-      "name": "number",
+      "name": "number-$product-name",
       "value": "1"
     })
 
-    <button class="product-card__cart" type="button">
-      <svg>
-        <use xlink:href="images/sprite.svg#cart"></use>
-      </svg>
-      <span class="sr-only">Добавить в "корзину"</span>
-    </button>
-  </div>
+    @@include('../_buttons/_icon-btn.html', {
+      "class": "product-card__icon-btn",
+      "mod": "",
+      "type": "submit",
+      "image": "cart",
+      "sr-only": "Добавить в корзину",
+      "extra": ""
+    })
+  </form>
 </article>

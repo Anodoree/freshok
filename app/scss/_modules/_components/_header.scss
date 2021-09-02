@@ -176,6 +176,10 @@
     @include media-w($lg) {
       margin-right: 10px;
     }
+
+    @include media-w($xxs) {
+      width: 100%;
+    }
   }
 
   &__search-form {
@@ -247,6 +251,12 @@
       @include media-w($lg) {
         margin-right: 6px;
       }
+    }
+  }
+
+  &__icon-btn {
+    &:hover {
+      background-color: rgba($white, 0.1);
     }
   }
 }

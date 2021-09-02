@@ -3,140 +3,17 @@
     position: relative;
   }
 
-  &__bg {
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-  }
-
-  &__inner {
-    max-width: 1550px;
-    height: 600px;
-    margin: 0 auto;
-    padding: 30px 130px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: flex-start;
-
-    @include media-w($lg) {
-      height: 500px;
-      padding: 20px 80px;
-    }
-
-    @include media-w($md) {
-      height: 440px;
-    }
-    
-    @include media-w($sm) {
-      height: 375px;
-      padding-right: 15px;
-      padding-bottom: 40px;
-      padding-left: 15px;
-    }
-
-    @include media-w($xs) {
-      height: 320px;
-      padding-top: 40px;
-    }
-  }
-
-  &__content {
-    max-width: 888px;
-    margin-bottom: 30px;
-    padding: 24px;
-    background-color: rgba($white, 0.8);
-    border-radius: 6px;
-
-    @include media-w($lg) {
-      max-width: 730px;
-    }
-
-    @include media-w($md) {
-      margin-bottom: 22px;
-    }
-
-    @include media-w($sm) {
-      margin-bottom: 16px;
-      padding: 15px;
-    }
-
-    @include media-w($xs) {
-      margin-right: -15px;
-      margin-left: -15px;
-      border-radius: 0;
-    }
-  }
-
-  &__title {
-    margin-bottom: 8px;
-    font-weight: 700;
-    font-size: 60px;
-    line-height: 1.3;
-    font-family: "Signika", "OpenSans", "Trebuchet MS", sans-serif;
-    text-transform: uppercase;
-    @include line-clamp(4);
-
-    @include media-w($lg) {
-      font-size: 40px;
-    }
-
-    @include media-w($md) {
-      font-size: 34px;
-    }
-
-    @include media-w($sm) {
-      font-size: 28px;
-      -webkit-line-clamp: 3;
-    }
-
-    @include media-w($xs) {
-      margin-bottom: 15px;
-      font-size: 20px;
-    }
-  }
-
-  &__accent {
-    display: block;
-    color: $red-900;
-  }
-
-  &__text {
-    font-size: 16px;
-    @include line-clamp(4);
-
-    @include media-w($sm) {
-      -webkit-line-clamp: 3;
-    }
-  }
-
-  &__arrow {
+  &__slider-arrow {
     position: absolute;
     top: calc(50% - 30px);
-    width: 60px;
-    height: 60px;
     z-index: 2;
-    padding: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: rgba($white, 0.8);
-    border: 0;
-    border-radius: 6px;
-    @extend %animation-btn;
 
     @include media-w($lg) {
       top: calc(50% - 22px);
-      width: 44px;
-      height: 44px;
     }
 
     @include media-w($sm) {
       display: none;
-    }
-
-    &:hover {
-      background-color: $green-900;
     }
 
     &--prev {
