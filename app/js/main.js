@@ -266,7 +266,7 @@ $(function() {
     starSvg: starSvgRateyo
   });
 
-  $('.product__star').rateYo({
+  $('.product__user-star').rateYo({
     starWidth: '16px',
     normalFill: '#c1c1c1',
     ratedFill: '#ffb800',
