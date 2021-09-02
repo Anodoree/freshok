@@ -8,10 +8,6 @@
   border-radius: 6px;
   transition: border-color 0.3s;
 
-  &:hover {
-    border-color: $green-900;
-  }
-
   &__top {
     max-height: 52px;
     padding: 7px 4px 0 12px;
@@ -168,12 +164,6 @@
     transform: scale(0);
     transition: opacity 0.3s, transform 0s 0.3s;
 
-    &--active {
-      opacity: 1;
-      transform: scale(1);
-      transition: opacity 0.3s;
-    }
-
     .minus {
       border-radius: 3px 0 0 3px;
     }
@@ -227,6 +217,16 @@
       svg {
         fill: rgba($white, 0.5);
       }
+    }
+  }
+
+  &:hover {
+    border-color: $green-900;
+
+    .product-card__quantity-input {
+      opacity: 1;
+      transform: scale(1);
+      transition: opacity 0.3s;
     }
   }
 }
