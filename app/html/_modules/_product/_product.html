@@ -36,7 +36,7 @@
         </span>
       </div>
 
-      <div class="product__row">
+      <form class="product__row">
         @@include('../_components/_forms/_quantity-input.html', {
           "class": "product__quantity-input",
           "name": "number-$product-name",
@@ -60,7 +60,7 @@
           "sr-only": "Добавить в избранное",
           "extra": ""
         })
-      </div>
+      </form>
 
       <div class="product__condition">
         <h2 class="product__subject subject">Доставка и оплата</h2>
@@ -156,7 +156,7 @@
                   <h3 class="product__user-name">Андрей</h3>
                   <time class="product__user-time" datetime="2021-06-10">10.06.2021</time>
                 </div>
-                <span class="product__star" data-rateyo-rating="4"></span>
+                <span class="product__user-star" data-rateyo-rating="4"></span>
               </header>
               <div class="product__text">
                 <p>
@@ -172,7 +172,7 @@
                   <h3 class="product__user-name">Екатерина Белая</h3>
                   <time class="product__user-time" datetime="2021-06-07">7.06.2021</time>
                 </div>
-                <span class="product__star" data-rateyo-rating="5"></span>
+                <span class="product__user-star" data-rateyo-rating="5"></span>
               </header>
               <div class="product__text">
                 <p>

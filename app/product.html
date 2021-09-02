@@ -441,7 +441,7 @@
             </span>
           </div>
 
-          <div class="product__row">
+          <form class="product__row">
             <input class="product__quantity-input quantity-input"
               type="number" name="number-$product-name"
               aria-label="Укажите количество выбранного товара"
@@ -462,7 +462,7 @@
               <span class="sr-only">Добавить в избранное</span>
               
             </button>
-          </div>
+          </form>
 
           <div class="product__condition">
             <h2 class="product__subject subject">Доставка и оплата</h2>
@@ -558,7 +558,7 @@
                       <h3 class="product__user-name">Андрей</h3>
                       <time class="product__user-time" datetime="2021-06-10">10.06.2021</time>
                     </div>
-                    <span class="product__star" data-rateyo-rating="4"></span>
+                    <span class="product__user-star" data-rateyo-rating="4"></span>
                   </header>
                   <div class="product__text">
                     <p>
@@ -574,7 +574,7 @@
                       <h3 class="product__user-name">Екатерина Белая</h3>
                       <time class="product__user-time" datetime="2021-06-07">7.06.2021</time>
                     </div>
-                    <span class="product__star" data-rateyo-rating="5"></span>
+                    <span class="product__user-star" data-rateyo-rating="5"></span>
                   </header>
                   <div class="product__text">
                     <p>
@@ -623,10 +623,10 @@
                 </div>
 
                 <div class="review-form__save">
-                  <input class="review-form__checkbox-input" id="review-form-save" type="checkbox"
-                    name="review-form-save">
-                  <span class="review-form__checkbox"></span>
-                  <label class="review-form__label" for="review-form-save">
+                  <label class="review-form__label review-form__label--save">
+                    <input class="review-form__checkbox-input" type="checkbox"
+                      name="review-form-save">
+                    <span class="review-form__checkbox"></span>
                     Сохранить моё имя, email и адрес сайта в этом браузере для последующих
                     моих комментариев.
                   </label>
