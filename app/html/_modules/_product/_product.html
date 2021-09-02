@@ -1,0 +1,191 @@
+<article class="product">
+  <div class="container">
+    <div class="product__top">
+      <h1 class="product__title title">Питахайя красная с белой мякотью</h1>
+
+      <div class="product__img-box">
+        <img class="product__img" src="images/products/dragon-fruit-md.jpg" alt="Питахайя красная с белой мякотью">
+      </div>
+
+      <div class="product__row">
+        @@include('../_components/_objects/_badge.html', {
+          "class": "product__badge",
+          "mod": "badge--orange",
+          "text": "Хит",
+          "suffix": ""
+        })
+      </div>
+
+      <div class="product__row">
+        <span class="product__code">Код: 0111111</span>
+        <span class="product__final-star" data-rateyo-rating="4"></span>
+        @@include('../_components/_objects/_avaliable.html', {
+          "class": "product__available",
+          "mod": "available--green",
+          "text": "В наличии"
+        })
+      </div>
+
+      <div class="product__row product__row--prices">
+        @@include('../_components/_objects/_old-price.html', {
+          "class": "product__old-price",
+          "old_price": "299"
+        })
+        <span class="product__price">
+          199 <span class="product__currency">₽</span>
+        </span>
+      </div>
+
+      <div class="product__row">
+        @@include('../_components/_forms/_quantity-input.html', {
+          "class": "product__quantity-input",
+          "name": "number-$product-name",
+          "value": "1"
+        })
+
+        @@include('../_components/_buttons/_icon-btn.html', {
+          "class": "product__icon-btn",
+          "mod": "",
+          "type": "submit",
+          "image": "cart",
+          "sr-only": "Добавить в корзину",
+          "extra": "<span class='icon-btn__text'>Добавить в корзину</span>"
+        })
+
+        @@include('../_components/_buttons/_icon-btn.html', {
+          "class": "product__icon-btn",
+          "mod": "icon-btn--transparent product__icon-btn--transparent",
+          "type": "button",
+          "image": "favorite",
+          "sr-only": "Добавить в избранное",
+          "extra": ""
+        })
+      </div>
+
+      <div class="product__condition">
+        <h2 class="product__subject subject">Доставка и оплата</h2>
+        <ul class="product__list">
+          <li class="product__condition-item">
+            Минимальная сумма заказа - 100 руб.
+          </li>
+          <li class="product__condition-item">
+            Время доставки заказа - 60-120 мин.
+          </li>
+          <li class="product__condition-item">
+            Оплата осуществляется только банковской картой.
+          </li>
+          <li class="product__condition-item">
+            Окончательная сумма заказа формируется после сбора товаров.
+          </li>
+        </ul>
+        <a class="product__more" href="#">Подробнее</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="product__bottom">
+    <div class="product__inner">
+      <ul class="product__tabs">
+        <li class="product__tab-item">
+          <button class="product__btn product__btn--active" type="button" data-for="#product-description">
+            Описание
+          </button>
+        </li>
+
+        <li class="product__tab-item">
+          <button class="product__btn" type="button" data-for="#product-specifications">
+            Характеристики
+          </button>
+        </li>
+
+        <li class="product__tab-item">
+          <button class="product__btn" type="button" data-for="#product-reviews">
+            Отзывы (3)
+          </button>
+        </li>
+      </ul>
+
+      <ul class="product__content">
+        <li class="product__item product__item--show" id="product-description">
+          <h2 class="sr-only">Описание</h2>
+          <div class="product__text">
+            <p>Питахайя – это источник питательных веществ и витаминов. Содержит витамин С, который способствует укреплению иммунной системы. В составе питайи много клетчатки, она благотворно влияет на работу ЖКТ. Оказывает противовоспалительное действие, так как фрукт богат антиоксидантами. При употреблении питахайи, понижается уровень сахара в крови, улучшается зрение и работа сердечно–сосудистой системы. Так как фрукт низкокалорийный и состоит на 90% из воды, способствует снижению веса.</p>
+            <p>Витамины: С, Е, РР, витамины группы В</p>
+            <p>Микроэлементы: железо, калий, кальций, магний, фосфор</p>
+            <p>Внешний вид товара может отличаться от изображений, представленных на сайте.</p>
+          </div>
+        </li>
+
+        <li class="product__item" id="product-specifications">
+          <h2 class="sr-only">Характеристики</h2>
+          <dl class="product__spec-list">
+            <div class="product__spec-item">
+              <dt>Вес:</dt>
+              <dd>250-350 г;</dd>
+            </div>
+            <div class="product__spec-item">
+              <dt>Калорийность (на 100г):</dt>
+              <dd>50 ккал;</dd>
+            </div>
+            <div class="product__spec-item">
+              <dt>Условия хранения:</dt>
+              <dd>температура от +3 до +8;</dd>
+            </div>
+            <div class="product__spec-item">
+              <dt>Другие названия:</dt>
+              <dd>Драконов фрукт, Глаз дракона;</dd>
+            </div>
+            <div class="product__spec-item">
+              <dt>Страна происхождения:</dt>
+              <dd>Вьетнам;</dd>
+            </div>
+            <div class="product__spec-item">
+              <dt>Срок хранения:</dt>
+              <dd>до 5 дней.</dd>
+            </div>
+          </dl>
+        </li>
+
+        <li class="product__item" id="product-reviews">
+          <article class="product__review">
+            <h2 class="product__subject product__subject--review subject">Мнения наших клиентов</h2>
+            <article class="product__article">
+              <header class="product__article-header">
+                <div class="product__user-avatar" style="background-image: url('images/avatar.jpg')"></div>
+                <div class="product__user-data">
+                  <h3 class="product__user-name">Андрей</h3>
+                  <time class="product__user-time" datetime="2021-06-10">10.06.2021</time>
+                </div>
+                <span class="product__star" data-rateyo-rating="4"></span>
+              </header>
+              <div class="product__text">
+                <p>
+                  Яркий цвет, нежный вкус. Очень свежий и приятный, буду пробовать еще!))
+                </p>
+              </div>
+            </article>
+
+            <article class="product__article">
+              <header class="product__article-header">
+                <div class="product__user-avatar" style="background-image: url('images/avatar.jpg')"></div>
+                <div class="product__user-data">
+                  <h3 class="product__user-name">Екатерина Белая</h3>
+                  <time class="product__user-time" datetime="2021-06-07">7.06.2021</time>
+                </div>
+                <span class="product__star" data-rateyo-rating="5"></span>
+              </header>
+              <div class="product__text">
+                <p>
+                  Цвет, конечно, очень насыщенный! Ожидаешь, что и вкус будет такой же яркий (просто взрыв), но нет. Вкус "сдержанно-сладкий" и очень-очень свежий! Рад, что есть такая возможность - пробовать экзотические фрукты.
+                </p>
+              </div>
+            </article>
+          </article>
+
+          <span class="product__subject product__subject--form subject">Оставить отзыв</span>
+          @@include('../_components/_forms/_review-form.html')
+        </li>
+      </ul>
+    </div>
+  </div>
+</article>

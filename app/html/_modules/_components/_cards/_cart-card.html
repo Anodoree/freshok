@@ -1,6 +1,7 @@
 <article class="cart-card">
   <div class="cart-card__img-box">
-    <img class="cart-card__img" src="images/products/@@image" alt="@@alt">
+    <img class="cart-card__img" src="images/products/@@image"
+      alt="@@alt">
   </div>
 
   <div class="cart-card__info">
@@ -15,7 +16,7 @@
   <div class="cart-card__sum">
     @@include('../_forms/_quantity-input.html', {
       "class": "cart-card__quantity-input",
-      "name": "number",
+      "name": "number-$product-name",
       "value": "2"
     })
 

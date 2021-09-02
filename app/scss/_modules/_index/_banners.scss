@@ -1,0 +1,49 @@
+.banners {
+  margin-bottom: 72px;
+
+  @include media-w($lg) {
+    margin-bottom: 60px;
+  }
+
+  @include media-w($md) {
+    margin-bottom: 54px;
+  }
+
+  @include media-w($xs) {
+    margin-bottom: 48px;
+  }
+
+  &__inner {
+    display: grid;
+    grid-template: 300px / repeat(4, 1fr);
+    grid-column-gap: 2.4%;
+    text-transform: uppercase;
+
+    @include media-w($md) {
+      grid-template: repeat(2, 260px) / repeat(2, 1fr);
+      grid-gap: 30px;
+    }
+
+    @include media-w($sm) {
+      grid-template-rows: repeat(2, 230px);
+    }
+
+    @include media-w($xs) {
+      grid-template: repeat(3, 300px) / repeat(1, 1fr);
+    }
+  }
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    &:first-child {
+      grid-column: span 2;
+
+      @include media-w($xs) {
+        grid-column: span 1;
+      }
+    }
+  }
+}

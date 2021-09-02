@@ -94,10 +94,6 @@
         margin-right: auto;
         margin-bottom: 30px;
       }
-
-      @include media-w($xs) {
-        margin-bottom: 15px;
-      }
     }
   }
 }
