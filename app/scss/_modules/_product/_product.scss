@@ -39,6 +39,7 @@
     justify-content: center;
     align-items: center;
     padding: 30px;
+    overflow: hidden;
     border: 1px solid $silver-600;
     border-radius: 4px;
 
@@ -47,8 +48,111 @@
     }
   }
 
+  &__img-list {
+    width: 100%;
+  
+    .slick-dots {
+      position: absolute;
+      bottom: 0;
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 0;
+      line-height: 0;
+  
+      li:not(:last-child) {
+        margin-right: 10px;
+      }
+  
+      button {
+        width: 12px;
+        height: 12px;
+        padding: 0;
+        background-color: $white;
+        border: 1px solid $silver-600;
+        border-radius: 6px;
+      }
+    }
+  
+    .slick-active {
+      button {
+        background-color: $green-900;
+        border-color: $green-900;
+      }
+    }
+
+    &--popup {
+      position: fixed;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      z-index: 12;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: rgba($black, 0.2);
+
+      &::before {
+        content: "";
+        position: absolute;
+        top: 5%;
+        right: 5%;
+        bottom: 5%;
+        left: 5%;
+        background-color: $white;
+        border-radius: 15px;
+
+        @include media-w($xs) {
+          top: 0;
+          right: 0;
+          bottom: 0;
+          left: 0;
+        }
+      }
+
+      .slick-dots {
+        bottom: 15px;
+      }
+
+      .product__slider-arrow {
+        &--prev {
+          left: 8%;
+        }
+    
+        &--next {
+          right: 8%;
+        }
+      }
+    }
+  }
+    
+  &__slider-arrow {
+    position: absolute;
+    top: calc(50% - 30px);
+    z-index: 2;
+
+    @include media-w($lg) {
+      top: calc(50% - 22px);
+    }
+
+    @include media-w($sm) {
+      display: none;
+    }
+
+    &--prev {
+      left: 0;
+    }
+
+    &--next {
+      right: 0;
+    }
+  }
+
   &__img {
     max-height: 100%;
+    margin: 0 auto;
     object-fit: contain;
   }
 
